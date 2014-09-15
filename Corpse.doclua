@@ -1,0 +1,212 @@
+---
+-- @module Corpse
+-- @extends Mob#Mob
+
+local M = {}
+
+---
+-- @field [parent=#Corpse] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Corpse] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Corpse] GetCharID
+-- @param self
+-- @return #number
+function M:GetCharID() end
+
+---
+-- @function [parent=#Corpse] GetDecayTime
+-- @param self
+-- @return #number
+function M:GetDecayTime() end
+
+---
+-- @function [parent=#Corpse] Lock
+-- @param self
+-- @return #nil
+function M:Lock() end
+
+---
+-- @function [parent=#Corpse] UnLock
+-- @param self
+-- @return #nil
+function M:UnLock() end
+
+---
+-- @function [parent=#Corpse] IsLocked
+-- @param self
+-- @return #boolean
+function M:IsLocked() end
+
+---
+-- @function [parent=#Corpse] ResetLooter
+-- @param self
+-- @return #nil
+function M:ResetLooter() end
+
+---
+-- @function [parent=#Corpse] GetDBID
+-- @param self
+-- @return #number
+function M:GetDBID() end
+
+---
+-- @function [parent=#Corpse] IsRezzed
+-- @param self
+-- @return #boolean
+function M:IsRezzed() end
+
+---
+-- @function [parent=#Corpse] GetOwnerName
+-- @param self
+-- @return #string
+function M:GetOwnerName() end
+
+---
+-- @function [parent=#Corpse] Save
+-- @param self
+-- @return #boolean
+function M:Save() end
+
+---
+-- @function [parent=#Corpse] Delete
+-- @param self
+-- @return #nil
+function M:Delete() end
+
+---
+-- @function [parent=#Corpse] Bury
+-- @param self
+-- @return #nil
+function M:Bury() end
+
+---
+-- @function [parent=#Corpse] Depop
+-- @param self
+-- @return #nil
+function M:Depop() end
+
+---
+-- @function [parent=#Corpse] CountItems
+-- @param self
+-- @return #number
+function M:CountItems() end
+
+---
+-- @function [parent=#Corpse] AddItem
+-- @param self
+-- @param #number itemnum
+-- @param uInteger#uInteger charges
+-- @param #number slot
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @param #number aug4
+-- @param #number aug5
+-- @return #nil
+function M:AddItem(itemnum,charges,slot,aug1,aug2,aug3,aug4,aug5) end
+
+---
+-- @function [parent=#Corpse] GetWornItem
+-- @param self
+-- @param #number equipSlot
+-- @return #number
+function M:GetWornItem(equipSlot) end
+
+---
+-- @function [parent=#Corpse] RemoveItem
+-- @param self
+-- @param #number lootslot
+-- @return #nil
+function M:RemoveItem(lootslot) end
+
+---
+-- @function [parent=#Corpse] SetCash
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @return #nil
+function M:SetCash(copper,silver,gold,platinum) end
+
+---
+-- @function [parent=#Corpse] RemoveCash
+-- @param self
+-- @return #nil
+function M:RemoveCash() end
+
+---
+-- @function [parent=#Corpse] IsEmpty
+-- @param self
+-- @return #boolean
+function M:IsEmpty() end
+
+---
+-- @function [parent=#Corpse] SetDecayTimer
+-- @param self
+-- @param #number decaytime
+-- @return #nil
+function M:SetDecayTimer(decaytime) end
+
+---
+-- @function [parent=#Corpse] CanMobLoot
+-- @param self
+-- @param #number charid
+-- @return #boolean
+function M:CanMobLoot(charid) end
+
+---
+-- @function [parent=#Corpse] AllowMobLoot
+-- @param self
+-- @param Mob#Mob them
+-- @param uInteger8#uInteger8 slot
+-- @return #nil
+function M:AllowMobLoot(them,slot) end
+
+---
+-- @function [parent=#Corpse] Summon
+-- @param self
+-- @param Client#Client client
+-- @param #boolean spell
+-- @param #boolean checkdistance
+-- @return #boolean
+function M:Summon(client,spell,checkdistance) end
+
+---
+-- @function [parent=#Corpse] GetCopper
+-- @param self
+-- @return #number
+function M:GetCopper() end
+
+---
+-- @function [parent=#Corpse] GetSilver
+-- @param self
+-- @return #number
+function M:GetSilver() end
+
+---
+-- @function [parent=#Corpse] GetGold
+-- @param self
+-- @return #number
+function M:GetGold() end
+
+---
+-- @function [parent=#Corpse] GetPlatinum
+-- @param self
+-- @return #number
+function M:GetPlatinum() end
+
+---
+-- @function [parent=#Corpse] AddLooter
+-- @param self
+-- @param Mob#Mob who
+-- @return #nil
+function M:AddLooter(who) end
+
+return M;

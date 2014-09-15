@@ -1,0 +1,238 @@
+---
+-- @module Object
+-- @extends Entity#Entity
+
+local M = {}
+
+---
+-- @field [parent=#Object] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Object] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Object] Depop
+-- @param self
+-- @return #nil
+function M:Depop() end
+
+---
+-- @function [parent=#Object] Repop
+-- @param self
+-- @return #nil
+function M:Repop() end
+
+---
+-- @function [parent=#Object] SetModelName
+-- @param self
+-- @param #string name
+-- @return #nil
+function M:SetModelName(name) end
+
+---
+-- @function [parent=#Object] GetModelName
+-- @param self
+-- @return #string
+function M:GetModelName() end
+
+---
+-- @function [parent=#Object] GetX
+-- @param self
+-- @return #number
+function M:GetX() end
+
+---
+-- @function [parent=#Object] GetY
+-- @param self
+-- @return #number
+function M:GetY() end
+
+---
+-- @function [parent=#Object] GetZ
+-- @param self
+-- @return #number
+function M:GetZ() end
+
+---
+-- @function [parent=#Object] GetHeading
+-- @param self
+-- @return #number
+function M:GetHeading() end
+
+---
+-- @function [parent=#Object] SetX
+-- @param self
+-- @param #number x
+-- @return #nil
+function M:SetX(x) end
+
+---
+-- @function [parent=#Object] SetY
+-- @param self
+-- @param #number y
+-- @return #nil
+function M:SetY(y) end
+
+---
+-- @function [parent=#Object] SetZ
+-- @param self
+-- @param #number z
+-- @return #nil
+function M:SetZ(z) end
+
+---
+-- @function [parent=#Object] SetHeading
+-- @param self
+-- @param #number h
+-- @return #nil
+function M:SetHeading(h) end
+
+---
+-- @function [parent=#Object] SetLocation
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:SetLocation(x,y,z) end
+
+---
+-- @function [parent=#Object] SetItemID
+-- @param self
+-- @param #number item_id
+-- @return #nil
+function M:SetItemID(item_id) end
+
+---
+-- @function [parent=#Object] GetItemID
+-- @param self
+-- @return #number
+function M:GetItemID() end
+
+---
+-- @function [parent=#Object] SetIcon
+-- @param self
+-- @param #number icon
+-- @return #nil
+function M:SetIcon(icon) end
+
+---
+-- @function [parent=#Object] GetIcon
+-- @param self
+-- @return #number
+function M:GetIcon() end
+
+---
+-- @function [parent=#Object] SetType
+-- @param self
+-- @param #number type
+-- @return #nil
+function M:SetType(type) end
+
+---
+-- @function [parent=#Object] GetType
+-- @param self
+-- @return #number
+function M:GetType() end
+
+---
+-- @function [parent=#Object] GetDBID
+-- @param self
+-- @return #number
+function M:GetDBID() end
+
+---
+-- @function [parent=#Object] ClearUser
+-- @param self
+-- @return #nil
+function M:ClearUser() end
+
+---
+-- @function [parent=#Object] SetID
+-- @param self
+-- @param #number user
+-- @return #nil
+function M:SetID(user) end
+
+---
+-- @function [parent=#Object] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#Object] Save
+-- @param self
+-- @return #boolean
+function M:Save() end
+
+---
+-- @function [parent=#Object] VarSave
+-- @param self
+-- @return #number
+function M:VarSave() end
+
+---
+-- @function [parent=#Object] DeleteItem
+-- @param self
+-- @param #number index
+-- @return #nil
+function M:DeleteItem(index) end
+
+---
+-- @function [parent=#Object] StartDecay
+-- @param self
+-- @return #nil
+function M:StartDecay() end
+
+---
+-- @function [parent=#Object] Delete
+-- @param self
+-- @return #nil
+function M:Delete() end
+
+---
+-- @function [parent=#Object] Delete
+-- @param self
+-- @param #boolean reset_state
+-- @return #nil
+function M:Delete(reset_state) end
+
+---
+-- @function [parent=#Object] IsGroundSpawn
+-- @param self
+-- @return #boolean
+function M:IsGroundSpawn() end
+
+---
+-- @function [parent=#Object] Close
+-- @param self
+-- @return #nil
+function M:Close() end
+
+---
+-- @function [parent=#Object] GetEntityVariable
+-- @param self
+-- @param #string name
+-- @return #string
+function M:GetEntityVariable(name) end
+
+---
+-- @function [parent=#Object] SetEntityVariable
+-- @param self
+-- @param #string name
+-- @param #string value
+-- @return #nil
+function M:SetEntityVariable(name,value) end
+
+---
+-- @function [parent=#Object] EntityVariableExists
+-- @param self
+-- @param #string name
+-- @return #boolean
+function M:EntityVariableExists(name) end
+
+return M;

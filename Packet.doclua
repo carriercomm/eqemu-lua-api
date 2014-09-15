@@ -1,0 +1,156 @@
+---
+-- @module Packet
+
+local M = {}
+
+---
+-- @field [parent=#Packet] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Packet] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Packet] GetSize
+-- @param self
+-- @return #number
+function M:GetSize() end
+
+---
+-- @function [parent=#Packet] GetOpcode
+-- @param self
+-- @return #number
+function M:GetOpcode() end
+
+---
+-- @function [parent=#Packet] SetOpcode
+-- @param self
+-- @param #number op
+-- @return #nil
+function M:SetOpcode(op) end
+
+---
+-- @function [parent=#Packet] WriteInteger8
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteInteger8(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteInteger16
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteInteger16(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteInteger32
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteInteger32(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteInteger64
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteInteger64(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteFloat
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteFloat(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteDouble
+-- @param self
+-- @param #number offset
+-- @param #number value
+-- @return #nil
+function M:WriteDouble(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteString
+-- @param self
+-- @param #number offset
+-- @param #string value
+-- @return #nil
+function M:WriteString(offset,value) end
+
+---
+-- @function [parent=#Packet] WriteFixedLengthString
+-- @param self
+-- @param #number offset
+-- @param #string value
+-- @param #number string_length
+-- @return #nil
+function M:WriteFixedLengthString(offset,value,string_length) end
+
+---
+-- @function [parent=#Packet] ReadInteger8
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadInteger8(offset) end
+
+---
+-- @function [parent=#Packet] ReadInteger16
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadInteger16(offset) end
+
+---
+-- @function [parent=#Packet] ReadInteger32
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadInteger32(offset) end
+
+---
+-- @function [parent=#Packet] ReadInteger64
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadInteger64(offset) end
+
+---
+-- @function [parent=#Packet] ReadFloat
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadFloat(offset) end
+
+---
+-- @function [parent=#Packet] ReadDouble
+-- @param self
+-- @param #number offset
+-- @return #number
+function M:ReadDouble(offset) end
+
+---
+-- @function [parent=#Packet] ReadString
+-- @param self
+-- @param #number offset
+-- @return #string
+function M:ReadString(offset) end
+
+---
+-- @function [parent=#Packet] ReadFixedLengthString
+-- @param self
+-- @param #number offset
+-- @param #number string_length
+-- @return #string
+function M:ReadFixedLengthString(offset,string_length) end
+
+return M;

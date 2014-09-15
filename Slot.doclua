@@ -1,0 +1,127 @@
+---
+-- @module Slot
+
+local M = {}
+
+---
+-- @field [parent=#Slot] #number Charm
+M.Charm = 1;
+
+---
+-- @field [parent=#Slot] #number Ear1
+M.Ear1 = 1;
+
+---
+-- @field [parent=#Slot] #number Head
+M.Head = 1;
+
+---
+-- @field [parent=#Slot] #number Face
+M.Face = 1;
+
+---
+-- @field [parent=#Slot] #number Ear2
+M.Ear2 = 1;
+
+---
+-- @field [parent=#Slot] #number Neck
+M.Neck = 1;
+
+---
+-- @field [parent=#Slot] #number Shoulder
+M.Shoulder = 1;
+
+---
+-- @field [parent=#Slot] #number Arms
+M.Arms = 1;
+
+---
+-- @field [parent=#Slot] #number Back
+M.Back = 1;
+
+---
+-- @field [parent=#Slot] #number Bracer1
+M.Bracer1 = 1;
+
+---
+-- @field [parent=#Slot] #number Bracer2
+M.Bracer2 = 1;
+
+---
+-- @field [parent=#Slot] #number Range
+M.Range = 1;
+
+---
+-- @field [parent=#Slot] #number Hands
+M.Hands = 1;
+
+---
+-- @field [parent=#Slot] #number Primary
+M.Primary = 1;
+
+---
+-- @field [parent=#Slot] #number Secondary
+M.Secondary = 1;
+
+---
+-- @field [parent=#Slot] #number Ring1
+M.Ring1 = 1;
+
+---
+-- @field [parent=#Slot] #number Ring2
+M.Ring2 = 1;
+
+---
+-- @field [parent=#Slot] #number Chest
+M.Chest = 1;
+
+---
+-- @field [parent=#Slot] #number Legs
+M.Legs = 1;
+
+---
+-- @field [parent=#Slot] #number Feet
+M.Feet = 1;
+
+---
+-- @field [parent=#Slot] #number Waist
+M.Waist = 1;
+
+---
+-- @field [parent=#Slot] #number Ammo
+M.Ammo = 1;
+
+---
+-- @field [parent=#Slot] #number PersonalBegin
+M.PersonalBegin = 1;
+
+---
+-- @field [parent=#Slot] #number PersonalEnd
+M.PersonalEnd = 1;
+
+---
+-- @field [parent=#Slot] #number Cursor
+M.Cursor = 1;
+
+---
+-- @field [parent=#Slot] #number CursorEnd
+M.CursorEnd = 1;
+
+---
+-- @field [parent=#Slot] #number Tradeskill
+M.Tradeskill = 1;
+
+---
+-- @field [parent=#Slot] #number Augment
+M.Augment = 1;
+
+---
+-- @field [parent=#Slot] #number PowerSource
+M.PowerSource = 1;
+
+---
+-- @field [parent=#Slot] #number Invalid
+M.Invalid = 1;
+
+
+return M;

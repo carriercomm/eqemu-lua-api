@@ -1,0 +1,451 @@
+---
+-- @module EntityList
+
+local M = {}
+
+---
+-- @field [parent=#EntityList] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#EntityList] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#EntityList] GetMobID
+-- @param self
+-- @param #number id
+-- @return Mob#Mob
+function M:GetMobID(id) end
+
+---
+-- @function [parent=#EntityList] GetMob
+-- @param self
+-- @param #string name
+-- @return Mob#Mob
+function M:GetMob(name) end
+
+---
+-- @function [parent=#EntityList] GetMob
+-- @param self
+-- @param #number id
+-- @return Mob#Mob
+function M:GetMob(id) end
+
+---
+-- @function [parent=#EntityList] GetMobByNpcTypeID
+-- @param self
+-- @param #number npc_type
+-- @return Mob#Mob
+function M:GetMobByNpcTypeID(npc_type) end
+
+---
+-- @function [parent=#EntityList] GetNPCByID
+-- @param self
+-- @param #number id
+-- @return NPC#NPC
+function M:GetNPCByID(id) end
+
+---
+-- @function [parent=#EntityList] GetNPCByNPCTypeID
+-- @param self
+-- @param #number npc_type
+-- @return NPC#NPC
+function M:GetNPCByNPCTypeID(npc_type) end
+
+---
+-- @function [parent=#EntityList] IsMobSpawnedByNpcTypeID
+-- @param self
+-- @param #number npc_type
+-- @return Bool#Bool
+function M:IsMobSpawnedByNpcTypeID(npc_type) end
+
+---
+-- @function [parent=#EntityList] GetClientByName
+-- @param self
+-- @param #string name
+-- @return Client#Client
+function M:GetClientByName(name) end
+
+---
+-- @function [parent=#EntityList] GetClientByAccID
+-- @param self
+-- @param #number acct_id
+-- @return Client#Client
+function M:GetClientByAccID(acct_id) end
+
+---
+-- @function [parent=#EntityList] GetClientByID
+-- @param self
+-- @param #number id
+-- @return Client#Client
+function M:GetClientByID(id) end
+
+---
+-- @function [parent=#EntityList] GetClientByCharID
+-- @param self
+-- @param #number char_id
+-- @return Client#Client
+function M:GetClientByCharID(char_id) end
+
+---
+-- @function [parent=#EntityList] GetClientByWID
+-- @param self
+-- @param #number wid
+-- @return Client#Client
+function M:GetClientByWID(wid) end
+
+---
+-- @function [parent=#EntityList] GetObjectByID
+-- @param self
+-- @param #number id
+-- @return Object#Object
+function M:GetObjectByID(id) end
+
+---
+-- @function [parent=#EntityList] GetObjectByDBID
+-- @param self
+-- @param #number db_id
+-- @return Object#Object
+function M:GetObjectByDBID(db_id) end
+
+---
+-- @function [parent=#EntityList] GetDoorsByID
+-- @param self
+-- @param #number id
+-- @return Door#Door
+function M:GetDoorsByID(id) end
+
+---
+-- @function [parent=#EntityList] GetDoorsByDBID
+-- @param self
+-- @param #number db_id
+-- @return Door#Door
+function M:GetDoorsByDBID(db_id) end
+
+---
+-- @function [parent=#EntityList] GetDoorsByDoorID
+-- @param self
+-- @param #number door_id
+-- @return Door#Door
+function M:GetDoorsByDoorID(door_id) end
+
+---
+-- @function [parent=#EntityList] FindDoor
+-- @param self
+-- @param #number id
+-- @return Door#Door
+function M:FindDoor(id) end
+
+---
+-- @function [parent=#EntityList] GetGroupByMob
+-- @param self
+-- @param Mob#Mob mob
+-- @return Group#Group
+function M:GetGroupByMob(mob) end
+
+---
+-- @function [parent=#EntityList] GetGroupByClient
+-- @param self
+-- @param Client#Client client
+-- @return Group#Group
+function M:GetGroupByClient(client) end
+
+---
+-- @function [parent=#EntityList] GetGroupByID
+-- @param self
+-- @param #number id
+-- @return Group#Group
+function M:GetGroupByID(id) end
+
+---
+-- @function [parent=#EntityList] GetGroupByLeaderName
+-- @param self
+-- @param #string name
+-- @return Group#Group
+function M:GetGroupByLeaderName(name) end
+
+---
+-- @function [parent=#EntityList] GetRaidByID
+-- @param self
+-- @param #number id
+-- @return Raid#Raid
+function M:GetRaidByID(id) end
+
+---
+-- @function [parent=#EntityList] GetRaidByClient
+-- @param self
+-- @param Client#Client client
+-- @return Raid#Raid
+function M:GetRaidByClient(client) end
+
+---
+-- @function [parent=#EntityList] GetCorpseByOwner
+-- @param self
+-- @param Client#Client client
+-- @return Corpse#Corpse
+function M:GetCorpseByOwner(client) end
+
+---
+-- @function [parent=#EntityList] GetCorpseByID
+-- @param self
+-- @param #number id
+-- @return Corpse#Corpse
+function M:GetCorpseByID(id) end
+
+---
+-- @function [parent=#EntityList] GetCorpseByName
+-- @param self
+-- @param #string name
+-- @return Corpse#Corpse
+function M:GetCorpseByName(name) end
+
+---
+-- @function [parent=#EntityList] GetSpawnByID
+-- @param self
+-- @param #number id
+-- @return Spawn#Spawn
+function M:GetSpawnByID(id) end
+
+---
+-- @function [parent=#EntityList] ClearClientPetitionQueue
+-- @param self
+-- @return #nil
+function M:ClearClientPetitionQueue() end
+
+---
+-- @function [parent=#EntityList] CanAddHateForMob
+-- @param self
+-- @param Mob#Mob p
+-- @return #boolean
+function M:CanAddHateForMob(p) end
+
+---
+-- @function [parent=#EntityList] Message
+-- @param self
+-- @param #number guild_dbid
+-- @param #number type
+-- @param #string message
+-- @return #nil
+function M:Message(guild_dbid,type,message) end
+
+---
+-- @function [parent=#EntityList] MessageStatus
+-- @param self
+-- @param #number guild_dbid
+-- @param #number min_status
+-- @param #number type
+-- @param #string message
+-- @return #nil
+function M:MessageStatus(guild_dbid,min_status,type,message) end
+
+---
+-- @function [parent=#EntityList] MessageClose
+-- @param self
+-- @param Mob#Mob sender
+-- @param #boolean skip_sender
+-- @param #number dist
+-- @param #number type
+-- @param #string message
+-- @return #nil
+function M:MessageClose(sender,skip_sender,dist,type,message) end
+
+---
+-- @function [parent=#EntityList] RemoveFromTargets
+-- @param self
+-- @param Mob#Mob mob
+-- @return #nil
+function M:RemoveFromTargets(mob) end
+
+---
+-- @function [parent=#EntityList] RemoveFromTargets
+-- @param self
+-- @param Mob#Mob mob
+-- @param bool#bool RemoveFromXTargets
+-- @return #nil
+function M:RemoveFromTargets(mob,RemoveFromXTargets) end
+
+---
+-- @function [parent=#EntityList] ReplaceWithTarget
+-- @param self
+-- @param Mob#Mob target
+-- @param Mob#Mob new_target
+-- @return #nil
+function M:ReplaceWithTarget(target,new_target) end
+
+---
+-- @function [parent=#EntityList] OpenDoorsNear
+-- @param self
+-- @param NPC#NPC opener
+-- @return #nil
+function M:OpenDoorsNear(opener) end
+
+---
+-- @function [parent=#EntityList] MakeNameUnique
+-- @param self
+-- @param #string name
+-- @return #string
+function M:MakeNameUnique(name) end
+
+---
+-- @function [parent=#EntityList] RemoveNumbers
+-- @param self
+-- @param #string name
+-- @return #string
+function M:RemoveNumbers(name) end
+
+---
+-- @function [parent=#EntityList] SignalMobsByNPCID
+-- @param self
+-- @param #number npc_id
+-- @param #number signal
+-- @return #nil
+function M:SignalMobsByNPCID(npc_id,signal) end
+
+---
+-- @function [parent=#EntityList] DeleteNPCCorpses
+-- @param self
+-- @return #number
+function M:DeleteNPCCorpses() end
+
+---
+-- @function [parent=#EntityList] DeletePlayerCorpses
+-- @param self
+-- @return #number
+function M:DeletePlayerCorpses() end
+
+---
+-- @function [parent=#EntityList] HalveAggro
+-- @param self
+-- @param Mob#Mob who
+-- @return #nil
+function M:HalveAggro(who) end
+
+---
+-- @function [parent=#EntityList] DoubleAggro
+-- @param self
+-- @param Mob#Mob who
+-- @return #nil
+function M:DoubleAggro(who) end
+
+---
+-- @function [parent=#EntityList] ClearFeignAggro
+-- @param self
+-- @param Mob#Mob who
+-- @return #nil
+function M:ClearFeignAggro(who) end
+
+---
+-- @function [parent=#EntityList] Fighting
+-- @param self
+-- @param Mob#Mob who
+-- @return #boolean
+function M:Fighting(who) end
+
+---
+-- @function [parent=#EntityList] RemoveFromHateLists
+-- @param self
+-- @param Mob#Mob who
+-- @return #nil
+function M:RemoveFromHateLists(who) end
+
+---
+-- @function [parent=#EntityList] RemoveFromHateLists
+-- @param self
+-- @param Mob#Mob who
+-- @param #boolean set_to_one
+-- @return #nil
+function M:RemoveFromHateLists(who,set_to_one) end
+
+---
+-- @function [parent=#EntityList] MessageGroup
+-- @param self
+-- @param Mob#Mob who
+-- @param #boolean skip_close
+-- @param #number type
+-- @param #string message
+-- @return #nil
+function M:MessageGroup(who,skip_close,type,message) end
+
+---
+-- @function [parent=#EntityList] GetRandomClient
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number dist
+-- @return Client#Client
+function M:GetRandomClient(x,y,z,dist) end
+
+---
+-- @function [parent=#EntityList] GetRandomClient
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number dist
+-- @param Client#Client exclude
+-- @return Client#Client
+function M:GetRandomClient(x,y,z,dist,exclude) end
+
+---
+-- @function [parent=#EntityList] GetMobList
+-- @param self
+-- @return Mob_List#Mob_List
+function M:GetMobList() end
+
+---
+-- @function [parent=#EntityList] GetClientList
+-- @param self
+-- @return Client_List#Client_List
+function M:GetClientList() end
+
+---
+-- @function [parent=#EntityList] GetNPCList
+-- @param self
+-- @return NPC_List#NPC_List
+function M:GetNPCList() end
+
+---
+-- @function [parent=#EntityList] GetCorpseList
+-- @param self
+-- @return Corpse_List#Corpse_List
+function M:GetCorpseList() end
+
+---
+-- @function [parent=#EntityList] GetObjectList
+-- @param self
+-- @return Object_List#Object_List
+function M:GetObjectList() end
+
+---
+-- @function [parent=#EntityList] GetDoorsList
+-- @param self
+-- @return Doors_List#Doors_List
+function M:GetDoorsList() end
+
+---
+-- @function [parent=#EntityList] GetSpawnList
+-- @param self
+-- @return Spawn_List#Spawn_List
+function M:GetSpawnList() end
+
+---
+-- @function [parent=#EntityList] SignalAllClients
+-- @param self
+-- @param #number signal
+-- @return #nil
+function M:SignalAllClients(signal) end
+
+---
+-- @function [parent=#EntityList] ChannelMessage
+-- @param self
+-- @param Mob#Mob from
+-- @param #number type
+-- @param #string msg
+-- @param #number language
+-- @return #nil
+function M:ChannelMessage(from,type,msg,language) end
+
+return M;

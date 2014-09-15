@@ -1,0 +1,123 @@
+---
+-- @module Entity
+
+local M = {}
+
+---
+-- @field [parent=#Entity] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Entity] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Entity] IsClient
+-- @param self
+-- @return #boolean
+function M:IsClient() end
+
+---
+-- @function [parent=#Entity] IsNPC
+-- @param self
+-- @return #boolean
+function M:IsNPC() end
+
+---
+-- @function [parent=#Entity] IsMob
+-- @param self
+-- @return #boolean
+function M:IsMob() end
+
+---
+-- @function [parent=#Entity] IsMerc
+-- @param self
+-- @return #boolean
+function M:IsMerc() end
+
+---
+-- @function [parent=#Entity] IsCorpse
+-- @param self
+-- @return #boolean
+function M:IsCorpse() end
+
+---
+-- @function [parent=#Entity] IsPlayerCorpse
+-- @param self
+-- @return #boolean
+function M:IsPlayerCorpse() end
+
+---
+-- @function [parent=#Entity] IsNPCCorpse
+-- @param self
+-- @return #boolean
+function M:IsNPCCorpse() end
+
+---
+-- @function [parent=#Entity] IsObject
+-- @param self
+-- @return #boolean
+function M:IsObject() end
+
+---
+-- @function [parent=#Entity] IsDoor
+-- @param self
+-- @return #boolean
+function M:IsDoor() end
+
+---
+-- @function [parent=#Entity] IsTrap
+-- @param self
+-- @return #boolean
+function M:IsTrap() end
+
+---
+-- @function [parent=#Entity] IsBeacon
+-- @param self
+-- @return #boolean
+function M:IsBeacon() end
+
+---
+-- @function [parent=#Entity] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#Entity] CastToClient
+-- @param self
+-- @return Client#Client
+function M:CastToClient() end
+
+---
+-- @function [parent=#Entity] CastToNPC
+-- @param self
+-- @return NPC#NPC
+function M:CastToNPC() end
+
+---
+-- @function [parent=#Entity] CastToMob
+-- @param self
+-- @return Mob#Mob
+function M:CastToMob() end
+
+---
+-- @function [parent=#Entity] CastToCorpse
+-- @param self
+-- @return Corpse#Corpse
+function M:CastToCorpse() end
+
+---
+-- @function [parent=#Entity] CastToObject
+-- @param self
+-- @return Object#Object
+function M:CastToObject() end
+
+---
+-- @function [parent=#Entity] CastToDoor
+-- @param self
+-- @return Door#Door
+function M:CastToDoor() end
+
+return M;

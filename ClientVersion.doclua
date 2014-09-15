@@ -1,0 +1,31 @@
+---
+-- @module ClientVersion
+
+local M = {}
+
+---
+-- @field [parent=#ClientVersion] #number Unknown
+M.Unknown = 1;
+
+---
+-- @field [parent=#ClientVersion] #number Titanium
+M.Titanium = 1;
+
+---
+-- @field [parent=#ClientVersion] #number SoF
+M.SoF = 1;
+
+---
+-- @field [parent=#ClientVersion] #number SoD
+M.SoD = 1;
+
+---
+-- @field [parent=#ClientVersion] #number Underfoot
+M.Underfoot = 1;
+
+---
+-- @field [parent=#ClientVersion] #number RoF
+M.RoF = 1;
+
+
+return M;

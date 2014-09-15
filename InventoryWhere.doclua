@@ -1,0 +1,27 @@
+---
+-- @module InventoryWhere
+
+local M = {}
+
+---
+-- @field [parent=#InventoryWhere] #number Personal
+M.Personal = 1;
+
+---
+-- @field [parent=#InventoryWhere] #number Bank
+M.Bank = 1;
+
+---
+-- @field [parent=#InventoryWhere] #number SharedBank
+M.SharedBank = 1;
+
+---
+-- @field [parent=#InventoryWhere] #number Trading
+M.Trading = 1;
+
+---
+-- @field [parent=#InventoryWhere] #number Cursor
+M.Cursor = 1;
+
+
+return M;

@@ -1,0 +1,147 @@
+---
+-- @module SpecialAbility
+
+local M = {}
+
+---
+-- @field [parent=#SpecialAbility] #number summon
+M.summon = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number enrage
+M.enrage = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number rampage
+M.rampage = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number area_rampage
+M.area_rampage = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number flurry
+M.flurry = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number triple_attack
+M.triple_attack = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number quad_attack
+M.quad_attack = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number innate_dual_wield
+M.innate_dual_wield = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number bane_attack
+M.bane_attack = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number magical_attack
+M.magical_attack = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number ranged_attack
+M.ranged_attack = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number unslowable
+M.unslowable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number unmezable
+M.unmezable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number uncharmable
+M.uncharmable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number unstunable
+M.unstunable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number unsnareable
+M.unsnareable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number unfearable
+M.unfearable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number undispellable
+M.undispellable = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_melee
+M.immune_melee = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_magic
+M.immune_magic = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_fleeing
+M.immune_fleeing = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_melee_except_bane
+M.immune_melee_except_bane = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_melee_except_magical
+M.immune_melee_except_magical = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_aggro
+M.immune_aggro = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_aggro_on
+M.immune_aggro_on = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_casting_from_range
+M.immune_casting_from_range = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_feign_death
+M.immune_feign_death = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_taunt
+M.immune_taunt = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number tunnelvision
+M.tunnelvision = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number dont_buff_friends
+M.dont_buff_friends = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number immune_pacify
+M.immune_pacify = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number leash
+M.leash = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number tether
+M.tether = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number destructible_object
+M.destructible_object = 1;
+
+---
+-- @field [parent=#SpecialAbility] #number no_harm_from_client
+M.no_harm_from_client = 1;
+
+
+return M;

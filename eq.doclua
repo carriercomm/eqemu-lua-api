@@ -1,0 +1,1146 @@
+---
+-- @module eq
+
+---------------------------------------------------------------------------------
+-- @field [parent=#global] #eq eq
+
+---------------------------------------------------------------------------------
+-- eq
+-- @type eq
+
+local M = {}
+
+---
+-- @function [parent=#eq] load_encounter
+-- @param #string name
+-- @return #nil
+function M.load_encounter(name) end
+
+---
+-- @function [parent=#eq] unload_encounter
+-- @param #string name
+-- @return #nil
+function M.unload_encounter(name) end
+
+---
+-- @function [parent=#eq] register_npc_event
+-- @param #string name
+-- @param #number evt
+-- @param #number npc_id
+-- @param LuaFunction func
+-- @return #nil
+function M.register_npc_event(name,evt,npc_id,func) end
+
+---
+-- @function [parent=#eq] unregister_npc_event
+-- @param #string name
+-- @param #number evt
+-- @param #number npc_id
+-- @return #nil
+function M.unregister_npc_event(name,evt,npc_id) end
+
+---
+-- @function [parent=#eq] register_player_event
+-- @param #string name
+-- @param #number evt
+-- @param LuaFunction func
+-- @return #nil
+function M.register_player_event(name,evt,func) end
+
+---
+-- @function [parent=#eq] unregister_player_event
+-- @param #string name
+-- @param #number evt
+-- @return #nil
+function M.unregister_player_event(name,evt) end
+
+---
+-- @function [parent=#eq] register_item_event
+-- @param #string name
+-- @param #number evt
+-- @param #number item_id
+-- @param LuaFunction func
+-- @return #nil
+function M.register_item_event(name,evt,item_id,func) end
+
+---
+-- @function [parent=#eq] unregister_item_event
+-- @param #string name
+-- @param #number evt
+-- @param #number item_id
+-- @return #nil
+function M.unregister_item_event(name,evt,item_id) end
+
+---
+-- @function [parent=#eq] register_spell_event
+-- @param #string name
+-- @param #number evt
+-- @param #number spell_id
+-- @param LuaFunction func
+-- @return #nil
+function M.register_spell_event(name,evt,spell_id,func) end
+
+---
+-- @function [parent=#eq] unregister_spell_event
+-- @param #string name
+-- @param #number evt
+-- @param #number spell_id
+-- @return #nil
+function M.unregister_spell_event(name,evt,spell_id) end
+
+---
+-- @function [parent=#eq] spawn2
+-- @param #number npc_type
+-- @param #number grid
+-- @param #number unused
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number heading
+-- @return Mob#Mob
+function M.spawn2(npc_type,grid,unused,x,y,z,heading) end
+
+---
+-- @function [parent=#eq] spawn_from_spawn2
+-- @param #number spawn2_id
+-- @return Mob#Mob
+function M.spawn_from_spawn2(spawn2_id) end
+
+---
+-- @function [parent=#eq] enable_spawn2
+-- @param #number spawn2_id
+-- @return #nil
+function M.enable_spawn2(spawn2_id) end
+
+---
+-- @function [parent=#eq] disable_spawn2
+-- @param #number spawn2_id
+-- @return #nil
+function M.disable_spawn2(spawn2_id) end
+
+---
+-- @function [parent=#eq] set_timer
+-- @param #string timer
+-- @param #number time_ms
+-- @return #nil
+function M.set_timer(timer,time_ms) end
+
+---
+-- @function [parent=#eq] set_timer
+-- @param #string timer
+-- @param #number time_ms
+-- @param Lua_ItemInst#Lua_ItemInst inst
+-- @return #nil
+function M.set_timer(timer,time_ms,inst) end
+
+---
+-- @function [parent=#eq] set_timer
+-- @param #string timer
+-- @param #number time_ms
+-- @param Lua_Mob#Lua_Mob mob
+-- @return #nil
+function M.set_timer(timer,time_ms,mob) end
+
+---
+-- @function [parent=#eq] stop_timer
+-- @param #string timer
+-- @return #nil
+function M.stop_timer(timer) end
+
+---
+-- @function [parent=#eq] stop_timer
+-- @param #string timer
+-- @param Lua_ItemInst#Lua_ItemInst inst
+-- @return #nil
+function M.stop_timer(timer,inst) end
+
+---
+-- @function [parent=#eq] stop_timer
+-- @param #string timer
+-- @param Lua_Mob#Lua_Mob mob
+-- @return #nil
+function M.stop_timer(timer,mob) end
+
+---
+-- @function [parent=#eq] stop_all_timers
+-- @return #nil
+function M.stop_all_timers() end
+
+---
+-- @function [parent=#eq] stop_all_timers
+-- @param Lua_ItemInst#Lua_ItemInst inst
+-- @return #nil
+function M.stop_all_timers(inst) end
+
+---
+-- @function [parent=#eq] stop_all_timers
+-- @param Lua_Mob#Lua_Mob mob
+-- @return #nil
+function M.stop_all_timers(mob) end
+
+---
+-- @function [parent=#eq] depop
+-- @return #nil
+function M.depop() end
+
+---
+-- @function [parent=#eq] depop
+-- @param #number npc_type
+-- @return #nil
+function M.depop(npc_type) end
+
+---
+-- @function [parent=#eq] depop_with_timer
+-- @return #nil
+function M.depop_with_timer() end
+
+---
+-- @function [parent=#eq] depop_with_timer
+-- @param #number npc_type
+-- @return #nil
+function M.depop_with_timer(npc_type) end
+
+---
+-- @function [parent=#eq] depop_all
+-- @return #nil
+function M.depop_all() end
+
+---
+-- @function [parent=#eq] depop_all
+-- @param #number npc_type
+-- @return #nil
+function M.depop_all(npc_type) end
+
+---
+-- @function [parent=#eq] depop_zone
+-- @param #boolean start_spawn_status
+-- @return #nil
+function M.depop_zone(start_spawn_status) end
+
+---
+-- @function [parent=#eq] repop_zone
+-- @return #nil
+function M.repop_zone() end
+
+---
+-- @function [parent=#eq] is_disc_tome
+-- @param #number item_id
+-- @return #boolean
+function M.is_disc_tome(item_id) end
+
+---
+-- @function [parent=#eq] safe_move
+-- @return #nil
+function M.safe_move() end
+
+---
+-- @function [parent=#eq] rain
+-- @param #number weather
+-- @return #nil
+function M.rain(weather) end
+
+---
+-- @function [parent=#eq] snow
+-- @param #number weather
+-- @return #nil
+function M.snow(weather) end
+
+---
+-- @function [parent=#eq] scribe_spells
+-- @param #number max
+-- @return #number
+function M.scribe_spells(max) end
+
+---
+-- @function [parent=#eq] scribe_spells
+-- @param #number max
+-- @param #number min
+-- @return #number
+function M.scribe_spells(max,min) end
+
+---
+-- @function [parent=#eq] train_discs
+-- @param #number max
+-- @return #number
+function M.train_discs(max) end
+
+---
+-- @function [parent=#eq] train_discs
+-- @param #number max
+-- @param #number min
+-- @return #number
+function M.train_discs(max,min) end
+
+---
+-- @function [parent=#eq] set_sky
+-- @param #number sky
+-- @return #nil
+function M.set_sky(sky) end
+
+---
+-- @function [parent=#eq] set_guild
+-- @param #number guild_id
+-- @param #number rank
+-- @return #nil
+function M.set_guild(guild_id,rank) end
+
+---
+-- @function [parent=#eq] create_guild
+-- @param #string name
+-- @param #string leader
+-- @return #nil
+function M.create_guild(name,leader) end
+
+---
+-- @function [parent=#eq] set_time
+-- @param #number hour
+-- @param #number min
+-- @return #nil
+function M.set_time(hour,min) end
+
+---
+-- @function [parent=#eq] signal
+-- @param #number npc_id
+-- @param #number signal_id
+-- @return #nil
+function M.signal(npc_id,signal_id) end
+
+---
+-- @function [parent=#eq] signal
+-- @param #number npc_id
+-- @param #number signal_id
+-- @param #number wait
+-- @return #nil
+function M.signal(npc_id,signal_id,wait) end
+
+---
+-- @function [parent=#eq] set_global
+-- @param #string name
+-- @param #string value
+-- @param #number options
+-- @param #string duration
+-- @return #nil
+function M.set_global(name,value,options,duration) end
+
+---
+-- @function [parent=#eq] target_global
+-- @param #string name
+-- @param #string value
+-- @param #string duration
+-- @param #number npc_id
+-- @param #number char_id
+-- @param #number zone_id
+-- @return #nil
+function M.target_global(name,value,duration,npc_id,char_id,zone_id) end
+
+---
+-- @function [parent=#eq] delete_global
+-- @param #string name
+-- @return #nil
+function M.delete_global(name) end
+
+---
+-- @function [parent=#eq] start
+-- @param #number wp
+-- @return #nil
+function M.start(wp) end
+
+---
+-- @function [parent=#eq] stop
+-- @return #nil
+function M.stop() end
+
+---
+-- @function [parent=#eq] pause
+-- @param #number duration
+-- @return #nil
+function M.pause(duration) end
+
+---
+-- @function [parent=#eq] move_to
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M.move_to(x,y,z) end
+
+---
+-- @function [parent=#eq] move_to
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M.move_to(x,y,z,h) end
+
+---
+-- @function [parent=#eq] move_to
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #boolean save_guard_spot
+-- @return #nil
+function M.move_to(x,y,z,h,save_guard_spot) end
+
+---
+-- @function [parent=#eq] resume
+-- @return #nil
+function M.resume() end
+
+---
+-- @function [parent=#eq] set_next_hp_event
+-- @param #number hp
+-- @return #nil
+function M.set_next_hp_event(hp) end
+
+---
+-- @function [parent=#eq] set_next_inc_hp_event
+-- @param #number hp
+-- @return #nil
+function M.set_next_inc_hp_event(hp) end
+
+---
+-- @function [parent=#eq] respawn
+-- @param #number npc_type
+-- @param #number grid
+-- @return #nil
+function M.respawn(npc_type,grid) end
+
+---
+-- @function [parent=#eq] set_proximity
+-- @param #number min_x
+-- @param #number max_x
+-- @param #number min_y
+-- @param #number max_y
+-- @return #nil
+function M.set_proximity(min_x,max_x,min_y,max_y) end
+
+---
+-- @function [parent=#eq] set_proximity
+-- @param #number min_x
+-- @param #number max_x
+-- @param #number min_y
+-- @param #number max_y
+-- @param #number min_z
+-- @param #number max_z
+-- @return #nil
+function M.set_proximity(min_x,max_x,min_y,max_y,min_z,max_z) end
+
+---
+-- @function [parent=#eq] clear_proximity
+-- @return #nil
+function M.clear_proximity() end
+
+---
+-- @function [parent=#eq] enable_proximity_say
+-- @return #nil
+function M.enable_proximity_say() end
+
+---
+-- @function [parent=#eq] disable_proximity_say
+-- @return #nil
+function M.disable_proximity_say() end
+
+---
+-- @function [parent=#eq] set_anim
+-- @param #number npc_type
+-- @param #number anim_num
+-- @return #nil
+function M.set_anim(npc_type,anim_num) end
+
+---
+-- @function [parent=#eq] spawn_condition
+-- @param #string zone
+-- @param #number instance_id
+-- @param #number condition_id
+-- @param #number value
+-- @return #nil
+function M.spawn_condition(zone,instance_id,condition_id,value) end
+
+---
+-- @function [parent=#eq] get_spawn_condition
+-- @param #string zone
+-- @param #number instance_id
+-- @param #number condition_id
+-- @return #nil
+function M.get_spawn_condition(zone,instance_id,condition_id) end
+
+---
+-- @function [parent=#eq] toggle_spawn_event
+-- @param #number event_id
+-- @param #boolean enable
+-- @param #boolean reset
+-- @return #nil
+function M.toggle_spawn_event(event_id,enable,reset) end
+
+---
+-- @function [parent=#eq] summon_burried_player_corpse
+-- @param #number char_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M.summon_burried_player_corpse(char_id,x,y,z,h) end
+
+---
+-- @function [parent=#eq] summon_all_player_corpses
+-- @param #number char_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M.summon_all_player_corpses(char_id,x,y,z,h) end
+
+---
+-- @function [parent=#eq] get_player_burried_corpse_count
+-- @param #number char_id
+-- @return #number
+function M.get_player_burried_corpse_count(char_id) end
+
+---
+-- @function [parent=#eq] bury_player_corpse
+-- @param #number char_id
+-- @return #boolean
+function M.bury_player_corpse(char_id) end
+
+---
+-- @function [parent=#eq] task_selector
+-- @param IntegerArray#IntegerArray table
+-- @return #nil
+function M.task_selector(table) end
+
+---
+-- @function [parent=#eq] task_set_selector
+-- @param #number task_set
+-- @return #nil
+function M.task_set_selector(task_set) end
+
+---
+-- @function [parent=#eq] enable_task
+-- @param IntegerArray#IntegerArray table
+-- @return #nil
+function M.enable_task(table) end
+
+---
+-- @function [parent=#eq] disable_task
+-- @param IntegerArray#IntegerArray table
+-- @return #nil
+function M.disable_task(table) end
+
+---
+-- @function [parent=#eq] is_task_enabled
+-- @param #number task
+-- @return #boolean
+function M.is_task_enabled(task) end
+
+---
+-- @function [parent=#eq] is_task_active
+-- @param #number task
+-- @return #boolean
+function M.is_task_active(task) end
+
+---
+-- @function [parent=#eq] is_task_activity_active
+-- @param #number task
+-- @param #number activity
+-- @return #boolean
+function M.is_task_activity_active(task,activity) end
+
+---
+-- @function [parent=#eq] get_task_activity_done_count
+-- @param #number task
+-- @param #number activity
+-- @return #number
+function M.get_task_activity_done_count(task,activity) end
+
+---
+-- @function [parent=#eq] update_task_activity
+-- @param #number task
+-- @param #number activity
+-- @param #number count
+-- @return #nil
+function M.update_task_activity(task,activity,count) end
+
+---
+-- @function [parent=#eq] reset_task_activity
+-- @param #number task
+-- @param #number activity
+-- @return #nil
+function M.reset_task_activity(task,activity) end
+
+---
+-- @function [parent=#eq] task_explored_area
+-- @param #number explore_id
+-- @return #nil
+function M.task_explored_area(explore_id) end
+
+---
+-- @function [parent=#eq] assign_task
+-- @param #number task_id
+-- @return #nil
+function M.assign_task(task_id) end
+
+---
+-- @function [parent=#eq] fail_task
+-- @param #number task_id
+-- @return #nil
+function M.fail_task(task_id) end
+
+---
+-- @function [parent=#eq] task_time_left
+-- @param #number task_id
+-- @return #number
+function M.task_time_left(task_id) end
+
+---
+-- @function [parent=#eq] is_task_completed
+-- @param #number task_id
+-- @return #number
+function M.is_task_completed(task_id) end
+
+---
+-- @function [parent=#eq] enabled_task_count
+-- @param #number task_set
+-- @return #number
+function M.enabled_task_count(task_set) end
+
+---
+-- @function [parent=#eq] first_task_in_set
+-- @param #number task_set
+-- @return #number
+function M.first_task_in_set(task_set) end
+
+---
+-- @function [parent=#eq] last_task_in_set
+-- @param #number task_set
+-- @return #number
+function M.last_task_in_set(task_set) end
+
+---
+-- @function [parent=#eq] next_task_in_set
+-- @param #number task_set
+-- @param #number task_id
+-- @return #number
+function M.next_task_in_set(task_set,task_id) end
+
+---
+-- @function [parent=#eq] active_speak_task
+-- @return #number
+function M.active_speak_task() end
+
+---
+-- @function [parent=#eq] active_speak_activity
+-- @param #number task_id
+-- @return #number
+function M.active_speak_activity(task_id) end
+
+---
+-- @function [parent=#eq] active_tasks_in_set
+-- @param #number task_set
+-- @return #number
+function M.active_tasks_in_set(task_set) end
+
+---
+-- @function [parent=#eq] completed_tasks_in_set
+-- @param #number task_set
+-- @return #number
+function M.completed_tasks_in_set(task_set) end
+
+---
+-- @function [parent=#eq] is_task_appropriate
+-- @param #number task
+-- @return #boolean
+function M.is_task_appropriate(task) end
+
+---
+-- @function [parent=#eq] popup
+-- @param #string title
+-- @param #string text
+-- @param #number id
+-- @param #number buttons
+-- @param #number duration
+-- @return #nil
+function M.popup(title,text,id,buttons,duration) end
+
+---
+-- @function [parent=#eq] clear_spawn_timers
+-- @return #nil
+function M.clear_spawn_timers() end
+
+---
+-- @function [parent=#eq] zone_emote
+-- @param #number type
+-- @param #string str
+-- @return #nil
+function M.zone_emote(type,str) end
+
+---
+-- @function [parent=#eq] world_emote
+-- @param #number type
+-- @param #string str
+-- @return #nil
+function M.world_emote(type,str) end
+
+---
+-- @function [parent=#eq] get_level
+-- @param #number type
+-- @return #number
+function M.get_level(type) end
+
+---
+-- @function [parent=#eq] create_ground_object
+-- @param #number item_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M.create_ground_object(item_id,x,y,z,h) end
+
+---
+-- @function [parent=#eq] create_ground_object
+-- @param #number item_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #number decay_time
+-- @return #nil
+function M.create_ground_object(item_id,x,y,z,h,decay_time) end
+
+---
+-- @function [parent=#eq] create_ground_object_from_model
+-- @param #string model
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M.create_ground_object_from_model(model,x,y,z,h) end
+
+---
+-- @function [parent=#eq] create_ground_object_from_model
+-- @param #string model
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #number type
+-- @return #nil
+function M.create_ground_object_from_model(model,x,y,z,h,type) end
+
+---
+-- @function [parent=#eq] create_ground_object_from_model
+-- @param #string model
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #number type
+-- @param #number decay_time
+-- @return #nil
+function M.create_ground_object_from_model(model,x,y,z,h,type,decay_time) end
+
+---
+-- @function [parent=#eq] create_door
+-- @param #string model
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #number open_type
+-- @param #number size
+-- @return #nil
+function M.create_door(model,x,y,z,h,open_type,size) end
+
+---
+-- @function [parent=#eq] modify_npc_stat
+-- @param #string id
+-- @param #string value
+-- @return #nil
+function M.modify_npc_stat(id,value) end
+
+---
+-- @function [parent=#eq] collect_items
+-- @param #number item_id
+-- @param #boolean remove
+-- @return #number
+function M.collect_items(item_id,remove) end
+
+---
+-- @function [parent=#eq] update_spawn_timer
+-- @param #number id
+-- @param #number new_time
+-- @return #nil
+function M.update_spawn_timer(id,new_time) end
+
+---
+-- @function [parent=#eq] merchant_set_item
+-- @param #number npc_id
+-- @param #number item_id
+-- @return #nil
+function M.merchant_set_item(npc_id,item_id) end
+
+---
+-- @function [parent=#eq] merchant_set_item
+-- @param #number npc_id
+-- @param #number item_id
+-- @param #number quantity
+-- @return #nil
+function M.merchant_set_item(npc_id,item_id,quantity) end
+
+---
+-- @function [parent=#eq] merchant_count_item
+-- @param #number npc_id
+-- @param #number item_id
+-- @return #number
+function M.merchant_count_item(npc_id,item_id) end
+
+---
+-- @function [parent=#eq] item_link
+-- @param #number item_id
+-- @return #string
+function M.item_link(item_id) end
+
+---
+-- @function [parent=#eq] say_link
+-- @param #string phrase
+-- @return #nil
+function M.say_link(phrase) end
+
+---
+-- @function [parent=#eq] say_link
+-- @param #string phrase
+-- @param #boolean silent
+-- @return #nil
+function M.say_link(phrase,silent) end
+
+---
+-- @function [parent=#eq] say_link
+-- @param #string phrase
+-- @param #boolean silent
+-- @param #string link_name
+-- @return #nil
+function M.say_link(phrase,silent,link_name) end
+
+---
+-- @function [parent=#eq] get_guild_name_by_id
+-- @param #number guild_id
+-- @return #string
+function M.get_guild_name_by_id(guild_id) end
+
+---
+-- @function [parent=#eq] create_instance
+-- @param #string zone
+-- @param #number version
+-- @param #number duration
+-- @return #number
+function M.create_instance(zone,version,duration) end
+
+---
+-- @function [parent=#eq] destroy_instance
+-- @param #number instance_id
+-- @return #nil
+function M.destroy_instance(instance_id) end
+
+---
+-- @function [parent=#eq] get_instance_id
+-- @param #string zone
+-- @param #number version
+-- @return #number
+function M.get_instance_id(zone,version) end
+
+---
+-- @function [parent=#eq] get_characters_in_instance
+-- @param #number instance_id
+-- @return HashTable#HashTable
+function M.get_characters_in_instance(instance_id) end
+
+---
+-- @function [parent=#eq] assign_to_instance
+-- @param #number instance_id
+-- @return #nil
+function M.assign_to_instance(instance_id) end
+
+---
+-- @function [parent=#eq] assign_group_to_instance
+-- @param #number instance_id
+-- @return #nil
+function M.assign_group_to_instance(instance_id) end
+
+---
+-- @function [parent=#eq] assign_raid_to_instance
+-- @param #number instance_id
+-- @return #nil
+function M.assign_raid_to_instance(instance_id) end
+
+---
+-- @function [parent=#eq] remove_from_instance
+-- @param #number instance_id
+-- @return #nil
+function M.remove_from_instance(instance_id) end
+
+---
+-- @function [parent=#eq] remove_all_from_instance
+-- @param #number instance_id
+-- @return #nil
+function M.remove_all_from_instance(instance_id) end
+
+---
+-- @function [parent=#eq] flag_instance_by_group_leader
+-- @param #number zone
+-- @param #number version
+-- @return #nil
+function M.flag_instance_by_group_leader(zone,version) end
+
+---
+-- @function [parent=#eq] flag_instance_by_raid_leader
+-- @param #number zone
+-- @param #number version
+-- @return #nil
+function M.flag_instance_by_raid_leader(zone,version) end
+
+---
+-- @function [parent=#eq] fly_mode
+-- @param #number flymode
+-- @return #nil
+function M.fly_mode(flymode) end
+
+---
+-- @function [parent=#eq] faction_value
+-- @return #number
+function M.faction_value() end
+
+---
+-- @function [parent=#eq] check_title
+-- @param #number title_set
+-- @return #nil
+function M.check_title(title_set) end
+
+---
+-- @function [parent=#eq] enable_title
+-- @param #number title_set
+-- @return #nil
+function M.enable_title(title_set) end
+
+---
+-- @function [parent=#eq] remove_title
+-- @param #number title_set
+-- @return #nil
+function M.remove_title(title_set) end
+
+---
+-- @function [parent=#eq] wear_change
+-- @param #number slot
+-- @param #number texture
+-- @return #nil
+function M.wear_change(slot,texture) end
+
+---
+-- @function [parent=#eq] voice_tell
+-- @param #string str
+-- @param #number macro_num
+-- @param #number race_num
+-- @param #number gender_num
+-- @return #nil
+function M.voice_tell(str,macro_num,race_num,gender_num) end
+
+---
+-- @function [parent=#eq] send_mail
+-- @param #string to
+-- @param #string from
+-- @param #string subject
+-- @param #string message
+-- @return #nil
+function M.send_mail(to,from,subject,message) end
+
+---
+-- @function [parent=#eq] cross_zone_signal_client_by_char_id
+-- @param #number player_id
+-- @param #number signal
+-- @return #nil
+function M.cross_zone_signal_client_by_char_id(player_id,signal) end
+
+---
+-- @function [parent=#eq] cross_zone_signal_client_by_name
+-- @param #string player
+-- @param #number signal
+-- @return #nil
+function M.cross_zone_signal_client_by_name(player,signal) end
+
+---
+-- @function [parent=#eq] cross_zone_message_player_by_name
+-- @param #number type
+-- @param #string player
+-- @param #string message
+-- @return #nil
+function M.cross_zone_message_player_by_name(type,player,message) end
+
+---
+-- @function [parent=#eq] get_qglobals
+-- @param NPC#NPC npc
+-- @param Client#Client client
+-- @return HashTable#HashTable
+function M.get_qglobals(npc,client) end
+
+---
+-- @function [parent=#eq] get_qglobals
+-- @param Client#Client client
+-- @return HashTable#HashTable
+function M.get_qglobals(client) end
+
+---
+-- @function [parent=#eq] get_qglobals
+-- @param NPC#NPC npc
+-- @return HashTable#HashTable
+function M.get_qglobals(npc) end
+
+---
+-- @function [parent=#eq] get_qglobals
+-- @return HashTable#HashTable
+function M.get_qglobals() end
+
+---
+-- @function [parent=#eq] get_entity_list
+-- @return EntityList#EntityList
+function M.get_entity_list() end
+
+---
+-- @function [parent=#eq] get_zone_id
+-- @return #number
+function M.get_zone_id() end
+
+---
+-- @function [parent=#eq] get_zone_long_name
+-- @return #string
+function M.get_zone_long_name() end
+
+---
+-- @function [parent=#eq] get_zone_short_name
+-- @return #string
+function M.get_zone_short_name() end
+
+---
+-- @function [parent=#eq] get_zone_instance_id
+-- @return #number
+function M.get_zone_instance_id() end
+
+---
+-- @function [parent=#eq] get_zone_instance_version
+-- @return #number
+function M.get_zone_instance_version() end
+
+---
+-- @function [parent=#eq] get_zone_weather
+-- @return #number
+function M.get_zone_weather() end
+
+---
+-- @function [parent=#eq] add_area
+-- @param #number id
+-- @param #number type
+-- @param #number min_x
+-- @param #number max_x
+-- @param #number min_y
+-- @param #number max_y
+-- @param #number min_z
+-- @param #number max_z
+-- @return #nil
+function M.add_area(id,type,min_x,max_x,min_y,max_y,min_z,max_z) end
+
+---
+-- @function [parent=#eq] remove_area
+-- @param #number id
+-- @return #nil
+function M.remove_area(id) end
+
+---
+-- @function [parent=#eq] clear_areas
+-- @return #nil
+function M.clear_areas() end
+
+---
+-- @function [parent=#eq] remove_spawn_point
+-- @param #number spawn2_id
+-- @return #nil
+function M.remove_spawn_point(spawn2_id) end
+
+---
+-- @function [parent=#eq] add_spawn_point
+-- @param SpawnPointOptions#SpawnPointOptions table
+-- @return #nil
+function M.add_spawn_point(table) end
+
+---
+-- @function [parent=#eq] attack
+-- @param #string client_name
+-- @return #nil
+function M.attack(client_name) end
+
+---
+-- @function [parent=#eq] attack_npc
+-- @param #number npc_entity_id
+-- @return #nil
+function M.attack_npc(npc_entity_id) end
+
+---
+-- @function [parent=#eq] attack_npc_type
+-- @param #number npc_type
+-- @return #nil
+function M.attack_npc_type(npc_type) end
+
+---
+-- @function [parent=#eq] follow
+-- @param #number entity_id
+-- @return #nil
+function M.follow(entity_id) end
+
+---
+-- @function [parent=#eq] follow
+-- @param #number entity_id
+-- @param #number distance
+-- @return #nil
+function M.follow(entity_id,distance) end
+
+---
+-- @function [parent=#eq] stop_follow
+-- @return #nil
+function M.stop_follow() end
+
+---
+-- @function [parent=#eq] get_owner
+-- @return Mob#Mob
+function M.get_owner() end
+
+---
+-- @function [parent=#eq] get_quest_item
+-- @return ItemInst#ItemInst
+function M.get_quest_item() end
+
+---
+-- @function [parent=#eq] enable_recipe
+-- @param #number recipe_id
+-- @return Bool#Bool
+function M.enable_recipe(recipe_id) end
+
+---
+-- @function [parent=#eq] disable_recipe
+-- @param #number recipe_id
+-- @return Bool#Bool
+function M.disable_recipe(recipe_id) end
+
+---
+-- @function [parent=#eq] clear_npctype_cache
+-- @param #number npctype_id
+-- @return #nil
+function M.clear_npctype_cache(npctype_id) end
+
+---
+-- @function [parent=#eq] clock
+-- @return #number
+function M.clock() end
+
+return M;

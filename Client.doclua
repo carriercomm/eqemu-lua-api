@@ -1,0 +1,1978 @@
+---
+-- @module Client
+-- @extends Mob#Mob
+
+local M = {}
+
+---
+-- @field [parent=#Client] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Client] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Client] SendSound
+-- @param self
+-- @return #nil
+function M:SendSound() end
+
+---
+-- @function [parent=#Client] Save
+-- @param self
+-- @return #nil
+function M:Save() end
+
+---
+-- @function [parent=#Client] Save
+-- @param self
+-- @param #number commit_now
+-- @return #nil
+function M:Save(commit_now) end
+
+---
+-- @function [parent=#Client] SaveBackup
+-- @param self
+-- @return #nil
+function M:SaveBackup() end
+
+---
+-- @function [parent=#Client] Connected
+-- @param self
+-- @return #boolean
+function M:Connected() end
+
+---
+-- @function [parent=#Client] InZone
+-- @param self
+-- @return #boolean
+function M:InZone() end
+
+---
+-- @function [parent=#Client] Kick
+-- @param self
+-- @return #nil
+function M:Kick() end
+
+---
+-- @function [parent=#Client] Disconnect
+-- @param self
+-- @return #nil
+function M:Disconnect() end
+
+---
+-- @function [parent=#Client] IsLD
+-- @param self
+-- @return #boolean
+function M:IsLD() end
+
+---
+-- @function [parent=#Client] WorldKick
+-- @param self
+-- @return #nil
+function M:WorldKick() end
+
+---
+-- @function [parent=#Client] GetAnon
+-- @param self
+-- @return #boolean
+function M:GetAnon() end
+
+---
+-- @function [parent=#Client] Duck
+-- @param self
+-- @return #nil
+function M:Duck() end
+
+---
+-- @function [parent=#Client] Stand
+-- @param self
+-- @return #nil
+function M:Stand() end
+
+---
+-- @function [parent=#Client] SetGM
+-- @param self
+-- @param #boolean v
+-- @return #nil
+function M:SetGM(v) end
+
+---
+-- @function [parent=#Client] SetPVP
+-- @param self
+-- @param #boolean v
+-- @return #nil
+function M:SetPVP(v) end
+
+---
+-- @function [parent=#Client] GetPVP
+-- @param self
+-- @return #boolean
+function M:GetPVP() end
+
+---
+-- @function [parent=#Client] GetGM
+-- @param self
+-- @return #boolean
+function M:GetGM() end
+
+---
+-- @function [parent=#Client] SetBaseClass
+-- @param self
+-- @param #number v
+-- @return #nil
+function M:SetBaseClass(v) end
+
+---
+-- @function [parent=#Client] SetBaseRace
+-- @param self
+-- @param #number v
+-- @return #nil
+function M:SetBaseRace(v) end
+
+---
+-- @function [parent=#Client] SetBaseGender
+-- @param self
+-- @param #number v
+-- @return #nil
+function M:SetBaseGender(v) end
+
+---
+-- @function [parent=#Client] GetBaseFace
+-- @param self
+-- @return #number
+function M:GetBaseFace() end
+
+---
+-- @function [parent=#Client] GetLanguageSkill
+-- @param self
+-- @param #number skill_id
+-- @return #number
+function M:GetLanguageSkill(skill_id) end
+
+---
+-- @function [parent=#Client] GetLastName
+-- @param self
+-- @return #string
+function M:GetLastName() end
+
+---
+-- @function [parent=#Client] GetLDoNPointsTheme
+-- @param self
+-- @param #number theme
+-- @return #number
+function M:GetLDoNPointsTheme(theme) end
+
+---
+-- @function [parent=#Client] GetBaseSTR
+-- @param self
+-- @return #number
+function M:GetBaseSTR() end
+
+---
+-- @function [parent=#Client] GetBaseSTA
+-- @param self
+-- @return #number
+function M:GetBaseSTA() end
+
+---
+-- @function [parent=#Client] GetBaseCHA
+-- @param self
+-- @return #number
+function M:GetBaseCHA() end
+
+---
+-- @function [parent=#Client] GetBaseDEX
+-- @param self
+-- @return #number
+function M:GetBaseDEX() end
+
+---
+-- @function [parent=#Client] GetBaseINT
+-- @param self
+-- @return #number
+function M:GetBaseINT() end
+
+---
+-- @function [parent=#Client] GetBaseAGI
+-- @param self
+-- @return #number
+function M:GetBaseAGI() end
+
+---
+-- @function [parent=#Client] GetBaseWIS
+-- @param self
+-- @return #number
+function M:GetBaseWIS() end
+
+---
+-- @function [parent=#Client] GetWeight
+-- @param self
+-- @return #number
+function M:GetWeight() end
+
+---
+-- @function [parent=#Client] GetEXP
+-- @param self
+-- @return #number
+function M:GetEXP() end
+
+---
+-- @function [parent=#Client] GetAAExp
+-- @param self
+-- @return #number
+function M:GetAAExp() end
+
+---
+-- @function [parent=#Client] GetTotalSecondsPlayed
+-- @param self
+-- @return #number
+function M:GetTotalSecondsPlayed() end
+
+---
+-- @function [parent=#Client] UpdateLDoNPoints
+-- @param self
+-- @param #number points
+-- @param #number theme
+-- @return #nil
+function M:UpdateLDoNPoints(points,theme) end
+
+---
+-- @function [parent=#Client] SetDeity
+-- @param self
+-- @param #number v
+-- @return #nil
+function M:SetDeity(v) end
+
+---
+-- @function [parent=#Client] AddEXP
+-- @param self
+-- @param #number add_exp
+-- @return #nil
+function M:AddEXP(add_exp) end
+
+---
+-- @function [parent=#Client] AddEXP
+-- @param self
+-- @param #number add_exp
+-- @param #number conlevel
+-- @return #nil
+function M:AddEXP(add_exp,conlevel) end
+
+---
+-- @function [parent=#Client] AddEXP
+-- @param self
+-- @param #number add_exp
+-- @param #number conlevel
+-- @param #boolean resexp
+-- @return #nil
+function M:AddEXP(add_exp,conlevel,resexp) end
+
+---
+-- @function [parent=#Client] SetEXP
+-- @param self
+-- @param #number set_exp
+-- @param #number set_aaxp
+-- @return #nil
+function M:SetEXP(set_exp,set_aaxp) end
+
+---
+-- @function [parent=#Client] SetEXP
+-- @param self
+-- @param #number set_exp
+-- @param #number set_aaxp
+-- @param #boolean resexp
+-- @return #nil
+function M:SetEXP(set_exp,set_aaxp,resexp) end
+
+---
+-- @function [parent=#Client] SetBindPoint
+-- @param self
+-- @return #nil
+function M:SetBindPoint() end
+
+---
+-- @function [parent=#Client] SetBindPoint
+-- @param self
+-- @param #number to_zone
+-- @return #nil
+function M:SetBindPoint(to_zone) end
+
+---
+-- @function [parent=#Client] SetBindPoint
+-- @param self
+-- @param #number to_zone
+-- @param #number new_x
+-- @return #nil
+function M:SetBindPoint(to_zone,new_x) end
+
+---
+-- @function [parent=#Client] SetBindPoint
+-- @param self
+-- @param #number to_zone
+-- @param #number new_x
+-- @param #number new_y
+-- @return #nil
+function M:SetBindPoint(to_zone,new_x,new_y) end
+
+---
+-- @function [parent=#Client] SetBindPoint
+-- @param self
+-- @param #number to_zone
+-- @param #number new_x
+-- @param #number new_y
+-- @param #number new_z
+-- @return #nil
+function M:SetBindPoint(to_zone,new_x,new_y,new_z) end
+
+---
+-- @function [parent=#Client] GetBindX
+-- @param self
+-- @return #number
+function M:GetBindX() end
+
+---
+-- @function [parent=#Client] GetBindX
+-- @param self
+-- @param #number index
+-- @return #number
+function M:GetBindX(index) end
+
+---
+-- @function [parent=#Client] GetBindY
+-- @param self
+-- @return #number
+function M:GetBindY() end
+
+---
+-- @function [parent=#Client] GetBindY
+-- @param self
+-- @param #number index
+-- @return #number
+function M:GetBindY(index) end
+
+---
+-- @function [parent=#Client] GetBindZ
+-- @param self
+-- @return #number
+function M:GetBindZ() end
+
+---
+-- @function [parent=#Client] GetBindZ
+-- @param self
+-- @param #number index
+-- @return #number
+function M:GetBindZ(index) end
+
+---
+-- @function [parent=#Client] GetBindHeading
+-- @param self
+-- @return #number
+function M:GetBindHeading() end
+
+---
+-- @function [parent=#Client] GetBindHeading
+-- @param self
+-- @param #number index
+-- @return #number
+function M:GetBindHeading(index) end
+
+---
+-- @function [parent=#Client] GetBindZoneID
+-- @param self
+-- @return #number
+function M:GetBindZoneID() end
+
+---
+-- @function [parent=#Client] GetBindZoneID
+-- @param self
+-- @param #number index
+-- @return #number
+function M:GetBindZoneID(index) end
+
+---
+-- @function [parent=#Client] MovePC
+-- @param self
+-- @param #number zone
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number heading
+-- @return #nil
+function M:MovePC(zone,x,y,z,heading) end
+
+---
+-- @function [parent=#Client] MovePCInstance
+-- @param self
+-- @param #number zone
+-- @param #number instance
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number heading
+-- @return #nil
+function M:MovePCInstance(zone,instance,x,y,z,heading) end
+
+---
+-- @function [parent=#Client] ChangeLastName
+-- @param self
+-- @param #string in_
+-- @return #nil
+function M:ChangeLastName(in_) end
+
+---
+-- @function [parent=#Client] GetFactionLevel
+-- @param self
+-- @param #number char_id
+-- @param #number npc_id
+-- @param #number race
+-- @param #number class_
+-- @param #number deity
+-- @param #number faction
+-- @param NPC#NPC npc
+-- @return #number
+function M:GetFactionLevel(char_id,npc_id,race,class_,deity,faction,npc) end
+
+---
+-- @function [parent=#Client] SetFactionLevel
+-- @param self
+-- @param #number char_id
+-- @param #number npc_id
+-- @param #number char_class
+-- @param #number char_race
+-- @param #number char_deity
+-- @return #nil
+function M:SetFactionLevel(char_id,npc_id,char_class,char_race,char_deity) end
+
+---
+-- @function [parent=#Client] SetFactionLevel2
+-- @param self
+-- @param #number char_id
+-- @param #number faction_id
+-- @param #number char_class
+-- @param #number char_race
+-- @param #number char_deity
+-- @param #number value
+-- @param #number temp
+-- @return #nil
+function M:SetFactionLevel2(char_id,faction_id,char_class,char_race,char_deity,value,temp) end
+
+---
+-- @function [parent=#Client] GetRawItemAC
+-- @param self
+-- @return #number
+function M:GetRawItemAC() end
+
+---
+-- @function [parent=#Client] AccountID
+-- @param self
+-- @return #number
+function M:AccountID() end
+
+---
+-- @function [parent=#Client] AccountName
+-- @param self
+-- @return #string
+function M:AccountName() end
+
+---
+-- @function [parent=#Client] Admin
+-- @param self
+-- @return #number
+function M:Admin() end
+
+---
+-- @function [parent=#Client] CharacterID
+-- @param self
+-- @return #number
+function M:CharacterID() end
+
+---
+-- @function [parent=#Client] GuildRank
+-- @param self
+-- @return #number
+function M:GuildRank() end
+
+---
+-- @function [parent=#Client] GuildID
+-- @param self
+-- @return #number
+function M:GuildID() end
+
+---
+-- @function [parent=#Client] GetFace
+-- @param self
+-- @return #number
+function M:GetFace() end
+
+---
+-- @function [parent=#Client] TakeMoneyFromPP
+-- @param self
+-- @param #number copper
+-- @return #boolean
+function M:TakeMoneyFromPP(copper) end
+
+---
+-- @function [parent=#Client] TakeMoneyFromPP
+-- @param self
+-- @param #number copper
+-- @param #boolean update_client
+-- @return #boolean
+function M:TakeMoneyFromPP(copper,update_client) end
+
+---
+-- @function [parent=#Client] AddMoneyToPP
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @param #boolean update_client
+-- @return #nil
+function M:AddMoneyToPP(copper,silver,gold,platinum,update_client) end
+
+---
+-- @function [parent=#Client] TGB
+-- @param self
+-- @return #boolean
+function M:TGB() end
+
+---
+-- @function [parent=#Client] GetSkillPoints
+-- @param self
+-- @return #number
+function M:GetSkillPoints() end
+
+---
+-- @function [parent=#Client] SetSkillPoints
+-- @param self
+-- @param #number skill
+-- @return #nil
+function M:SetSkillPoints(skill) end
+
+---
+-- @function [parent=#Client] IncreaseSkill
+-- @param self
+-- @param #number skill_id
+-- @return #nil
+function M:IncreaseSkill(skill_id) end
+
+---
+-- @function [parent=#Client] IncreaseSkill
+-- @param self
+-- @param #number skill_id
+-- @param #number value
+-- @return #nil
+function M:IncreaseSkill(skill_id,value) end
+
+---
+-- @function [parent=#Client] IncreaseLanguageSkill
+-- @param self
+-- @param #number skill_id
+-- @return #nil
+function M:IncreaseLanguageSkill(skill_id) end
+
+---
+-- @function [parent=#Client] IncreaseLanguageSkill
+-- @param self
+-- @param #number skill_id
+-- @param #number value
+-- @return #nil
+function M:IncreaseLanguageSkill(skill_id,value) end
+
+---
+-- @function [parent=#Client] GetRawSkill
+-- @param self
+-- @param #number skill_id
+-- @return #number
+function M:GetRawSkill(skill_id) end
+
+---
+-- @function [parent=#Client] HasSkill
+-- @param self
+-- @param #number skill_id
+-- @return #boolean
+function M:HasSkill(skill_id) end
+
+---
+-- @function [parent=#Client] CanHaveSkill
+-- @param self
+-- @param #number skill_id
+-- @return #boolean
+function M:CanHaveSkill(skill_id) end
+
+---
+-- @function [parent=#Client] SetSkill
+-- @param self
+-- @param #number skill_id
+-- @param #number value
+-- @return #nil
+function M:SetSkill(skill_id,value) end
+
+---
+-- @function [parent=#Client] AddSkill
+-- @param self
+-- @param #number skill_id
+-- @param #number value
+-- @return #nil
+function M:AddSkill(skill_id,value) end
+
+---
+-- @function [parent=#Client] CheckSpecializeIncrease
+-- @param self
+-- @param #number spell_id
+-- @return #nil
+function M:CheckSpecializeIncrease(spell_id) end
+
+---
+-- @function [parent=#Client] CheckIncreaseSkill
+-- @param self
+-- @param #number skill_id
+-- @param Mob#Mob target
+-- @return #nil
+function M:CheckIncreaseSkill(skill_id,target) end
+
+---
+-- @function [parent=#Client] CheckIncreaseSkill
+-- @param self
+-- @param #number skill_id
+-- @param Mob#Mob target
+-- @param #number chance_mod
+-- @return #nil
+function M:CheckIncreaseSkill(skill_id,target,chance_mod) end
+
+---
+-- @function [parent=#Client] SetLanguageSkill
+-- @param self
+-- @param #number language
+-- @param #number value
+-- @return #nil
+function M:SetLanguageSkill(language,value) end
+
+---
+-- @function [parent=#Client] MaxSkill
+-- @param self
+-- @param #number skill_id
+-- @return #number
+function M:MaxSkill(skill_id) end
+
+---
+-- @function [parent=#Client] IsMedding
+-- @param self
+-- @return #boolean
+function M:IsMedding() end
+
+---
+-- @function [parent=#Client] GetDuelTarget
+-- @param self
+-- @return #number
+function M:GetDuelTarget() end
+
+---
+-- @function [parent=#Client] IsDueling
+-- @param self
+-- @return #boolean
+function M:IsDueling() end
+
+---
+-- @function [parent=#Client] SetDuelTarget
+-- @param self
+-- @param #number c
+-- @return #nil
+function M:SetDuelTarget(c) end
+
+---
+-- @function [parent=#Client] SetDueling
+-- @param self
+-- @param #boolean v
+-- @return #nil
+function M:SetDueling(v) end
+
+---
+-- @function [parent=#Client] ResetAA
+-- @param self
+-- @return #nil
+function M:ResetAA() end
+
+---
+-- @function [parent=#Client] MemSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number slot
+-- @return #nil
+function M:MemSpell(spell_id,slot) end
+
+---
+-- @function [parent=#Client] MemSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number slot
+-- @param #boolean update_client
+-- @return #nil
+function M:MemSpell(spell_id,slot,update_client) end
+
+---
+-- @function [parent=#Client] UnmemSpell
+-- @param self
+-- @param #number slot
+-- @return #nil
+function M:UnmemSpell(slot) end
+
+---
+-- @function [parent=#Client] UnmemSpell
+-- @param self
+-- @param #number slot
+-- @param #boolean update_client
+-- @return #nil
+function M:UnmemSpell(slot,update_client) end
+
+---
+-- @function [parent=#Client] UnmemSpellAll
+-- @param self
+-- @return #nil
+function M:UnmemSpellAll() end
+
+---
+-- @function [parent=#Client] UnmemSpellAll
+-- @param self
+-- @param #boolean update_client
+-- @return #nil
+function M:UnmemSpellAll(update_client) end
+
+---
+-- @function [parent=#Client] ScribeSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number slot
+-- @return #nil
+function M:ScribeSpell(spell_id,slot) end
+
+---
+-- @function [parent=#Client] ScribeSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number slot
+-- @param #boolean update_client
+-- @return #nil
+function M:ScribeSpell(spell_id,slot,update_client) end
+
+---
+-- @function [parent=#Client] UnscribeSpell
+-- @param self
+-- @param #number slot
+-- @return #nil
+function M:UnscribeSpell(slot) end
+
+---
+-- @function [parent=#Client] UnscribeSpell
+-- @param self
+-- @param #number slot
+-- @param #boolean update_client
+-- @return #nil
+function M:UnscribeSpell(slot,update_client) end
+
+---
+-- @function [parent=#Client] UnscribeSpellAll
+-- @param self
+-- @return #nil
+function M:UnscribeSpellAll() end
+
+---
+-- @function [parent=#Client] UnscribeSpellAll
+-- @param self
+-- @param #boolean update_client
+-- @return #nil
+function M:UnscribeSpellAll(update_client) end
+
+---
+-- @function [parent=#Client] UntrainDisc
+-- @param self
+-- @param #number slot
+-- @return #nil
+function M:UntrainDisc(slot) end
+
+---
+-- @function [parent=#Client] UntrainDisc
+-- @param self
+-- @param #number slot
+-- @param #boolean update_client
+-- @return #nil
+function M:UntrainDisc(slot,update_client) end
+
+---
+-- @function [parent=#Client] UntrainDiscAll
+-- @param self
+-- @return #nil
+function M:UntrainDiscAll() end
+
+---
+-- @function [parent=#Client] UntrainDiscAll
+-- @param self
+-- @param #boolean update_client
+-- @return #nil
+function M:UntrainDiscAll(update_client) end
+
+---
+-- @function [parent=#Client] IsSitting
+-- @param self
+-- @return #boolean
+function M:IsSitting() end
+
+---
+-- @function [parent=#Client] SetFeigned
+-- @param self
+-- @param #boolean v
+-- @return #nil
+function M:SetFeigned(v) end
+
+---
+-- @function [parent=#Client] GetFeigned
+-- @param self
+-- @return #boolean
+function M:GetFeigned() end
+
+---
+-- @function [parent=#Client] AutoSplitEnabled
+-- @param self
+-- @return #boolean
+function M:AutoSplitEnabled() end
+
+---
+-- @function [parent=#Client] SetHorseId
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:SetHorseId(id) end
+
+---
+-- @function [parent=#Client] GetHorseId
+-- @param self
+-- @return #number
+function M:GetHorseId() end
+
+---
+-- @function [parent=#Client] NukeItem
+-- @param self
+-- @param #number item_num
+-- @return #nil
+function M:NukeItem(item_num) end
+
+---
+-- @function [parent=#Client] NukeItem
+-- @param self
+-- @param #number item_num
+-- @param #number where_to_check
+-- @return #nil
+function M:NukeItem(item_num,where_to_check) end
+
+---
+-- @function [parent=#Client] SetTint
+-- @param self
+-- @param #number slot_id
+-- @param #number color
+-- @return #nil
+function M:SetTint(slot_id,color) end
+
+---
+-- @function [parent=#Client] SetMaterial
+-- @param self
+-- @param #number slot_id
+-- @param #number item_id
+-- @return #nil
+function M:SetMaterial(slot_id,item_id) end
+
+---
+-- @function [parent=#Client] Undye
+-- @param self
+-- @return #nil
+function M:Undye() end
+
+---
+-- @function [parent=#Client] GetItemIDAt
+-- @param self
+-- @param #number slot_id
+-- @return #number
+function M:GetItemIDAt(slot_id) end
+
+---
+-- @function [parent=#Client] GetAugmentIDAt
+-- @param self
+-- @param #number slot_id
+-- @param #number aug_slot
+-- @return #number
+function M:GetAugmentIDAt(slot_id,aug_slot) end
+
+---
+-- @function [parent=#Client] DeleteItemInInventory
+-- @param self
+-- @param #number slot_id
+-- @param #number quantity
+-- @return #nil
+function M:DeleteItemInInventory(slot_id,quantity) end
+
+---
+-- @function [parent=#Client] DeleteItemInInventory
+-- @param self
+-- @param #number slot_id
+-- @param #number quantity
+-- @param #boolean update_client
+-- @return #nil
+function M:DeleteItemInInventory(slot_id,quantity,update_client) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @return #nil
+function M:SummonItem(item_id) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @return #nil
+function M:SummonItem(item_id,charges) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2,aug3) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @param #number aug4
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2,aug3,aug4) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @param #number aug4
+-- @param #number aug5
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2,aug3,aug4,aug5) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @param #number aug4
+-- @param #number aug5
+-- @param #boolean attuned
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2,aug3,aug4,aug5,attuned) end
+
+---
+-- @function [parent=#Client] SummonItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #number aug1
+-- @param #number aug2
+-- @param #number aug3
+-- @param #number aug4
+-- @param #number aug5
+-- @param #boolean attuned
+-- @param #number to_slot
+-- @return #nil
+function M:SummonItem(item_id,charges,aug1,aug2,aug3,aug4,aug5,attuned,to_slot) end
+
+---
+-- @function [parent=#Client] SetStats
+-- @param self
+-- @param #number type
+-- @param #number value
+-- @return #nil
+function M:SetStats(type,value) end
+
+---
+-- @function [parent=#Client] IncStats
+-- @param self
+-- @param #number type
+-- @param #number value
+-- @return #nil
+function M:IncStats(type,value) end
+
+---
+-- @function [parent=#Client] DropItem
+-- @param self
+-- @param #number slot_id
+-- @return #nil
+function M:DropItem(slot_id) end
+
+---
+-- @function [parent=#Client] BreakInvis
+-- @param self
+-- @return #nil
+function M:BreakInvis() end
+
+---
+-- @function [parent=#Client] LeaveGroup
+-- @param self
+-- @return #nil
+function M:LeaveGroup() end
+
+---
+-- @function [parent=#Client] IsGrouped
+-- @param self
+-- @return #boolean
+function M:IsGrouped() end
+
+---
+-- @function [parent=#Client] IsRaidGrouped
+-- @param self
+-- @return #boolean
+function M:IsRaidGrouped() end
+
+---
+-- @function [parent=#Client] Hungry
+-- @param self
+-- @return #boolean
+function M:Hungry() end
+
+---
+-- @function [parent=#Client] Thirsty
+-- @param self
+-- @return #boolean
+function M:Thirsty() end
+
+---
+-- @function [parent=#Client] GetInstrumentMod
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:GetInstrumentMod(spell_id) end
+
+---
+-- @function [parent=#Client] DecreaseByID
+-- @param self
+-- @param #number type
+-- @param #number amt
+-- @return #boolean
+function M:DecreaseByID(type,amt) end
+
+---
+-- @function [parent=#Client] Escape
+-- @param self
+-- @return #nil
+function M:Escape() end
+
+---
+-- @function [parent=#Client] GoFish
+-- @param self
+-- @return #nil
+function M:GoFish() end
+
+---
+-- @function [parent=#Client] ForageItem
+-- @param self
+-- @return #nil
+function M:ForageItem() end
+
+---
+-- @function [parent=#Client] ForageItem
+-- @param self
+-- @param #boolean guarantee
+-- @return #nil
+function M:ForageItem(guarantee) end
+
+---
+-- @function [parent=#Client] CalcPriceMod
+-- @param self
+-- @param Mob#Mob other
+-- @param #boolean reverse
+-- @return #number
+function M:CalcPriceMod(other,reverse) end
+
+---
+-- @function [parent=#Client] ResetTrade
+-- @param self
+-- @return #nil
+function M:ResetTrade() end
+
+---
+-- @function [parent=#Client] UseDiscipline
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @return #boolean
+function M:UseDiscipline(spell_id,target_id) end
+
+---
+-- @function [parent=#Client] GetCharacterFactionLevel
+-- @param self
+-- @param #number faction_id
+-- @return #number
+function M:GetCharacterFactionLevel(faction_id) end
+
+---
+-- @function [parent=#Client] SetZoneFlag
+-- @param self
+-- @param #number zone_id
+-- @return #nil
+function M:SetZoneFlag(zone_id) end
+
+---
+-- @function [parent=#Client] ClearZoneFlag
+-- @param self
+-- @param #number zone_id
+-- @return #nil
+function M:ClearZoneFlag(zone_id) end
+
+---
+-- @function [parent=#Client] HasZoneFlag
+-- @param self
+-- @param #number zone_id
+-- @return #boolean
+function M:HasZoneFlag(zone_id) end
+
+---
+-- @function [parent=#Client] SendZoneFlagInfo
+-- @param self
+-- @param #Client to
+-- @return #nil
+function M:SendZoneFlagInfo(to) end
+
+---
+-- @function [parent=#Client] SetAATitle
+-- @param self
+-- @param #string title
+-- @return #nil
+function M:SetAATitle(title) end
+
+---
+-- @function [parent=#Client] GetClientVersion
+-- @param self
+-- @return #number
+function M:GetClientVersion() end
+
+---
+-- @function [parent=#Client] GetClientVersionBit
+-- @param self
+-- @return #number
+function M:GetClientVersionBit() end
+
+---
+-- @function [parent=#Client] SetTitleSuffix
+-- @param self
+-- @param #string text
+-- @return #nil
+function M:SetTitleSuffix(text) end
+
+---
+-- @function [parent=#Client] SetAAPoints
+-- @param self
+-- @param #number points
+-- @return #nil
+function M:SetAAPoints(points) end
+
+---
+-- @function [parent=#Client] GetAAPoints
+-- @param self
+-- @return #number
+function M:GetAAPoints() end
+
+---
+-- @function [parent=#Client] GetSpentAA
+-- @param self
+-- @return #number
+function M:GetSpentAA() end
+
+---
+-- @function [parent=#Client] AddAAPoints
+-- @param self
+-- @param #number points
+-- @return #nil
+function M:AddAAPoints(points) end
+
+---
+-- @function [parent=#Client] RefundAA
+-- @param self
+-- @return #nil
+function M:RefundAA() end
+
+---
+-- @function [parent=#Client] GetModCharacterFactionLevel
+-- @param self
+-- @param #number faction
+-- @return #number
+function M:GetModCharacterFactionLevel(faction) end
+
+---
+-- @function [parent=#Client] GetLDoNWins
+-- @param self
+-- @return #number
+function M:GetLDoNWins() end
+
+---
+-- @function [parent=#Client] GetLDoNLosses
+-- @param self
+-- @return #number
+function M:GetLDoNLosses() end
+
+---
+-- @function [parent=#Client] GetLDoNWinsTheme
+-- @param self
+-- @param #number theme
+-- @return #number
+function M:GetLDoNWinsTheme(theme) end
+
+---
+-- @function [parent=#Client] GetLDoNLossesTheme
+-- @param self
+-- @param #number theme
+-- @return #number
+function M:GetLDoNLossesTheme(theme) end
+
+---
+-- @function [parent=#Client] GetStartZone
+-- @param self
+-- @return #number
+function M:GetStartZone() end
+
+---
+-- @function [parent=#Client] SetStartZone
+-- @param self
+-- @param #number zone_id
+-- @return #nil
+function M:SetStartZone(zone_id) end
+
+---
+-- @function [parent=#Client] SetStartZone
+-- @param self
+-- @param #number zone_id
+-- @param #number x
+-- @return #nil
+function M:SetStartZone(zone_id,x) end
+
+---
+-- @function [parent=#Client] SetStartZone
+-- @param self
+-- @param #number zone_id
+-- @param #number x
+-- @param #number y
+-- @return #nil
+function M:SetStartZone(zone_id,x,y) end
+
+---
+-- @function [parent=#Client] SetStartZone
+-- @param self
+-- @param #number zone_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:SetStartZone(zone_id,x,y,z) end
+
+---
+-- @function [parent=#Client] KeyRingAdd
+-- @param self
+-- @param #number item
+-- @return #nil
+function M:KeyRingAdd(item) end
+
+---
+-- @function [parent=#Client] KeyRingCheck
+-- @param self
+-- @param #number item
+-- @return #boolean
+function M:KeyRingCheck(item) end
+
+---
+-- @function [parent=#Client] AddPVPPoints
+-- @param self
+-- @param #number points
+-- @return #nil
+function M:AddPVPPoints(points) end
+
+---
+-- @function [parent=#Client] AddCrystals
+-- @param self
+-- @param #number radiant
+-- @param #number ebon
+-- @return #nil
+function M:AddCrystals(radiant,ebon) end
+
+---
+-- @function [parent=#Client] GetPVPPoints
+-- @param self
+-- @return #number
+function M:GetPVPPoints() end
+
+---
+-- @function [parent=#Client] GetRadiantCrystals
+-- @param self
+-- @return #number
+function M:GetRadiantCrystals() end
+
+---
+-- @function [parent=#Client] GetEbonCrystals
+-- @param self
+-- @return #number
+function M:GetEbonCrystals() end
+
+---
+-- @function [parent=#Client] QuestReadBook
+-- @param self
+-- @param #string text
+-- @param #number type
+-- @return #nil
+function M:QuestReadBook(text,type) end
+
+---
+-- @function [parent=#Client] UpdateGroupAAs
+-- @param self
+-- @param #number points
+-- @param #number type
+-- @return #nil
+function M:UpdateGroupAAs(points,type) end
+
+---
+-- @function [parent=#Client] GetGroupPoints
+-- @param self
+-- @return #number
+function M:GetGroupPoints() end
+
+---
+-- @function [parent=#Client] GetRaidPoints
+-- @param self
+-- @return #number
+function M:GetRaidPoints() end
+
+---
+-- @function [parent=#Client] LearnRecipe
+-- @param self
+-- @param #number recipe
+-- @return #nil
+function M:LearnRecipe(recipe) end
+
+---
+-- @function [parent=#Client] GetEndurance
+-- @param self
+-- @return #number
+function M:GetEndurance() end
+
+---
+-- @function [parent=#Client] GetMaxEndurance
+-- @param self
+-- @return #number
+function M:GetMaxEndurance() end
+
+---
+-- @function [parent=#Client] GetEndurancePercent
+-- @param self
+-- @return #number
+function M:GetEndurancePercent() end
+
+---
+-- @function [parent=#Client] SetEndurance
+-- @param self
+-- @param #number endur
+-- @return #nil
+function M:SetEndurance(endur) end
+
+---
+-- @function [parent=#Client] SendOPTranslocateConfirm
+-- @param self
+-- @param Mob#Mob caster
+-- @param #number spell_id
+-- @return #nil
+function M:SendOPTranslocateConfirm(caster,spell_id) end
+
+---
+-- @function [parent=#Client] GetIP
+-- @param self
+-- @return #number
+function M:GetIP() end
+
+---
+-- @function [parent=#Client] AddLevelBasedExp
+-- @param self
+-- @param #number exp_pct
+-- @return #nil
+function M:AddLevelBasedExp(exp_pct) end
+
+---
+-- @function [parent=#Client] AddLevelBasedExp
+-- @param self
+-- @param #number exp_pct
+-- @param #number max_level
+-- @return #nil
+function M:AddLevelBasedExp(exp_pct,max_level) end
+
+---
+-- @function [parent=#Client] IncrementAA
+-- @param self
+-- @param #number aa
+-- @return #nil
+function M:IncrementAA(aa) end
+
+---
+-- @function [parent=#Client] MarkSingleCompassLoc
+-- @param self
+-- @param #number in_x
+-- @param #number in_y
+-- @param #number in_z
+-- @return #nil
+function M:MarkSingleCompassLoc(in_x,in_y,in_z) end
+
+---
+-- @function [parent=#Client] MarkSingleCompassLoc
+-- @param self
+-- @param #number in_x
+-- @param #number in_y
+-- @param #number in_z
+-- @param #number count
+-- @return #nil
+function M:MarkSingleCompassLoc(in_x,in_y,in_z,count) end
+
+---
+-- @function [parent=#Client] GetNextAvailableSpellBookSlot
+-- @param self
+-- @return #number
+function M:GetNextAvailableSpellBookSlot() end
+
+---
+-- @function [parent=#Client] GetNextAvailableSpellBookSlot
+-- @param self
+-- @param #number start
+-- @return #number
+function M:GetNextAvailableSpellBookSlot(start) end
+
+---
+-- @function [parent=#Client] FindSpellBookSlotBySpellID
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:FindSpellBookSlotBySpellID(spell_id) end
+
+---
+-- @function [parent=#Client] UpdateTaskActivity
+-- @param self
+-- @param #number task
+-- @param #number activity
+-- @param #number count
+-- @return #nil
+function M:UpdateTaskActivity(task,activity,count) end
+
+---
+-- @function [parent=#Client] AssignTask
+-- @param self
+-- @param #number task
+-- @param #number npc_id
+-- @return #nil
+function M:AssignTask(task,npc_id) end
+
+---
+-- @function [parent=#Client] FailTask
+-- @param self
+-- @param #number task
+-- @return #nil
+function M:FailTask(task) end
+
+---
+-- @function [parent=#Client] IsTaskCompleted
+-- @param self
+-- @param #number task
+-- @return #boolean
+function M:IsTaskCompleted(task) end
+
+---
+-- @function [parent=#Client] IsTaskActive
+-- @param self
+-- @param #number task
+-- @return #boolean
+function M:IsTaskActive(task) end
+
+---
+-- @function [parent=#Client] IsTaskActivityActive
+-- @param self
+-- @param #number task
+-- @param #number activity
+-- @return #boolean
+function M:IsTaskActivityActive(task,activity) end
+
+---
+-- @function [parent=#Client] GetCorpseCount
+-- @param self
+-- @return #number
+function M:GetCorpseCount() end
+
+---
+-- @function [parent=#Client] GetCorpseID
+-- @param self
+-- @param #number corpse
+-- @return #number
+function M:GetCorpseID(corpse) end
+
+---
+-- @function [parent=#Client] GetCorpseItemAt
+-- @param self
+-- @param #number corpse
+-- @param #number slot
+-- @return #number
+function M:GetCorpseItemAt(corpse,slot) end
+
+---
+-- @function [parent=#Client] AssignToInstance
+-- @param self
+-- @param #number instance_id
+-- @return #nil
+function M:AssignToInstance(instance_id) end
+
+---
+-- @function [parent=#Client] Freeze
+-- @param self
+-- @return #nil
+function M:Freeze() end
+
+---
+-- @function [parent=#Client] UnFreeze
+-- @param self
+-- @return #nil
+function M:UnFreeze() end
+
+---
+-- @function [parent=#Client] GetAggroCount
+-- @param self
+-- @return #number
+function M:GetAggroCount() end
+
+---
+-- @function [parent=#Client] GetCarriedMoney
+-- @param self
+-- @return #number
+function M:GetCarriedMoney() end
+
+---
+-- @function [parent=#Client] GetAllMoney
+-- @param self
+-- @return #number
+function M:GetAllMoney() end
+
+---
+-- @function [parent=#Client] OpenLFGuildWindow
+-- @param self
+-- @return #nil
+function M:OpenLFGuildWindow() end
+
+---
+-- @function [parent=#Client] Signal
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:Signal(id) end
+
+---
+-- @function [parent=#Client] AddAlternateCurrencyValue
+-- @param self
+-- @param #number currency
+-- @param #number amount
+-- @return #nil
+function M:AddAlternateCurrencyValue(currency,amount) end
+
+---
+-- @function [parent=#Client] SendWebLink
+-- @param self
+-- @param #string site
+-- @return #nil
+function M:SendWebLink(site) end
+
+---
+-- @function [parent=#Client] HasSpellScribed
+-- @param self
+-- @param #number spell_id
+-- @return #boolean
+function M:HasSpellScribed(spell_id) end
+
+---
+-- @function [parent=#Client] SetAccountFlag
+-- @param self
+-- @param #string flag
+-- @param #string val
+-- @return #nil
+function M:SetAccountFlag(flag,val) end
+
+---
+-- @function [parent=#Client] GetAccountFlag
+-- @param self
+-- @param #string flag
+-- @return #string
+function M:GetAccountFlag(flag) end
+
+---
+-- @function [parent=#Client] GetGroup
+-- @param self
+-- @return Group#Group
+function M:GetGroup() end
+
+---
+-- @function [parent=#Client] GetRaid
+-- @param self
+-- @return Raid#Raid
+function M:GetRaid() end
+
+---
+-- @function [parent=#Client] PutItemInInventory
+-- @param self
+-- @param #number slot_id
+-- @param ItemInst#ItemInst inst
+-- @return #boolean
+function M:PutItemInInventory(slot_id,inst) end
+
+---
+-- @function [parent=#Client] PushItemOnCursor
+-- @param self
+-- @param ItemInst#ItemInst inst
+-- @return #boolean
+function M:PushItemOnCursor(inst) end
+
+---
+-- @function [parent=#Client] GetInventory
+-- @param self
+-- @return Inventory#Inventory
+function M:GetInventory() end
+
+---
+-- @function [parent=#Client] SendItemScale
+-- @param self
+-- @param ItemInst#ItemInst inst
+-- @return #nil
+function M:SendItemScale(inst) end
+
+---
+-- @function [parent=#Client] QueuePacket
+-- @param self
+-- @param Packet#Packet app
+-- @return #nil
+function M:QueuePacket(app) end
+
+---
+-- @function [parent=#Client] QueuePacket
+-- @param self
+-- @param Packet#Packet app
+-- @param #boolean ack_req
+-- @return #nil
+function M:QueuePacket(app,ack_req) end
+
+---
+-- @function [parent=#Client] QueuePacket
+-- @param self
+-- @param Packet#Packet app
+-- @param #boolean ack_req
+-- @param #number client_connection_status
+-- @return #nil
+function M:QueuePacket(app,ack_req,client_connection_status) end
+
+---
+-- @function [parent=#Client] QueuePacket
+-- @param self
+-- @param Packet#Packet app
+-- @param #boolean ack_req
+-- @param #number client_connection_status
+-- @param #number filter
+-- @return #nil
+function M:QueuePacket(app,ack_req,client_connection_status,filter) end
+
+---
+-- @function [parent=#Client] GetHunger
+-- @param self
+-- @return #number
+function M:GetHunger() end
+
+---
+-- @function [parent=#Client] GetThirst
+-- @param self
+-- @return #number
+function M:GetThirst() end
+
+---
+-- @function [parent=#Client] SetHunger
+-- @param self
+-- @param #number in_hunger
+-- @return #nil
+function M:SetHunger(in_hunger) end
+
+---
+-- @function [parent=#Client] SetThirst
+-- @param self
+-- @param #number in_thirst
+-- @return #nil
+function M:SetThirst(in_thirst) end
+
+---
+-- @function [parent=#Client] SetConsumption
+-- @param self
+-- @param #number in_hunger
+-- @param #number in_thirst
+-- @return #nil
+function M:SetConsumption(in_hunger,in_thirst) end
+
+---
+-- @function [parent=#Client] SendMarqueeMessage
+-- @param self
+-- @param #number type
+-- @param #number priority
+-- @param #number fade_in
+-- @param #number fade_out
+-- @param #number duration
+-- @param #string msg
+-- @return #nil
+function M:SendMarqueeMessage(type,priority,fade_in,fade_out,duration,msg) end
+
+---
+-- @function [parent=#Client] PlayMP3
+-- @param self
+-- @param #string filename
+-- @return #nil
+function M:PlayMP3(filename) end
+
+---
+-- @type event_cast
+-- @field Client#Client self
+-- @field Spell#Spell spell
+
+---
+-- @type event_cast_begin
+-- @field Client#Client self
+-- @field Spell#Spell spell
+
+---
+-- @type event_click_door
+-- @field Client#Client self
+-- @field Door#Door door
+
+---
+-- @type event_click_object
+-- @field Client#Client self
+-- @field Object#Object object
+
+---
+-- @type event_combine_failure
+-- @field Client#Client self
+-- @field #number recipe_id
+-- @field #string recipe_name
+
+---
+-- @type event_combine_success
+-- @field Client#Client self
+-- @field #number recipe_id
+-- @field #string recipe_name
+
+---
+-- @type event_command
+-- @field Client#Client self
+-- @field #string command
+-- @field StringArray#StringArray args
+
+---
+-- @type event_connect
+-- @field Client#Client self
+
+---
+-- @type event_death
+-- @field Client#Client self
+-- @field Mob#Mob other
+-- @field #number damage
+-- @field Spell#Spell spell
+-- @field #number skill
+
+---
+-- @type event_death_complete
+-- @field Client#Client self
+-- @field Mob#Mob other
+-- @field #number damage
+-- @field Spell#Spell spell
+-- @field #number skill
+
+---
+-- @type event_disconnect
+-- @field Client#Client self
+
+---
+-- @type event_discover_item
+-- @field Client#Client self
+-- @field Item#Item item
+
+---
+-- @type event_duel_lose
+-- @field Client#Client self
+-- @field Client#Client other
+
+---
+-- @type event_duel_win
+-- @field Client#Client self
+-- @field Client#Client other
+
+---
+-- @type event_enter_area
+-- @field Client#Client self
+-- @field #number area_id
+-- @field #number area_type
+
+---
+-- @type event_enter_zone
+-- @field Client#Client self
+
+---
+-- @type event_feign_death
+-- @field Client#Client self
+-- @field NPC#NPC other
+
+---
+-- @type event_fish_failure
+-- @field Client#Client self
+
+---
+-- @type event_fish_start
+-- @field Client#Client self
+
+---
+-- @type event_fish_success
+-- @field Client#Client self
+-- @field ItemInst#ItemInst item
+
+---
+-- @type event_forage_failure
+-- @field Client#Client self
+
+---
+-- @type event_forage_success
+-- @field Client#Client self
+-- @field ItemInst#ItemInst item
+
+---
+-- @type event_group_change
+-- @field Client#Client self
+
+---
+-- @type event_leave_area
+-- @field Client#Client self
+-- @field #number area_id
+-- @field #number area_type
+
+---
+-- @type event_level_up
+-- @field Client#Client self
+
+---
+-- @type event_loot
+-- @field Client#Client self
+-- @field ItemInst#ItemInst item
+
+---
+-- @type event_player_pickup
+-- @field Client#Client self
+-- @field ItemInst#ItemInst item
+
+---
+-- @type event_popup_response
+-- @field Client#Client self
+-- @field #number popup_id
+
+---
+-- @type event_respawn
+-- @field Client#Client self
+-- @field #number option
+-- @field #boolean resurrect
+
+---
+-- @type event_say
+-- @field Client#Client self
+-- @field #string message
+-- @field #number language
+
+---
+-- @type event_signal
+-- @field Client#Client self
+-- @field #number signal
+
+---
+-- @type event_target_change
+-- @field Client#Client self
+
+---
+-- @type event_task_complete
+-- @field Client#Client self
+-- @field #number task_id
+-- @field #number activity_id
+-- @field #number count
+
+---
+-- @type event_task_fail
+-- @field Client#Client self
+-- @field #number task_id
+
+---
+-- @type event_task_stage_complete
+-- @field Client#Client self
+-- @field #number task_id
+-- @field #number activity_id
+
+---
+-- @type event_task_update
+-- @field Client#Client self
+-- @field #number task_id
+-- @field #number activity_id
+-- @field #number count
+
+---
+-- @type event_timer
+-- @field Client#Client self
+-- @field #string timer
+
+---
+-- @type event_unhandled_opcode
+-- @field Client#Client self
+-- @field Packet#Packet packet
+-- @field #boolean connecting
+
+---
+-- @type event_zone
+-- @field Client#Client self
+-- @field #number zone_id
+
+return M;

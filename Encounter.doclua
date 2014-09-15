@@ -1,0 +1,12 @@
+---
+-- @module Encounter
+
+---
+-- @type event_encounter_load
+-- @field #string name
+
+---
+-- @type event_encounter_unload
+-- @field #string name
+
+return nil;

@@ -1,0 +1,216 @@
+---
+-- @module Door
+-- @extends Entity#Entity
+
+local M = {}
+
+---
+-- @field [parent=#Door] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Door] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Door] SetDoorName
+-- @param self
+-- @param #string name
+-- @return #nil
+function M:SetDoorName(name) end
+
+---
+-- @function [parent=#Door] GetDoorName
+-- @param self
+-- @return #string
+function M:GetDoorName() end
+
+---
+-- @function [parent=#Door] GetX
+-- @param self
+-- @return #number
+function M:GetX() end
+
+---
+-- @function [parent=#Door] GetY
+-- @param self
+-- @return #number
+function M:GetY() end
+
+---
+-- @function [parent=#Door] GetZ
+-- @param self
+-- @return #number
+function M:GetZ() end
+
+---
+-- @function [parent=#Door] GetHeading
+-- @param self
+-- @return #number
+function M:GetHeading() end
+
+---
+-- @function [parent=#Door] SetX
+-- @param self
+-- @param #number x
+-- @return #nil
+function M:SetX(x) end
+
+---
+-- @function [parent=#Door] SetY
+-- @param self
+-- @param #number y
+-- @return #nil
+function M:SetY(y) end
+
+---
+-- @function [parent=#Door] SetZ
+-- @param self
+-- @param #number z
+-- @return #nil
+function M:SetZ(z) end
+
+---
+-- @function [parent=#Door] SetHeading
+-- @param self
+-- @param #number h
+-- @return #nil
+function M:SetHeading(h) end
+
+---
+-- @function [parent=#Door] SetLocation
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:SetLocation(x,y,z) end
+
+---
+-- @function [parent=#Door] GetDoorDBID
+-- @param self
+-- @return #number
+function M:GetDoorDBID() end
+
+---
+-- @function [parent=#Door] GetDoorID
+-- @param self
+-- @return #number
+function M:GetDoorID() end
+
+---
+-- @function [parent=#Door] SetSize
+-- @param self
+-- @param #number sz
+-- @return #nil
+function M:SetSize(sz) end
+
+---
+-- @function [parent=#Door] GetSize
+-- @param self
+-- @return #number
+function M:GetSize() end
+
+---
+-- @function [parent=#Door] SetIncline
+-- @param self
+-- @param #number incline
+-- @return #nil
+function M:SetIncline(incline) end
+
+---
+-- @function [parent=#Door] GetIncline
+-- @param self
+-- @return #number
+function M:GetIncline() end
+
+---
+-- @function [parent=#Door] SetOpenType
+-- @param self
+-- @param #number type
+-- @return #nil
+function M:SetOpenType(type) end
+
+---
+-- @function [parent=#Door] GetOpenType
+-- @param self
+-- @return #number
+function M:GetOpenType() end
+
+---
+-- @function [parent=#Door] SetLockPick
+-- @param self
+-- @param #number pick
+-- @return #nil
+function M:SetLockPick(pick) end
+
+---
+-- @function [parent=#Door] GetLockPick
+-- @param self
+-- @return #number
+function M:GetLockPick() end
+
+---
+-- @function [parent=#Door] SetKeyItem
+-- @param self
+-- @param #number key
+-- @return #nil
+function M:SetKeyItem(key) end
+
+---
+-- @function [parent=#Door] GetKeyItem
+-- @param self
+-- @return #number
+function M:GetKeyItem() end
+
+---
+-- @function [parent=#Door] SetNoKeyring
+-- @param self
+-- @param #number type
+-- @return #nil
+function M:SetNoKeyring(type) end
+
+---
+-- @function [parent=#Door] GetNoKeyring
+-- @param self
+-- @return #number
+function M:GetNoKeyring() end
+
+---
+-- @function [parent=#Door] CreateDatabaseEntry
+-- @param self
+-- @return #nil
+function M:CreateDatabaseEntry() end
+
+---
+-- @function [parent=#Door] ForceOpen
+-- @param self
+-- @param Mob#Mob sender
+-- @return #nil
+function M:ForceOpen(sender) end
+
+---
+-- @function [parent=#Door] ForceOpen
+-- @param self
+-- @param Mob#Mob sender
+-- @param bool#bool alt_mode
+-- @return #nil
+function M:ForceOpen(sender,alt_mode) end
+
+---
+-- @function [parent=#Door] ForceClose
+-- @param self
+-- @param Mob#Mob sender
+-- @return #nil
+function M:ForceClose(sender) end
+
+---
+-- @function [parent=#Door] ForceClose
+-- @param self
+-- @param Mob#Mob sender
+-- @param bool#bool alt_mode
+-- @return #nil
+function M:ForceClose(sender,alt_mode) end
+
+return M;

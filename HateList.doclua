@@ -1,0 +1,67 @@
+---
+-- @module HateList
+
+local M = {}
+
+---
+-- @field [parent=#HateList] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#HateList] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#HateList] GetEnt
+-- @param self
+-- @return Mob#Mob
+function M:GetEnt() end
+
+---
+-- @function [parent=#HateList] SetEnt
+-- @param self
+-- @param Mob#Mob e
+-- @return #nil
+function M:SetEnt(e) end
+
+---
+-- @function [parent=#HateList] GetDamage
+-- @param self
+-- @return #number
+function M:GetDamage() end
+
+---
+-- @function [parent=#HateList] SetDamage
+-- @param self
+-- @param #number value
+-- @return #nil
+function M:SetDamage(value) end
+
+---
+-- @function [parent=#HateList] GetHate
+-- @param self
+-- @return #number
+function M:GetHate() end
+
+---
+-- @function [parent=#HateList] SetHate
+-- @param self
+-- @param #number value
+-- @return #nil
+function M:SetHate(value) end
+
+---
+-- @function [parent=#HateList] GetFrenzy
+-- @param self
+-- @return #number
+function M:GetFrenzy() end
+
+---
+-- @function [parent=#HateList] SetFrenzy
+-- @param self
+-- @param #boolean value
+-- @return #nil
+function M:SetFrenzy(value) end
+
+return M;

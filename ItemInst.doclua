@@ -1,0 +1,302 @@
+---
+-- @module ItemInst
+
+local M = {}
+
+---
+-- @field [parent=#ItemInst] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#ItemInst] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#ItemInst] IsType
+-- @param self
+-- @param #number item_class
+-- @return #boolean
+function M:IsType(item_class) end
+
+---
+-- @function [parent=#ItemInst] IsStackable
+-- @param self
+-- @return #boolean
+function M:IsStackable() end
+
+---
+-- @function [parent=#ItemInst] IsEquipable
+-- @param self
+-- @param #number race
+-- @param #number class_
+-- @return #boolean
+function M:IsEquipable(race,class_) end
+
+---
+-- @function [parent=#ItemInst] IsEquipable
+-- @param self
+-- @param #number slot_id
+-- @return #boolean
+function M:IsEquipable(slot_id) end
+
+---
+-- @function [parent=#ItemInst] IsAugmentable
+-- @param self
+-- @return #boolean
+function M:IsAugmentable() end
+
+---
+-- @function [parent=#ItemInst] GetAugmentType
+-- @param self
+-- @return #number
+function M:GetAugmentType() end
+
+---
+-- @function [parent=#ItemInst] IsExpendable
+-- @param self
+-- @return #boolean
+function M:IsExpendable() end
+
+---
+-- @function [parent=#ItemInst] GetItem
+-- @param self
+-- @param #number slot
+-- @return #ItemInst
+function M:GetItem(slot) end
+
+---
+-- @function [parent=#ItemInst] GetItem
+-- @param self
+-- @return Item#Item
+function M:GetItem() end
+
+---
+-- @function [parent=#ItemInst] SetItem
+-- @param self
+-- @param Item#Item item
+-- @return #nil
+function M:SetItem(item) end
+
+---
+-- @function [parent=#ItemInst] GetUnscaledItem
+-- @param self
+-- @param #number slot
+-- @return Item#Item
+function M:GetUnscaledItem(slot) end
+
+---
+-- @function [parent=#ItemInst] GetItemID
+-- @param self
+-- @param #number slot
+-- @return #number
+function M:GetItemID(slot) end
+
+---
+-- @function [parent=#ItemInst] GetTotalItemCount
+-- @param self
+-- @return #number
+function M:GetTotalItemCount() end
+
+---
+-- @function [parent=#ItemInst] GetAugment
+-- @param self
+-- @param #number slot
+-- @return #ItemInst
+function M:GetAugment(slot) end
+
+---
+-- @function [parent=#ItemInst] GetAugmentItemID
+-- @param self
+-- @param #number slot
+-- @return #number
+function M:GetAugmentItemID(slot) end
+
+---
+-- @function [parent=#ItemInst] IsAugmented
+-- @param self
+-- @return #boolean
+function M:IsAugmented() end
+
+---
+-- @function [parent=#ItemInst] IsWeapon
+-- @param self
+-- @return #boolean
+function M:IsWeapon() end
+
+---
+-- @function [parent=#ItemInst] IsAmmo
+-- @param self
+-- @return #boolean
+function M:IsAmmo() end
+
+---
+-- @function [parent=#ItemInst] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#ItemInst] GetItemScriptID
+-- @param self
+-- @return #number
+function M:GetItemScriptID() end
+
+---
+-- @function [parent=#ItemInst] GetCharges
+-- @param self
+-- @return #number
+function M:GetCharges() end
+
+---
+-- @function [parent=#ItemInst] SetCharges
+-- @param self
+-- @param #number charges
+-- @return #nil
+function M:SetCharges(charges) end
+
+---
+-- @function [parent=#ItemInst] GetPrice
+-- @param self
+-- @return #number
+function M:GetPrice() end
+
+---
+-- @function [parent=#ItemInst] SetPrice
+-- @param self
+-- @param #number price
+-- @return #nil
+function M:SetPrice(price) end
+
+---
+-- @function [parent=#ItemInst] SetColor
+-- @param self
+-- @param #number color
+-- @return #nil
+function M:SetColor(color) end
+
+---
+-- @function [parent=#ItemInst] GetColor
+-- @param self
+-- @return #number
+function M:GetColor() end
+
+---
+-- @function [parent=#ItemInst] IsInstNoDrop
+-- @param self
+-- @return #boolean
+function M:IsInstNoDrop() end
+
+---
+-- @function [parent=#ItemInst] SetInstNoDrop
+-- @param self
+-- @param #boolean flag
+-- @return #nil
+function M:SetInstNoDrop(flag) end
+
+---
+-- @function [parent=#ItemInst] GetCustomDataString
+-- @param self
+-- @return #string
+function M:GetCustomDataString() end
+
+---
+-- @function [parent=#ItemInst] SetCustomData
+-- @param self
+-- @param #string identifier
+-- @param #string value
+-- @return #nil
+function M:SetCustomData(identifier,value) end
+
+---
+-- @function [parent=#ItemInst] SetCustomData
+-- @param self
+-- @param #string identifier
+-- @param #number value
+-- @return #nil
+function M:SetCustomData(identifier,value) end
+
+---
+-- @function [parent=#ItemInst] SetCustomData
+-- @param self
+-- @param #string identifier
+-- @param #number value
+-- @return #nil
+function M:SetCustomData(identifier,value) end
+
+---
+-- @function [parent=#ItemInst] SetCustomData
+-- @param self
+-- @param #string identifier
+-- @param #boolean value
+-- @return #nil
+function M:SetCustomData(identifier,value) end
+
+---
+-- @function [parent=#ItemInst] GetCustomData
+-- @param self
+-- @param #string identifier
+-- @return #string
+function M:GetCustomData(identifier) end
+
+---
+-- @function [parent=#ItemInst] DeleteCustomData
+-- @param self
+-- @param #string identifier
+-- @return #nil
+function M:DeleteCustomData(identifier) end
+
+---
+-- @function [parent=#ItemInst] SetScaling
+-- @param self
+-- @param #boolean val
+-- @return #nil
+function M:SetScaling(val) end
+
+---
+-- @function [parent=#ItemInst] SetScale
+-- @param self
+-- @param #number scale_factor
+-- @return #nil
+function M:SetScale(scale_factor) end
+
+---
+-- @function [parent=#ItemInst] GetExp
+-- @param self
+-- @return #number
+function M:GetExp() end
+
+---
+-- @function [parent=#ItemInst] SetExp
+-- @param self
+-- @param #number exp
+-- @return #nil
+function M:SetExp(exp) end
+
+---
+-- @function [parent=#ItemInst] AddExp
+-- @param self
+-- @param #number exp
+-- @return #nil
+function M:AddExp(exp) end
+
+---
+-- @function [parent=#ItemInst] GetMaxEvolveLvl
+-- @param self
+-- @return #number
+function M:GetMaxEvolveLvl() end
+
+---
+-- @function [parent=#ItemInst] GetKillsNeeded
+-- @param self
+-- @param #number current_level
+-- @return #number
+function M:GetKillsNeeded(current_level) end
+
+---
+-- @function [parent=#ItemInst] Clone
+-- @param self
+-- @return #ItemInst
+function M:Clone() end
+
+return M;

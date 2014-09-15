@@ -1,0 +1,1153 @@
+---
+-- @module Item
+
+local M = {}
+
+---
+-- @field [parent=#Item] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Item] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Item] MinStatus
+-- @param self
+-- @return #number
+function M:MinStatus() end
+
+---
+-- @function [parent=#Item] ItemClass
+-- @param self
+-- @return #number
+function M:ItemClass() end
+
+---
+-- @function [parent=#Item] Name
+-- @param self
+-- @return #string
+function M:Name() end
+
+---
+-- @function [parent=#Item] Lore
+-- @param self
+-- @return #string
+function M:Lore() end
+
+---
+-- @function [parent=#Item] IDFile
+-- @param self
+-- @return #string
+function M:IDFile() end
+
+---
+-- @function [parent=#Item] ID
+-- @param self
+-- @return #number
+function M:ID() end
+
+---
+-- @function [parent=#Item] Weight
+-- @param self
+-- @return #number
+function M:Weight() end
+
+---
+-- @function [parent=#Item] NoRent
+-- @param self
+-- @return #number
+function M:NoRent() end
+
+---
+-- @function [parent=#Item] NoDrop
+-- @param self
+-- @return #number
+function M:NoDrop() end
+
+---
+-- @function [parent=#Item] Size
+-- @param self
+-- @return #number
+function M:Size() end
+
+---
+-- @function [parent=#Item] Slots
+-- @param self
+-- @return #number
+function M:Slots() end
+
+---
+-- @function [parent=#Item] Price
+-- @param self
+-- @return #number
+function M:Price() end
+
+---
+-- @function [parent=#Item] Icon
+-- @param self
+-- @return #number
+function M:Icon() end
+
+---
+-- @function [parent=#Item] LoreGroup
+-- @param self
+-- @return #number
+function M:LoreGroup() end
+
+---
+-- @function [parent=#Item] LoreFlag
+-- @param self
+-- @return #boolean
+function M:LoreFlag() end
+
+---
+-- @function [parent=#Item] PendingLoreFlag
+-- @param self
+-- @return #boolean
+function M:PendingLoreFlag() end
+
+---
+-- @function [parent=#Item] ArtifactFlag
+-- @param self
+-- @return #boolean
+function M:ArtifactFlag() end
+
+---
+-- @function [parent=#Item] SummonedFlag
+-- @param self
+-- @return #boolean
+function M:SummonedFlag() end
+
+---
+-- @function [parent=#Item] FVNoDrop
+-- @param self
+-- @return #number
+function M:FVNoDrop() end
+
+---
+-- @function [parent=#Item] Favor
+-- @param self
+-- @return #number
+function M:Favor() end
+
+---
+-- @function [parent=#Item] GuildFavor
+-- @param self
+-- @return #number
+function M:GuildFavor() end
+
+---
+-- @function [parent=#Item] PointType
+-- @param self
+-- @return #number
+function M:PointType() end
+
+---
+-- @function [parent=#Item] BagType
+-- @param self
+-- @return #number
+function M:BagType() end
+
+---
+-- @function [parent=#Item] BagSlots
+-- @param self
+-- @return #number
+function M:BagSlots() end
+
+---
+-- @function [parent=#Item] BagSize
+-- @param self
+-- @return #number
+function M:BagSize() end
+
+---
+-- @function [parent=#Item] BagWR
+-- @param self
+-- @return #number
+function M:BagWR() end
+
+---
+-- @function [parent=#Item] BenefitFlag
+-- @param self
+-- @return #boolean
+function M:BenefitFlag() end
+
+---
+-- @function [parent=#Item] Tradeskills
+-- @param self
+-- @return #boolean
+function M:Tradeskills() end
+
+---
+-- @function [parent=#Item] CR
+-- @param self
+-- @return #number
+function M:CR() end
+
+---
+-- @function [parent=#Item] DR
+-- @param self
+-- @return #number
+function M:DR() end
+
+---
+-- @function [parent=#Item] PR
+-- @param self
+-- @return #number
+function M:PR() end
+
+---
+-- @function [parent=#Item] MR
+-- @param self
+-- @return #number
+function M:MR() end
+
+---
+-- @function [parent=#Item] FR
+-- @param self
+-- @return #number
+function M:FR() end
+
+---
+-- @function [parent=#Item] AStr
+-- @param self
+-- @return #number
+function M:AStr() end
+
+---
+-- @function [parent=#Item] ASta
+-- @param self
+-- @return #number
+function M:ASta() end
+
+---
+-- @function [parent=#Item] AAgi
+-- @param self
+-- @return #number
+function M:AAgi() end
+
+---
+-- @function [parent=#Item] ADex
+-- @param self
+-- @return #number
+function M:ADex() end
+
+---
+-- @function [parent=#Item] ACha
+-- @param self
+-- @return #number
+function M:ACha() end
+
+---
+-- @function [parent=#Item] AInt
+-- @param self
+-- @return #number
+function M:AInt() end
+
+---
+-- @function [parent=#Item] AWis
+-- @param self
+-- @return #number
+function M:AWis() end
+
+---
+-- @function [parent=#Item] HP
+-- @param self
+-- @return #number
+function M:HP() end
+
+---
+-- @function [parent=#Item] Mana
+-- @param self
+-- @return #number
+function M:Mana() end
+
+---
+-- @function [parent=#Item] AC
+-- @param self
+-- @return #number
+function M:AC() end
+
+---
+-- @function [parent=#Item] Deity
+-- @param self
+-- @return #number
+function M:Deity() end
+
+---
+-- @function [parent=#Item] SkillModValue
+-- @param self
+-- @return #number
+function M:SkillModValue() end
+
+---
+-- @function [parent=#Item] SkillModType
+-- @param self
+-- @return #number
+function M:SkillModType() end
+
+---
+-- @function [parent=#Item] BaneDmgRace
+-- @param self
+-- @return #number
+function M:BaneDmgRace() end
+
+---
+-- @function [parent=#Item] BaneDmgAmt
+-- @param self
+-- @return #number
+function M:BaneDmgAmt() end
+
+---
+-- @function [parent=#Item] BaneDmgBody
+-- @param self
+-- @return #number
+function M:BaneDmgBody() end
+
+---
+-- @function [parent=#Item] Magic
+-- @param self
+-- @return #boolean
+function M:Magic() end
+
+---
+-- @function [parent=#Item] CastTime_
+-- @param self
+-- @return #number
+function M:CastTime_() end
+
+---
+-- @function [parent=#Item] ReqLevel
+-- @param self
+-- @return #number
+function M:ReqLevel() end
+
+---
+-- @function [parent=#Item] BardType
+-- @param self
+-- @return #number
+function M:BardType() end
+
+---
+-- @function [parent=#Item] BardValue
+-- @param self
+-- @return #number
+function M:BardValue() end
+
+---
+-- @function [parent=#Item] Light
+-- @param self
+-- @return #number
+function M:Light() end
+
+---
+-- @function [parent=#Item] Delay
+-- @param self
+-- @return #number
+function M:Delay() end
+
+---
+-- @function [parent=#Item] RecLevel
+-- @param self
+-- @return #number
+function M:RecLevel() end
+
+---
+-- @function [parent=#Item] RecSkill
+-- @param self
+-- @return #number
+function M:RecSkill() end
+
+---
+-- @function [parent=#Item] ElemDmgType
+-- @param self
+-- @return #number
+function M:ElemDmgType() end
+
+---
+-- @function [parent=#Item] ElemDmgAmt
+-- @param self
+-- @return #number
+function M:ElemDmgAmt() end
+
+---
+-- @function [parent=#Item] Range
+-- @param self
+-- @return #number
+function M:Range() end
+
+---
+-- @function [parent=#Item] Damage
+-- @param self
+-- @return #number
+function M:Damage() end
+
+---
+-- @function [parent=#Item] Color
+-- @param self
+-- @return #number
+function M:Color() end
+
+---
+-- @function [parent=#Item] Classes
+-- @param self
+-- @return #number
+function M:Classes() end
+
+---
+-- @function [parent=#Item] Races
+-- @param self
+-- @return #number
+function M:Races() end
+
+---
+-- @function [parent=#Item] MaxCharges
+-- @param self
+-- @return #number
+function M:MaxCharges() end
+
+---
+-- @function [parent=#Item] ItemType
+-- @param self
+-- @return #number
+function M:ItemType() end
+
+---
+-- @function [parent=#Item] Material
+-- @param self
+-- @return #number
+function M:Material() end
+
+---
+-- @function [parent=#Item] SellRate
+-- @param self
+-- @return #number
+function M:SellRate() end
+
+---
+-- @function [parent=#Item] Fulfilment
+-- @param self
+-- @return #number
+function M:Fulfilment() end
+
+---
+-- @function [parent=#Item] CastTime
+-- @param self
+-- @return #number
+function M:CastTime() end
+
+---
+-- @function [parent=#Item] EliteMaterial
+-- @param self
+-- @return #number
+function M:EliteMaterial() end
+
+---
+-- @function [parent=#Item] ProcRate
+-- @param self
+-- @return #number
+function M:ProcRate() end
+
+---
+-- @function [parent=#Item] CombatEffects
+-- @param self
+-- @return #number
+function M:CombatEffects() end
+
+---
+-- @function [parent=#Item] Shielding
+-- @param self
+-- @return #number
+function M:Shielding() end
+
+---
+-- @function [parent=#Item] StunResist
+-- @param self
+-- @return #number
+function M:StunResist() end
+
+---
+-- @function [parent=#Item] StrikeThrough
+-- @param self
+-- @return #number
+function M:StrikeThrough() end
+
+---
+-- @function [parent=#Item] ExtraDmgSkill
+-- @param self
+-- @return #number
+function M:ExtraDmgSkill() end
+
+---
+-- @function [parent=#Item] ExtraDmgAmt
+-- @param self
+-- @return #number
+function M:ExtraDmgAmt() end
+
+---
+-- @function [parent=#Item] SpellShield
+-- @param self
+-- @return #number
+function M:SpellShield() end
+
+---
+-- @function [parent=#Item] AVoidance
+-- @param self
+-- @return #number
+function M:AVoidance() end
+
+---
+-- @function [parent=#Item] Accuracy
+-- @param self
+-- @return #number
+function M:Accuracy() end
+
+---
+-- @function [parent=#Item] CharmFileID
+-- @param self
+-- @return #number
+function M:CharmFileID() end
+
+---
+-- @function [parent=#Item] FactionMod1
+-- @param self
+-- @return #number
+function M:FactionMod1() end
+
+---
+-- @function [parent=#Item] FactionMod2
+-- @param self
+-- @return #number
+function M:FactionMod2() end
+
+---
+-- @function [parent=#Item] FactionMod3
+-- @param self
+-- @return #number
+function M:FactionMod3() end
+
+---
+-- @function [parent=#Item] FactionMod4
+-- @param self
+-- @return #number
+function M:FactionMod4() end
+
+---
+-- @function [parent=#Item] FactionAmt1
+-- @param self
+-- @return #number
+function M:FactionAmt1() end
+
+---
+-- @function [parent=#Item] FactionAmt2
+-- @param self
+-- @return #number
+function M:FactionAmt2() end
+
+---
+-- @function [parent=#Item] FactionAmt3
+-- @param self
+-- @return #number
+function M:FactionAmt3() end
+
+---
+-- @function [parent=#Item] FactionAmt4
+-- @param self
+-- @return #number
+function M:FactionAmt4() end
+
+---
+-- @function [parent=#Item] CharmFile
+-- @param self
+-- @return #string
+function M:CharmFile() end
+
+---
+-- @function [parent=#Item] AugType
+-- @param self
+-- @return #number
+function M:AugType() end
+
+---
+-- @function [parent=#Item] AugSlotType
+-- @param self
+-- @param #number i
+-- @return #number
+function M:AugSlotType(i) end
+
+---
+-- @function [parent=#Item] AugSlotVisible
+-- @param self
+-- @param #number i
+-- @return #number
+function M:AugSlotVisible(i) end
+
+---
+-- @function [parent=#Item] AugSlotUnk2
+-- @param self
+-- @param #number i
+-- @return #number
+function M:AugSlotUnk2(i) end
+
+---
+-- @function [parent=#Item] LDoNTheme
+-- @param self
+-- @return #number
+function M:LDoNTheme() end
+
+---
+-- @function [parent=#Item] LDoNPrice
+-- @param self
+-- @return #number
+function M:LDoNPrice() end
+
+---
+-- @function [parent=#Item] LDoNSold
+-- @param self
+-- @return #number
+function M:LDoNSold() end
+
+---
+-- @function [parent=#Item] BaneDmgRaceAmt
+-- @param self
+-- @return #number
+function M:BaneDmgRaceAmt() end
+
+---
+-- @function [parent=#Item] AugRestrict
+-- @param self
+-- @return #number
+function M:AugRestrict() end
+
+---
+-- @function [parent=#Item] Endur
+-- @param self
+-- @return #number
+function M:Endur() end
+
+---
+-- @function [parent=#Item] DotShielding
+-- @param self
+-- @return #number
+function M:DotShielding() end
+
+---
+-- @function [parent=#Item] Attack
+-- @param self
+-- @return #number
+function M:Attack() end
+
+---
+-- @function [parent=#Item] Regen
+-- @param self
+-- @return #number
+function M:Regen() end
+
+---
+-- @function [parent=#Item] ManaRegen
+-- @param self
+-- @return #number
+function M:ManaRegen() end
+
+---
+-- @function [parent=#Item] EnduranceRegen
+-- @param self
+-- @return #number
+function M:EnduranceRegen() end
+
+---
+-- @function [parent=#Item] Haste
+-- @param self
+-- @return #number
+function M:Haste() end
+
+---
+-- @function [parent=#Item] DamageShield
+-- @param self
+-- @return #number
+function M:DamageShield() end
+
+---
+-- @function [parent=#Item] RecastDelay
+-- @param self
+-- @return #number
+function M:RecastDelay() end
+
+---
+-- @function [parent=#Item] RecastType
+-- @param self
+-- @return #number
+function M:RecastType() end
+
+---
+-- @function [parent=#Item] AugDistiller
+-- @param self
+-- @return #number
+function M:AugDistiller() end
+
+---
+-- @function [parent=#Item] Attuneable
+-- @param self
+-- @return #boolean
+function M:Attuneable() end
+
+---
+-- @function [parent=#Item] NoPet
+-- @param self
+-- @return #boolean
+function M:NoPet() end
+
+---
+-- @function [parent=#Item] PotionBelt
+-- @param self
+-- @return #boolean
+function M:PotionBelt() end
+
+---
+-- @function [parent=#Item] Stackable
+-- @param self
+-- @return #boolean
+function M:Stackable() end
+
+---
+-- @function [parent=#Item] NoTransfer
+-- @param self
+-- @return #boolean
+function M:NoTransfer() end
+
+---
+-- @function [parent=#Item] QuestItemFlag
+-- @param self
+-- @return #boolean
+function M:QuestItemFlag() end
+
+---
+-- @function [parent=#Item] StackSize
+-- @param self
+-- @return #number
+function M:StackSize() end
+
+---
+-- @function [parent=#Item] PotionBeltSlots
+-- @param self
+-- @return #number
+function M:PotionBeltSlots() end
+
+---
+-- @function [parent=#Item] Click_Effect
+-- @param self
+-- @return #number
+function M:Click_Effect() end
+
+---
+-- @function [parent=#Item] Click_Type
+-- @param self
+-- @return #number
+function M:Click_Type() end
+
+---
+-- @function [parent=#Item] Click_Level
+-- @param self
+-- @return #number
+function M:Click_Level() end
+
+---
+-- @function [parent=#Item] Click_Level2
+-- @param self
+-- @return #number
+function M:Click_Level2() end
+
+---
+-- @function [parent=#Item] Proc_Effect
+-- @param self
+-- @return #number
+function M:Proc_Effect() end
+
+---
+-- @function [parent=#Item] Proc_Type
+-- @param self
+-- @return #number
+function M:Proc_Type() end
+
+---
+-- @function [parent=#Item] Proc_Level
+-- @param self
+-- @return #number
+function M:Proc_Level() end
+
+---
+-- @function [parent=#Item] Proc_Level2
+-- @param self
+-- @return #number
+function M:Proc_Level2() end
+
+---
+-- @function [parent=#Item] Worn_Effect
+-- @param self
+-- @return #number
+function M:Worn_Effect() end
+
+---
+-- @function [parent=#Item] Worn_Type
+-- @param self
+-- @return #number
+function M:Worn_Type() end
+
+---
+-- @function [parent=#Item] Worn_Level
+-- @param self
+-- @return #number
+function M:Worn_Level() end
+
+---
+-- @function [parent=#Item] Worn_Level2
+-- @param self
+-- @return #number
+function M:Worn_Level2() end
+
+---
+-- @function [parent=#Item] Focus_Effect
+-- @param self
+-- @return #number
+function M:Focus_Effect() end
+
+---
+-- @function [parent=#Item] Focus_Type
+-- @param self
+-- @return #number
+function M:Focus_Type() end
+
+---
+-- @function [parent=#Item] Focus_Level
+-- @param self
+-- @return #number
+function M:Focus_Level() end
+
+---
+-- @function [parent=#Item] Focus_Level2
+-- @param self
+-- @return #number
+function M:Focus_Level2() end
+
+---
+-- @function [parent=#Item] Scroll_Effect
+-- @param self
+-- @return #number
+function M:Scroll_Effect() end
+
+---
+-- @function [parent=#Item] Scroll_Type
+-- @param self
+-- @return #number
+function M:Scroll_Type() end
+
+---
+-- @function [parent=#Item] Scroll_Level
+-- @param self
+-- @return #number
+function M:Scroll_Level() end
+
+---
+-- @function [parent=#Item] Scroll_Level2
+-- @param self
+-- @return #number
+function M:Scroll_Level2() end
+
+---
+-- @function [parent=#Item] Bard_Effect
+-- @param self
+-- @return #number
+function M:Bard_Effect() end
+
+---
+-- @function [parent=#Item] Bard_Type
+-- @param self
+-- @return #number
+function M:Bard_Type() end
+
+---
+-- @function [parent=#Item] Bard_Level
+-- @param self
+-- @return #number
+function M:Bard_Level() end
+
+---
+-- @function [parent=#Item] Bard_Level2
+-- @param self
+-- @return #number
+function M:Bard_Level2() end
+
+---
+-- @function [parent=#Item] Book
+-- @param self
+-- @return #number
+function M:Book() end
+
+---
+-- @function [parent=#Item] BookType
+-- @param self
+-- @return #number
+function M:BookType() end
+
+---
+-- @function [parent=#Item] Filename
+-- @param self
+-- @return #string
+function M:Filename() end
+
+---
+-- @function [parent=#Item] SVCorruption
+-- @param self
+-- @return #number
+function M:SVCorruption() end
+
+---
+-- @function [parent=#Item] Purity
+-- @param self
+-- @return #number
+function M:Purity() end
+
+---
+-- @function [parent=#Item] BackstabDmg
+-- @param self
+-- @return #number
+function M:BackstabDmg() end
+
+---
+-- @function [parent=#Item] DSMitigation
+-- @param self
+-- @return #number
+function M:DSMitigation() end
+
+---
+-- @function [parent=#Item] HeroicStr
+-- @param self
+-- @return #number
+function M:HeroicStr() end
+
+---
+-- @function [parent=#Item] HeroicInt
+-- @param self
+-- @return #number
+function M:HeroicInt() end
+
+---
+-- @function [parent=#Item] HeroicWis
+-- @param self
+-- @return #number
+function M:HeroicWis() end
+
+---
+-- @function [parent=#Item] HeroicAgi
+-- @param self
+-- @return #number
+function M:HeroicAgi() end
+
+---
+-- @function [parent=#Item] HeroicDex
+-- @param self
+-- @return #number
+function M:HeroicDex() end
+
+---
+-- @function [parent=#Item] HeroicSta
+-- @param self
+-- @return #number
+function M:HeroicSta() end
+
+---
+-- @function [parent=#Item] HeroicCha
+-- @param self
+-- @return #number
+function M:HeroicCha() end
+
+---
+-- @function [parent=#Item] HeroicMR
+-- @param self
+-- @return #number
+function M:HeroicMR() end
+
+---
+-- @function [parent=#Item] HeroicFR
+-- @param self
+-- @return #number
+function M:HeroicFR() end
+
+---
+-- @function [parent=#Item] HeroicCR
+-- @param self
+-- @return #number
+function M:HeroicCR() end
+
+---
+-- @function [parent=#Item] HeroicDR
+-- @param self
+-- @return #number
+function M:HeroicDR() end
+
+---
+-- @function [parent=#Item] HeroicPR
+-- @param self
+-- @return #number
+function M:HeroicPR() end
+
+---
+-- @function [parent=#Item] HeroicSVCorrup
+-- @param self
+-- @return #number
+function M:HeroicSVCorrup() end
+
+---
+-- @function [parent=#Item] HealAmt
+-- @param self
+-- @return #number
+function M:HealAmt() end
+
+---
+-- @function [parent=#Item] SpellDmg
+-- @param self
+-- @return #number
+function M:SpellDmg() end
+
+---
+-- @function [parent=#Item] LDoNSellBackRate
+-- @param self
+-- @return #number
+function M:LDoNSellBackRate() end
+
+---
+-- @function [parent=#Item] ScriptFileID
+-- @param self
+-- @return #number
+function M:ScriptFileID() end
+
+---
+-- @function [parent=#Item] ExpendableArrow
+-- @param self
+-- @return #number
+function M:ExpendableArrow() end
+
+---
+-- @function [parent=#Item] Clairvoyance
+-- @param self
+-- @return #number
+function M:Clairvoyance() end
+
+---
+-- @function [parent=#Item] ClickName
+-- @param self
+-- @return #string
+function M:ClickName() end
+
+---
+-- @function [parent=#Item] ProcName
+-- @param self
+-- @return #string
+function M:ProcName() end
+
+---
+-- @function [parent=#Item] WornName
+-- @param self
+-- @return #string
+function M:WornName() end
+
+---
+-- @function [parent=#Item] FocusName
+-- @param self
+-- @return #string
+function M:FocusName() end
+
+---
+-- @function [parent=#Item] ScrollName
+-- @param self
+-- @return #string
+function M:ScrollName() end
+
+---
+-- @type event_augment_insert
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field ItemInst#ItemInst item
+-- @field #number slot_id
+
+---
+-- @type event_augment_item
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field ItemInst#ItemInst aug
+-- @field #number slot_id
+
+---
+-- @type event_augment_remove
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field ItemInst#ItemInst item
+-- @field #number slot_id
+-- @field Booleanean#Booleanean destroyed
+
+---
+-- @type event_destroy_item
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+
+---
+-- @type event_drop_item
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+
+---
+-- @type event_item_click
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field #number slot_id
+
+---
+-- @type event_item_click_cast
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field #number slot_id
+
+---
+-- @type event_item_enter_zone
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+
+---
+-- @type event_item_tick
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+
+---
+-- @type event_loot
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field Corpse#Corpse corpse
+
+---
+-- @type event_scale_calc
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+
+---
+-- @type event_timer
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field #string timer
+
+---
+-- @type event_unaugment_item
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field ItemInst#ItemInst aug
+-- @field #number slot_id
+
+---
+-- @type event_weapon_proc
+-- @field ItemInst#ItemInst self
+-- @field Client#Client owner
+-- @field Mob#Mob target
+-- @field Spell#Spell spell
+
+return M;

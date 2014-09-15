@@ -1,0 +1,63 @@
+---
+-- @module SpawnPointOptions
+
+local M = {}
+
+---
+-- @field [parent=#SpawnPointOptions] #number spawn2_id
+M.spawn2_id = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number spawngroup_id
+M.spawngroup_id = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number x
+M.x = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number y
+M.y = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number z
+M.z = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number heading
+M.heading = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number respawn
+M.respawn = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number variance
+M.variance = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number timeleft
+M.timeleft = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number grid
+M.grid = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number condition_id
+M.condition_id = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #number condition_min_value
+M.condition_min_value = 1;
+
+---
+-- @field [parent=#SpawnPointOptions] #boolean enabled
+M.enabled = true;
+
+---
+-- @field [parent=#SpawnPointOptions] #number animation
+M.animation = 1;
+
+
+return M;

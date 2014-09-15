@@ -1,0 +1,71 @@
+---
+-- @module IllusionOptions
+
+local M = {}
+
+---
+-- @field [parent=#IllusionOptions] #number race
+M.race = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number gender
+M.gender = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number texture
+M.texture = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number helmtexture
+M.helmtexture = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number haircolor
+M.haircolor = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number beardcolor
+M.beardcolor = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number eyecolor1
+M.eyecolor1 = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number eyecolor2
+M.eyecolor2 = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number hairstyle
+M.hairstyle = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number luclinface
+M.luclinface = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number beard
+M.beard = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number aa_title
+M.aa_title = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number drakkin_heritage
+M.drakkin_heritage = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number drakkin_tattoo
+M.drakkin_tattoo = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number drakkin_details
+M.drakkin_details = 1;
+
+---
+-- @field [parent=#IllusionOptions] #number size
+M.size = 1;
+
+
+return M;

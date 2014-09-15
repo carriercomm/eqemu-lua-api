@@ -1,0 +1,41 @@
+---
+-- @module instance_requests
+
+---
+-- @type instance_req_return
+-- @field #number flags
+-- @field #boolean valid
+
+---
+-- @function [parent=#instance_requests] ValidateInstanceRequest
+-- @param #string instance The short instance name
+-- @param #number max_players Max number of players in instance
+-- @param Client#Client requestor The client requesting the instance
+-- @param #table event_globals The set of globals for instance events. qglobalname = eventName ex: { "Ink_Kelekdrix", "Kelekdrix, Herald of Trushar" } 
+-- @return #instance_req_return 
+
+---
+-- @function [parent=#instance_requests] GetLockedOutEvents
+-- @param #number locked_bits The bits for events a client is locked out of.
+-- @param #table event_globals The set of globals for instance events.
+-- @return #table A table containing the names of events that are locked out.
+
+---
+-- @function [parent=#instance_requests] GetClientLockoutBits
+-- @param Client#Client client The Client to get lockout bits for.
+-- @param #table event_globals The set of globals for instance events.
+-- @return #number The lockout bits for this client.
+
+---
+-- @function [parent=#instance_requests] GetLockoutEndTimeForHours
+-- @param #number hours The duration of hours to calculate for lockout.
+-- @return #number The unix timestamp for the end of a lockout.
+
+---
+-- @function [parent=#instance_lockouts] DisplayLockouts
+-- @param Client#Client requestor The client requesting display.
+-- @param Client#Client client The client to display lockouts for.
+-- @param #table The set of globals for instance events.
+-- @return #nil
+
+return nil;

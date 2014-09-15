@@ -1,0 +1,90 @@
+---
+-- @module eqemuapi
+
+---
+-- @field [parent=#global] eq#eq eq
+
+---
+-- @function [parent=#global] Client
+-- @return Client#Client
+function Client() end
+
+---
+-- @function [parent=#global] Corpse
+-- @return Corpse#Corpse
+function Corpse() end
+
+---
+-- @function [parent=#global] Door
+-- @return Door#Door
+function Door() end
+
+---
+-- @function [parent=#global] Entity
+-- @return Entity#Entity
+function Entity() end
+
+---
+-- @function [parent=#global] EntityList
+-- @return EntityList#EntityList
+function EntityList() end
+
+---
+-- @function [parent=#global] Group
+-- @return Group#Group
+function Group() end
+
+---
+-- @function [parent=#global] HateList
+-- @return HateList#HateList
+function HateList() end
+
+---
+-- @function [parent=#global] Inventory
+-- @return Inventory#Inventory
+function Inventory() end
+
+---
+-- @function [parent=#global] Item
+-- @return Item#Item
+function Item() end
+
+---
+-- @function [parent=#global] ItemInst
+-- @return ItemInst#ItemInst
+function ItemInst() end
+
+---
+-- @function [parent=#global] Mob
+-- @return Mob#Mob
+function Mob() end
+
+---
+-- @function [parent=#global] NPC
+-- @return NPC#NPC
+function NPC() end
+
+---
+-- @function [parent=#global] Object
+-- @return Object#Object
+function Object() end
+
+---
+-- @function [parent=#global] Packet
+-- @return Packet#Packet
+function Packet() end
+
+---
+-- @function [parent=#global] Raid
+-- @return Raid#Raid
+function Raid() end
+
+---
+-- @function [parent=#global] Spell
+-- @return Spell#Spell
+function Spell() end
+
+---
+-- @function [parent=#global] Spawn
+-- @return Spawn#Spawn
+function Spawn() end

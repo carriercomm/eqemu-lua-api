@@ -1,0 +1,485 @@
+---
+-- @module Spell
+
+local M = {}
+
+---
+-- @field [parent=#Spell] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Spell] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Spell] ID
+-- @param self
+-- @return #number
+function M:ID() end
+
+---
+-- @function [parent=#Spell] Name
+-- @param self
+-- @return #string
+function M:Name() end
+
+---
+-- @function [parent=#Spell] Player1
+-- @param self
+-- @return #string
+function M:Player1() end
+
+---
+-- @function [parent=#Spell] TeleportZone
+-- @param self
+-- @return #string
+function M:TeleportZone() end
+
+---
+-- @function [parent=#Spell] YouCast
+-- @param self
+-- @return #string
+function M:YouCast() end
+
+---
+-- @function [parent=#Spell] OtherCasts
+-- @param self
+-- @return #string
+function M:OtherCasts() end
+
+---
+-- @function [parent=#Spell] CastOnYou
+-- @param self
+-- @return #string
+function M:CastOnYou() end
+
+---
+-- @function [parent=#Spell] CastOnOther
+-- @param self
+-- @return #string
+function M:CastOnOther() end
+
+---
+-- @function [parent=#Spell] SpellFades
+-- @param self
+-- @return #string
+function M:SpellFades() end
+
+---
+-- @function [parent=#Spell] Range
+-- @param self
+-- @return #number
+function M:Range() end
+
+---
+-- @function [parent=#Spell] AoeRange
+-- @param self
+-- @return #number
+function M:AoeRange() end
+
+---
+-- @function [parent=#Spell] PushBack
+-- @param self
+-- @return #number
+function M:PushBack() end
+
+---
+-- @function [parent=#Spell] PushUp
+-- @param self
+-- @return #number
+function M:PushUp() end
+
+---
+-- @function [parent=#Spell] CastTime
+-- @param self
+-- @return #number
+function M:CastTime() end
+
+---
+-- @function [parent=#Spell] RecoveryTime
+-- @param self
+-- @return #number
+function M:RecoveryTime() end
+
+---
+-- @function [parent=#Spell] RecastTime
+-- @param self
+-- @return #number
+function M:RecastTime() end
+
+---
+-- @function [parent=#Spell] BuffdurationFormula
+-- @param self
+-- @return #number
+function M:BuffdurationFormula() end
+
+---
+-- @function [parent=#Spell] BuffDuration
+-- @param self
+-- @return #number
+function M:BuffDuration() end
+
+---
+-- @function [parent=#Spell] AEDuration
+-- @param self
+-- @return #number
+function M:AEDuration() end
+
+---
+-- @function [parent=#Spell] Mana
+-- @param self
+-- @return #number
+function M:Mana() end
+
+---
+-- @function [parent=#Spell] Base
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Base(i) end
+
+---
+-- @function [parent=#Spell] Base2
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Base2(i) end
+
+---
+-- @function [parent=#Spell] Max
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Max(i) end
+
+---
+-- @function [parent=#Spell] Components
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Components(i) end
+
+---
+-- @function [parent=#Spell] ComponentCounts
+-- @param self
+-- @param #number i
+-- @return #number
+function M:ComponentCounts(i) end
+
+---
+-- @function [parent=#Spell] NoexpendReagent
+-- @param self
+-- @param #number i
+-- @return #number
+function M:NoexpendReagent(i) end
+
+---
+-- @function [parent=#Spell] Formula
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Formula(i) end
+
+---
+-- @function [parent=#Spell] GoodEffect
+-- @param self
+-- @return #number
+function M:GoodEffect() end
+
+---
+-- @function [parent=#Spell] Activated
+-- @param self
+-- @return #number
+function M:Activated() end
+
+---
+-- @function [parent=#Spell] ResistType
+-- @param self
+-- @return #number
+function M:ResistType() end
+
+---
+-- @function [parent=#Spell] EffectID
+-- @param self
+-- @param #number i
+-- @return #number
+function M:EffectID(i) end
+
+---
+-- @function [parent=#Spell] TargetType
+-- @param self
+-- @return #number
+function M:TargetType() end
+
+---
+-- @function [parent=#Spell] BaseDiff
+-- @param self
+-- @return #number
+function M:BaseDiff() end
+
+---
+-- @function [parent=#Spell] Skill
+-- @param self
+-- @return #number
+function M:Skill() end
+
+---
+-- @function [parent=#Spell] ZoneType
+-- @param self
+-- @return #number
+function M:ZoneType() end
+
+---
+-- @function [parent=#Spell] EnvironmentType
+-- @param self
+-- @return #number
+function M:EnvironmentType() end
+
+---
+-- @function [parent=#Spell] TimeOfDay
+-- @param self
+-- @return #number
+function M:TimeOfDay() end
+
+---
+-- @function [parent=#Spell] Classes
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Classes(i) end
+
+---
+-- @function [parent=#Spell] CastingAnim
+-- @param self
+-- @return #number
+function M:CastingAnim() end
+
+---
+-- @function [parent=#Spell] SpellAffectIndex
+-- @param self
+-- @return #number
+function M:SpellAffectIndex() end
+
+---
+-- @function [parent=#Spell] DisallowSit
+-- @param self
+-- @return #number
+function M:DisallowSit() end
+
+---
+-- @function [parent=#Spell] Deities
+-- @param self
+-- @param #number i
+-- @return #number
+function M:Deities(i) end
+
+---
+-- @function [parent=#Spell] Uninterruptable
+-- @param self
+-- @return #number
+function M:Uninterruptable() end
+
+---
+-- @function [parent=#Spell] ResistDiff
+-- @param self
+-- @return #number
+function M:ResistDiff() end
+
+---
+-- @function [parent=#Spell] RecourseLink
+-- @param self
+-- @return #number
+function M:RecourseLink() end
+
+---
+-- @function [parent=#Spell] ShortBuffBox
+-- @param self
+-- @return #number
+function M:ShortBuffBox() end
+
+---
+-- @function [parent=#Spell] DescNum
+-- @param self
+-- @return #number
+function M:DescNum() end
+
+---
+-- @function [parent=#Spell] EffectDescNum
+-- @param self
+-- @return #number
+function M:EffectDescNum() end
+
+---
+-- @function [parent=#Spell] BonusHate
+-- @param self
+-- @return #number
+function M:BonusHate() end
+
+---
+-- @function [parent=#Spell] EndurCost
+-- @param self
+-- @return #number
+function M:EndurCost() end
+
+---
+-- @function [parent=#Spell] EndurTimerIndex
+-- @param self
+-- @return #number
+function M:EndurTimerIndex() end
+
+---
+-- @function [parent=#Spell] HateAdded
+-- @param self
+-- @return #number
+function M:HateAdded() end
+
+---
+-- @function [parent=#Spell] EndurUpkeep
+-- @param self
+-- @return #number
+function M:EndurUpkeep() end
+
+---
+-- @function [parent=#Spell] NumHits
+-- @param self
+-- @return #number
+function M:NumHits() end
+
+---
+-- @function [parent=#Spell] PVPResistBase
+-- @param self
+-- @return #number
+function M:PVPResistBase() end
+
+---
+-- @function [parent=#Spell] PVPResistCalc
+-- @param self
+-- @return #number
+function M:PVPResistCalc() end
+
+---
+-- @function [parent=#Spell] PVPResistCap
+-- @param self
+-- @return #number
+function M:PVPResistCap() end
+
+---
+-- @function [parent=#Spell] SpellCategory
+-- @param self
+-- @return #number
+function M:SpellCategory() end
+
+---
+-- @function [parent=#Spell] CanMGB
+-- @param self
+-- @return #number
+function M:CanMGB() end
+
+---
+-- @function [parent=#Spell] DispelFlag
+-- @param self
+-- @return #number
+function M:DispelFlag() end
+
+---
+-- @function [parent=#Spell] MinResist
+-- @param self
+-- @return #number
+function M:MinResist() end
+
+---
+-- @function [parent=#Spell] MaxResist
+-- @param self
+-- @return #number
+function M:MaxResist() end
+
+---
+-- @function [parent=#Spell] ViralTargets
+-- @param self
+-- @return #number
+function M:ViralTargets() end
+
+---
+-- @function [parent=#Spell] ViralTimer
+-- @param self
+-- @return #number
+function M:ViralTimer() end
+
+---
+-- @function [parent=#Spell] NimbusEffect
+-- @param self
+-- @return #number
+function M:NimbusEffect() end
+
+---
+-- @function [parent=#Spell] DirectionalStart
+-- @param self
+-- @return #number
+function M:DirectionalStart() end
+
+---
+-- @function [parent=#Spell] DirectionalEnd
+-- @param self
+-- @return #number
+function M:DirectionalEnd() end
+
+---
+-- @function [parent=#Spell] SpellGroup
+-- @param self
+-- @return #number
+function M:SpellGroup() end
+
+---
+-- @function [parent=#Spell] PowerfulFlag
+-- @param self
+-- @return #number
+function M:PowerfulFlag() end
+
+---
+-- @function [parent=#Spell] CastRestriction
+-- @param self
+-- @return #number
+function M:CastRestriction() end
+
+---
+-- @function [parent=#Spell] AllowRest
+-- @param self
+-- @return #boolean
+function M:AllowRest() end
+
+---
+-- @function [parent=#Spell] DamageShieldType
+-- @param self
+-- @return #number
+function M:DamageShieldType() end
+
+---
+-- @type event_spell_buff_tic
+-- @field Spell#Spell self
+-- @field Mob#Mob target
+-- @field #number tics_remaining
+-- @field #number caster_level
+-- @field #number buff_slot
+-- @field #number caster_id
+
+---
+-- @type event_spell_effect
+-- @field Spell#Spell self
+-- @field Mob#Mob target
+-- @field #number buff_slot
+-- @field #number caster_id
+
+---
+-- @type event_spell_effect_translocate_complete
+-- @field Spell#Spell self
+-- @field Mob#Mob target
+
+---
+-- @type event_spell_fade
+-- @field Spell#Spell self
+-- @field Mob#Mob target
+-- @field #number buff_slot
+-- @field #number caster_id
+
+return M;

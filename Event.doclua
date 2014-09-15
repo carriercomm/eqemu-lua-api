@@ -1,0 +1,299 @@
+---
+-- @module Event
+
+local M = {}
+
+---
+-- @field [parent=#Event] #number say
+M.say = 1;
+
+---
+-- @field [parent=#Event] #number trade
+M.trade = 1;
+
+---
+-- @field [parent=#Event] #number death
+M.death = 1;
+
+---
+-- @field [parent=#Event] #number spawn
+M.spawn = 1;
+
+---
+-- @field [parent=#Event] #number combat
+M.combat = 1;
+
+---
+-- @field [parent=#Event] #number slay
+M.slay = 1;
+
+---
+-- @field [parent=#Event] #number waypoint_arrive
+M.waypoint_arrive = 1;
+
+---
+-- @field [parent=#Event] #number waypoint_depart
+M.waypoint_depart = 1;
+
+---
+-- @field [parent=#Event] #number timer
+M.timer = 1;
+
+---
+-- @field [parent=#Event] #number signal
+M.signal = 1;
+
+---
+-- @field [parent=#Event] #number hp
+M.hp = 1;
+
+---
+-- @field [parent=#Event] #number enter
+M.enter = 1;
+
+---
+-- @field [parent=#Event] #number exit
+M.exit = 1;
+
+---
+-- @field [parent=#Event] #number enter_zone
+M.enter_zone = 1;
+
+---
+-- @field [parent=#Event] #number click_door
+M.click_door = 1;
+
+---
+-- @field [parent=#Event] #number loot
+M.loot = 1;
+
+---
+-- @field [parent=#Event] #number zone
+M.zone = 1;
+
+---
+-- @field [parent=#Event] #number level_up
+M.level_up = 1;
+
+---
+-- @field [parent=#Event] #number killed_merit
+M.killed_merit = 1;
+
+---
+-- @field [parent=#Event] #number cast_on
+M.cast_on = 1;
+
+---
+-- @field [parent=#Event] #number task_accepted
+M.task_accepted = 1;
+
+---
+-- @field [parent=#Event] #number task_stage_complete
+M.task_stage_complete = 1;
+
+---
+-- @field [parent=#Event] #number task_update
+M.task_update = 1;
+
+---
+-- @field [parent=#Event] #number task_complete
+M.task_complete = 1;
+
+---
+-- @field [parent=#Event] #number task_fail
+M.task_fail = 1;
+
+---
+-- @field [parent=#Event] #number aggro_say
+M.aggro_say = 1;
+
+---
+-- @field [parent=#Event] #number player_pickup
+M.player_pickup = 1;
+
+---
+-- @field [parent=#Event] #number popup_response
+M.popup_response = 1;
+
+---
+-- @field [parent=#Event] #number proximity_say
+M.proximity_say = 1;
+
+---
+-- @field [parent=#Event] #number cast
+M.cast = 1;
+
+---
+-- @field [parent=#Event] #number cast_begin
+M.cast_begin = 1;
+
+---
+-- @field [parent=#Event] #number scale_calc
+M.scale_calc = 1;
+
+---
+-- @field [parent=#Event] #number item_enter_zone
+M.item_enter_zone = 1;
+
+---
+-- @field [parent=#Event] #number target_change
+M.target_change = 1;
+
+---
+-- @field [parent=#Event] #number hate_list
+M.hate_list = 1;
+
+---
+-- @field [parent=#Event] #number spell_effect
+M.spell_effect = 1;
+
+---
+-- @field [parent=#Event] #number spell_buff_tic
+M.spell_buff_tic = 1;
+
+---
+-- @field [parent=#Event] #number spell_fade
+M.spell_fade = 1;
+
+---
+-- @field [parent=#Event] #number spell_effect_translocate_complete
+M.spell_effect_translocate_complete = 1;
+
+---
+-- @field [parent=#Event] #number combine_success
+M.combine_success = 1;
+
+---
+-- @field [parent=#Event] #number combine_failure
+M.combine_failure = 1;
+
+---
+-- @field [parent=#Event] #number item_click
+M.item_click = 1;
+
+---
+-- @field [parent=#Event] #number item_click_cast
+M.item_click_cast = 1;
+
+---
+-- @field [parent=#Event] #number group_change
+M.group_change = 1;
+
+---
+-- @field [parent=#Event] #number forage_success
+M.forage_success = 1;
+
+---
+-- @field [parent=#Event] #number forage_failure
+M.forage_failure = 1;
+
+---
+-- @field [parent=#Event] #number fish_start
+M.fish_start = 1;
+
+---
+-- @field [parent=#Event] #number fish_success
+M.fish_success = 1;
+
+---
+-- @field [parent=#Event] #number fish_failure
+M.fish_failure = 1;
+
+---
+-- @field [parent=#Event] #number click_object
+M.click_object = 1;
+
+---
+-- @field [parent=#Event] #number discover_item
+M.discover_item = 1;
+
+---
+-- @field [parent=#Event] #number disconnect
+M.disconnect = 1;
+
+---
+-- @field [parent=#Event] #number connect
+M.connect = 1;
+
+---
+-- @field [parent=#Event] #number item_tick
+M.item_tick = 1;
+
+---
+-- @field [parent=#Event] #number duel_win
+M.duel_win = 1;
+
+---
+-- @field [parent=#Event] #number duel_lose
+M.duel_lose = 1;
+
+---
+-- @field [parent=#Event] #number encounter_load
+M.encounter_load = 1;
+
+---
+-- @field [parent=#Event] #number encounter_unload
+M.encounter_unload = 1;
+
+---
+-- @field [parent=#Event] #number command
+M.command = 1;
+
+---
+-- @field [parent=#Event] #number drop_item
+M.drop_item = 1;
+
+---
+-- @field [parent=#Event] #number destroy_item
+M.destroy_item = 1;
+
+---
+-- @field [parent=#Event] #number feign_death
+M.feign_death = 1;
+
+---
+-- @field [parent=#Event] #number weapon_proc
+M.weapon_proc = 1;
+
+---
+-- @field [parent=#Event] #number equip_item
+M.equip_item = 1;
+
+---
+-- @field [parent=#Event] #number unequip_item
+M.unequip_item = 1;
+
+---
+-- @field [parent=#Event] #number augment_item
+M.augment_item = 1;
+
+---
+-- @field [parent=#Event] #number unaugment_item
+M.unaugment_item = 1;
+
+---
+-- @field [parent=#Event] #number augment_insert
+M.augment_insert = 1;
+
+---
+-- @field [parent=#Event] #number augment_remove
+M.augment_remove = 1;
+
+---
+-- @field [parent=#Event] #number enter_area
+M.enter_area = 1;
+
+---
+-- @field [parent=#Event] #number leave_area
+M.leave_area = 1;
+
+---
+-- @field [parent=#Event] #number death_complete
+M.death_complete = 1;
+
+---
+-- @field [parent=#Event] #number unhandled_opcode
+M.unhandled_opcode = 1;
+
+
+return M;

@@ -1,0 +1,43 @@
+---
+-- @module Faction
+
+local M = {}
+
+---
+-- @field [parent=#Faction] #number Ally
+M.Ally = 1;
+
+---
+-- @field [parent=#Faction] #number Warmly
+M.Warmly = 1;
+
+---
+-- @field [parent=#Faction] #number Kindly
+M.Kindly = 1;
+
+---
+-- @field [parent=#Faction] #number Amiable
+M.Amiable = 1;
+
+---
+-- @field [parent=#Faction] #number Indifferent
+M.Indifferent = 1;
+
+---
+-- @field [parent=#Faction] #number Apprehensive
+M.Apprehensive = 1;
+
+---
+-- @field [parent=#Faction] #number Dubious
+M.Dubious = 1;
+
+---
+-- @field [parent=#Faction] #number Threatenly
+M.Threatenly = 1;
+
+---
+-- @field [parent=#Faction] #number Scowls
+M.Scowls = 1;
+
+
+return M;

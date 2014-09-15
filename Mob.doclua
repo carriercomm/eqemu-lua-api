@@ -1,0 +1,2483 @@
+---
+-- @module Mob
+-- @extends Entity#Entity
+
+local M = {}
+
+---
+-- @field [parent=#Mob] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Mob] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:AddToHateList(other) end
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @return #nil
+function M:AddToHateList(other,hate) end
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @param #number damage
+-- @return #nil
+function M:AddToHateList(other,hate,damage) end
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @param #number damage
+-- @param #boolean yell_for_help
+-- @return #nil
+function M:AddToHateList(other,hate,damage,yell_for_help) end
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @param #number damage
+-- @param #boolean yell_for_help
+-- @param #boolean frenzy
+-- @return #nil
+function M:AddToHateList(other,hate,damage,yell_for_help,frenzy) end
+
+---
+-- @function [parent=#Mob] AddToHateList
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @param #number damage
+-- @param #boolean yell_for_help
+-- @param #boolean frenzy
+-- @param #boolean buff_tic
+-- @return #nil
+function M:AddToHateList(other,hate,damage,yell_for_help,frenzy,buff_tic) end
+
+---
+-- @function [parent=#Mob] Attack
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:Attack(other) end
+
+---
+-- @function [parent=#Mob] Attack
+-- @param self
+-- @param #Mob other
+-- @param #number hand
+-- @return #boolean
+function M:Attack(other,hand) end
+
+---
+-- @function [parent=#Mob] Attack
+-- @param self
+-- @param #Mob other
+-- @param #number hand
+-- @param #boolean from_riposte
+-- @return #boolean
+function M:Attack(other,hand,from_riposte) end
+
+---
+-- @function [parent=#Mob] Attack
+-- @param self
+-- @param #Mob other
+-- @param #number hand
+-- @param #boolean from_riposte
+-- @param #boolean is_strikethrough
+-- @return #boolean
+function M:Attack(other,hand,from_riposte,is_strikethrough) end
+
+---
+-- @function [parent=#Mob] Attack
+-- @param self
+-- @param #Mob other
+-- @param #number hand
+-- @param #boolean from_riposte
+-- @param #boolean is_strikethrough
+-- @param #boolean is_from_spell
+-- @return #boolean
+function M:Attack(other,hand,from_riposte,is_strikethrough,is_from_spell) end
+
+---
+-- @function [parent=#Mob] BehindMob
+-- @param self
+-- @return #boolean
+function M:BehindMob() end
+
+---
+-- @function [parent=#Mob] BehindMob
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:BehindMob(other) end
+
+---
+-- @function [parent=#Mob] BehindMob
+-- @param self
+-- @param #Mob other
+-- @param #number x
+-- @return #boolean
+function M:BehindMob(other,x) end
+
+---
+-- @function [parent=#Mob] BehindMob
+-- @param self
+-- @param #Mob other
+-- @param #number x
+-- @param #number y
+-- @return #boolean
+function M:BehindMob(other,x,y) end
+
+---
+-- @function [parent=#Mob] CalculateDistance
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #number
+function M:CalculateDistance(x,y,z) end
+
+---
+-- @function [parent=#Mob] CalculateHeadingToTarget
+-- @param self
+-- @param #number in_x
+-- @param #number in_y
+-- @return #number
+function M:CalculateHeadingToTarget(in_x,in_y) end
+
+---
+-- @function [parent=#Mob] CalculateNewPosition
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number speed
+-- @return #boolean
+function M:CalculateNewPosition(x,y,z,speed) end
+
+---
+-- @function [parent=#Mob] CalculateNewPosition
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number speed
+-- @param #boolean check_z
+-- @return #boolean
+function M:CalculateNewPosition(x,y,z,speed,check_z) end
+
+---
+-- @function [parent=#Mob] CalculateNewPosition2
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number speed
+-- @return #boolean
+function M:CalculateNewPosition2(x,y,z,speed) end
+
+---
+-- @function [parent=#Mob] CalculateNewPosition2
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number speed
+-- @param #boolean check_z
+-- @return #boolean
+function M:CalculateNewPosition2(x,y,z,speed,check_z) end
+
+---
+-- @function [parent=#Mob] CameraEffect
+-- @param self
+-- @param #number duration
+-- @param #number intensity
+-- @return #nil
+function M:CameraEffect(duration,intensity) end
+
+---
+-- @function [parent=#Mob] CameraEffect
+-- @param self
+-- @param #number duration
+-- @param #number intensity
+-- @param Client#Client c
+-- @return #nil
+function M:CameraEffect(duration,intensity,c) end
+
+---
+-- @function [parent=#Mob] CameraEffect
+-- @param self
+-- @param #number duration
+-- @param #number intensity
+-- @param Client#Client c
+-- @param #boolean global
+-- @return #nil
+function M:CameraEffect(duration,intensity,c,global) end
+
+---
+-- @function [parent=#Mob] CanThisClassBlock
+-- @param self
+-- @return #boolean
+function M:CanThisClassBlock() end
+
+---
+-- @function [parent=#Mob] CanThisClassDodge
+-- @param self
+-- @return #boolean
+function M:CanThisClassDodge() end
+
+---
+-- @function [parent=#Mob] CanThisClassDoubleAttack
+-- @param self
+-- @return #boolean
+function M:CanThisClassDoubleAttack() end
+
+---
+-- @function [parent=#Mob] CanThisClassDualWield
+-- @param self
+-- @return #boolean
+function M:CanThisClassDualWield() end
+
+---
+-- @function [parent=#Mob] CanThisClassParry
+-- @param self
+-- @return #boolean
+function M:CanThisClassParry() end
+
+---
+-- @function [parent=#Mob] CanThisClassRiposte
+-- @param self
+-- @return #boolean
+function M:CanThisClassRiposte() end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @return #boolean
+function M:CastSpell(spell_id,target_id) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @param #number cast_time
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot,cast_time) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @param #number cast_time
+-- @param #number mana_cost
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot,cast_time,mana_cost) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @param #number cast_time
+-- @param #number mana_cost
+-- @param #number item_slot
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot,cast_time,mana_cost,item_slot) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @param #number cast_time
+-- @param #number mana_cost
+-- @param #number item_slot
+-- @param #number timer
+-- @param #number timer_duration
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot,cast_time,mana_cost,item_slot,timer,timer_duration) end
+
+---
+-- @function [parent=#Mob] CastSpell
+-- @param self
+-- @param #number spell_id
+-- @param #number target_id
+-- @param #number slot
+-- @param #number cast_time
+-- @param #number mana_cost
+-- @param #number item_slot
+-- @param #number timer
+-- @param #number timer_duration
+-- @param #number resist_adjust
+-- @return #boolean
+function M:CastSpell(spell_id,target_id,slot,cast_time,mana_cost,item_slot,timer,timer_duration,resist_adjust) end
+
+---
+-- @function [parent=#Mob] ChangeSize
+-- @param self
+-- @param #number in_size
+-- @return #nil
+function M:ChangeSize(in_size) end
+
+---
+-- @function [parent=#Mob] ChangeSize
+-- @param self
+-- @param #number in_size
+-- @param #boolean no_restriction
+-- @return #nil
+function M:ChangeSize(in_size,no_restriction) end
+
+---
+-- @function [parent=#Mob] CheckAggro
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:CheckAggro(other) end
+
+---
+-- @function [parent=#Mob] CheckAggroAmount
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:CheckAggroAmount(spell_id) end
+
+---
+-- @function [parent=#Mob] CheckAggroAmount
+-- @param self
+-- @param #number spell_id
+-- @param #boolean is_proc
+-- @return #number
+function M:CheckAggroAmount(spell_id,is_proc) end
+
+---
+-- @function [parent=#Mob] CheckHealAggroAmount
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:CheckHealAggroAmount(spell_id) end
+
+---
+-- @function [parent=#Mob] CheckHealAggroAmount
+-- @param self
+-- @param #number spell_id
+-- @param #number heal_possible
+-- @return #number
+function M:CheckHealAggroAmount(spell_id,heal_possible) end
+
+---
+-- @function [parent=#Mob] CheckLoS
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:CheckLoS(other) end
+
+---
+-- @function [parent=#Mob] CheckLoSToLoc
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #boolean
+function M:CheckLoSToLoc(x,y,z) end
+
+---
+-- @function [parent=#Mob] CheckLoSToLoc
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number mob_size
+-- @return #boolean
+function M:CheckLoSToLoc(x,y,z,mob_size) end
+
+---
+-- @function [parent=#Mob] CombatRange
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:CombatRange(other) end
+
+---
+-- @function [parent=#Mob] Damage
+-- @param self
+-- @param #Mob from
+-- @param #number damage
+-- @param #number spell_id
+-- @param #number attack_skill
+-- @return #nil
+function M:Damage(from,damage,spell_id,attack_skill) end
+
+---
+-- @function [parent=#Mob] Damage
+-- @param self
+-- @param #Mob from
+-- @param #number damage
+-- @param #number spell_id
+-- @param #number attack_skill
+-- @param #boolean avoidable
+-- @return #nil
+function M:Damage(from,damage,spell_id,attack_skill,avoidable) end
+
+---
+-- @function [parent=#Mob] Damage
+-- @param self
+-- @param #Mob from
+-- @param #number damage
+-- @param #number spell_id
+-- @param #number attack_skill
+-- @param #boolean avoidable
+-- @param #number buffslot
+-- @return #nil
+function M:Damage(from,damage,spell_id,attack_skill,avoidable,buffslot) end
+
+---
+-- @function [parent=#Mob] Damage
+-- @param self
+-- @param #Mob from
+-- @param #number damage
+-- @param #number spell_id
+-- @param #number attack_skill
+-- @param #boolean avoidable
+-- @param #number buffslot
+-- @param #boolean buff_tic
+-- @return #nil
+function M:Damage(from,damage,spell_id,attack_skill,avoidable,buffslot,buff_tic) end
+
+---
+-- @function [parent=#Mob] DelGlobal
+-- @param self
+-- @param #string varname
+-- @return #nil
+function M:DelGlobal(varname) end
+
+---
+-- @function [parent=#Mob] Depop
+-- @param self
+-- @return #nil
+function M:Depop() end
+
+---
+-- @function [parent=#Mob] Depop
+-- @param self
+-- @param #boolean start_spawn_timer
+-- @return #nil
+function M:Depop(start_spawn_timer) end
+
+---
+-- @function [parent=#Mob] DivineAura
+-- @param self
+-- @return #boolean
+function M:DivineAura() end
+
+---
+-- @function [parent=#Mob] DoAnim
+-- @param self
+-- @param #number anim_num
+-- @return #nil
+function M:DoAnim(anim_num) end
+
+---
+-- @function [parent=#Mob] DoAnim
+-- @param self
+-- @param #number anim_num
+-- @param #number type
+-- @return #nil
+function M:DoAnim(anim_num,type) end
+
+---
+-- @function [parent=#Mob] DoAnim
+-- @param self
+-- @param #number anim_num
+-- @param #number type
+-- @param #boolean ackreq
+-- @return #nil
+function M:DoAnim(anim_num,type,ackreq) end
+
+---
+-- @function [parent=#Mob] DoAnim
+-- @param self
+-- @param #number anim_num
+-- @param #number type
+-- @param #boolean ackreq
+-- @param #number filter
+-- @return #nil
+function M:DoAnim(anim_num,type,ackreq,filter) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:DoArcheryAttackDmg(other) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @return #nil
+function M:DoArcheryAttackDmg(other,range_weapon) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param ItemInst#ItemInst ammo
+-- @return #nil
+function M:DoArcheryAttackDmg(other,range_weapon,ammo) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param ItemInst#ItemInst ammo
+-- @param #number weapon_damage
+-- @return #nil
+function M:DoArcheryAttackDmg(other,range_weapon,ammo,weapon_damage) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param ItemInst#ItemInst ammo
+-- @param #number weapon_damage
+-- @param #number chance_mod
+-- @return #nil
+function M:DoArcheryAttackDmg(other,range_weapon,ammo,weapon_damage,chance_mod) end
+
+---
+-- @function [parent=#Mob] DoArcheryAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param ItemInst#ItemInst ammo
+-- @param #number weapon_damage
+-- @param #number chance_mod
+-- @param #number focus
+-- @return #nil
+function M:DoArcheryAttackDmg(other,range_weapon,ammo,weapon_damage,chance_mod,focus) end
+
+---
+-- @function [parent=#Mob] DoKnockback
+-- @param self
+-- @param #Mob caster
+-- @param #number pushback
+-- @param #number pushup
+-- @return #nil
+function M:DoKnockback(caster,pushback,pushup) end
+
+---
+-- @function [parent=#Mob] DoMeleeSkillAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param #number weapon_damage
+-- @param #number skill
+-- @return #nil
+function M:DoMeleeSkillAttackDmg(other,weapon_damage,skill) end
+
+---
+-- @function [parent=#Mob] DoMeleeSkillAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param #number weapon_damage
+-- @param #number skill
+-- @param #number chance_mod
+-- @return #nil
+function M:DoMeleeSkillAttackDmg(other,weapon_damage,skill,chance_mod) end
+
+---
+-- @function [parent=#Mob] DoMeleeSkillAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param #number weapon_damage
+-- @param #number skill
+-- @param #number chance_mod
+-- @param #number focus
+-- @return #nil
+function M:DoMeleeSkillAttackDmg(other,weapon_damage,skill,chance_mod,focus) end
+
+---
+-- @function [parent=#Mob] DoMeleeSkillAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param #number weapon_damage
+-- @param #number skill
+-- @param #number chance_mod
+-- @param #number focus
+-- @param #boolean can_riposte
+-- @return #nil
+function M:DoMeleeSkillAttackDmg(other,weapon_damage,skill,chance_mod,focus,can_riposte) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:DoThrowingAttackDmg(other) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @return #nil
+function M:DoThrowingAttackDmg(other,range_weapon) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param Item#Item item
+-- @return #nil
+function M:DoThrowingAttackDmg(other,range_weapon,item) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param Item#Item item
+-- @param #number weapon_damage
+-- @return #nil
+function M:DoThrowingAttackDmg(other,range_weapon,item,weapon_damage) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param Item#Item item
+-- @param #number weapon_damage
+-- @param #number chance_mod
+-- @return #nil
+function M:DoThrowingAttackDmg(other,range_weapon,item,weapon_damage,chance_mod) end
+
+---
+-- @function [parent=#Mob] DoThrowingAttackDmg
+-- @param self
+-- @param #Mob other
+-- @param ItemInst#ItemInst range_weapon
+-- @param Item#Item item
+-- @param #number weapon_damage
+-- @param #number chance_mod
+-- @param #number focus
+-- @return #nil
+function M:DoThrowingAttackDmg(other,range_weapon,item,weapon_damage,chance_mod,focus) end
+
+---
+-- @function [parent=#Mob] DoSpecialAttackDamage
+-- @param self
+-- @param #Mob other
+-- @param #number skill
+-- @param #number max_damage
+-- @return #nil
+function M:DoSpecialAttackDamage(other,skill,max_damage) end
+
+---
+-- @function [parent=#Mob] DoSpecialAttackDamage
+-- @param self
+-- @param #Mob other
+-- @param #number skill
+-- @param #number max_damage
+-- @param #number min_damage
+-- @return #nil
+function M:DoSpecialAttackDamage(other,skill,max_damage,min_damage) end
+
+---
+-- @function [parent=#Mob] DoSpecialAttackDamage
+-- @param self
+-- @param #Mob other
+-- @param #number skill
+-- @param #number max_damage
+-- @param #number min_damage
+-- @param #number hate_override
+-- @return #nil
+function M:DoSpecialAttackDamage(other,skill,max_damage,min_damage,hate_override) end
+
+---
+-- @function [parent=#Mob] DoSpecialAttackDamage
+-- @param self
+-- @param #Mob other
+-- @param #number skill
+-- @param #number max_damage
+-- @param #number min_damage
+-- @param #number hate_override
+-- @param #number reuse_time
+-- @return #nil
+function M:DoSpecialAttackDamage(other,skill,max_damage,min_damage,hate_override,reuse_time) end
+
+---
+-- @function [parent=#Mob] DoSpecialAttackDamage
+-- @param self
+-- @param #Mob other
+-- @param #number skill
+-- @param #number max_damage
+-- @param #number min_damage
+-- @param #number hate_override
+-- @param #number reuse_time
+-- @param #boolean hit_chance
+-- @return #nil
+function M:DoSpecialAttackDamage(other,skill,max_damage,min_damage,hate_override,reuse_time,hit_chance) end
+
+---
+-- @function [parent=#Mob] Emote
+-- @param self
+-- @param #string message
+-- @return #nil
+function M:Emote(message) end
+
+---
+-- @function [parent=#Mob] EntityVariableExists
+-- @param self
+-- @param #string name
+-- @return #boolean
+function M:EntityVariableExists(name) end
+
+---
+-- @function [parent=#Mob] FaceTarget
+-- @param self
+-- @param #Mob target
+-- @return #nil
+function M:FaceTarget(target) end
+
+---
+-- @function [parent=#Mob] FindBuff
+-- @param self
+-- @param #number spell_id
+-- @return #boolean
+function M:FindBuff(spell_id) end
+
+---
+-- @function [parent=#Mob] FindGroundZ
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @return #number
+function M:FindGroundZ(x,y) end
+
+---
+-- @function [parent=#Mob] FindGroundZ
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #number
+function M:FindGroundZ(x,y,z) end
+
+---
+-- @function [parent=#Mob] FindType
+-- @param self
+-- @param #number type
+-- @return #boolean
+function M:FindType(type) end
+
+---
+-- @function [parent=#Mob] FindType
+-- @param self
+-- @param #number type
+-- @param #boolean offensive
+-- @return #boolean
+function M:FindType(type,offensive) end
+
+---
+-- @function [parent=#Mob] FindType
+-- @param self
+-- @param #number type
+-- @param #boolean offensive
+-- @param #number threshold
+-- @return #boolean
+function M:FindType(type,offensive,threshold) end
+
+---
+-- @function [parent=#Mob] Gate
+-- @param self
+-- @return #nil
+function M:Gate() end
+
+---
+-- @function [parent=#Mob] GetAA
+-- @param self
+-- @param #number id
+-- @return #number
+function M:GetAA(id) end
+
+---
+-- @function [parent=#Mob] GetAC
+-- @param self
+-- @return #number
+function M:GetAC() end
+
+---
+-- @function [parent=#Mob] GetAGI
+-- @param self
+-- @return #number
+function M:GetAGI() end
+
+---
+-- @function [parent=#Mob] GetAggroRange
+-- @param self
+-- @return #number
+function M:GetAggroRange() end
+
+---
+-- @function [parent=#Mob] GetAllowBeneficial
+-- @param self
+-- @return #boolean
+function M:GetAllowBeneficial() end
+
+---
+-- @function [parent=#Mob] GetAssistRange
+-- @param self
+-- @return #number
+function M:GetAssistRange() end
+
+---
+-- @function [parent=#Mob] GetATK
+-- @param self
+-- @return #number
+function M:GetATK() end
+
+---
+-- @function [parent=#Mob] GetBaseRace
+-- @param self
+-- @return #number
+function M:GetBaseRace() end
+
+---
+-- @function [parent=#Mob] GetBaseGender
+-- @param self
+-- @return #number
+function M:GetBaseGender() end
+
+---
+-- @function [parent=#Mob] GetBeard
+-- @param self
+-- @return #number
+function M:GetBeard() end
+
+---
+-- @function [parent=#Mob] GetBeardColor
+-- @param self
+-- @return #number
+function M:GetBeardColor() end
+
+---
+-- @function [parent=#Mob] GetBuffSlotFromType
+-- @param self
+-- @param #number slot
+-- @return #number
+function M:GetBuffSlotFromType(slot) end
+
+---
+-- @function [parent=#Mob] GetCasterLevel
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:GetCasterLevel(spell_id) end
+
+---
+-- @function [parent=#Mob] GetCHA
+-- @param self
+-- @return #number
+function M:GetCHA() end
+
+---
+-- @function [parent=#Mob] Charmed
+-- @param self
+-- @return #boolean
+function M:Charmed() end
+
+---
+-- @function [parent=#Mob] GetClass
+-- @param self
+-- @return #number
+function M:GetClass() end
+
+---
+-- @function [parent=#Mob] GetCleanName
+-- @param self
+-- @return #string
+function M:GetCleanName() end
+
+---
+-- @function [parent=#Mob] GetCR
+-- @param self
+-- @return #number
+function M:GetCR() end
+
+---
+-- @function [parent=#Mob] GetCorruption
+-- @param self
+-- @return #number
+function M:GetCorruption() end
+
+---
+-- @function [parent=#Mob] GetDamageAmount
+-- @param self
+-- @param #Mob target
+-- @return #number
+function M:GetDamageAmount(target) end
+
+---
+-- @function [parent=#Mob] GetDeity
+-- @param self
+-- @return #number
+function M:GetDeity() end
+
+---
+-- @function [parent=#Mob] GetDEX
+-- @param self
+-- @return #number
+function M:GetDEX() end
+
+---
+-- @function [parent=#Mob] GetDR
+-- @param self
+-- @return #number
+function M:GetDR() end
+
+---
+-- @function [parent=#Mob] GetDrakkinDetails
+-- @param self
+-- @return #number
+function M:GetDrakkinDetails() end
+
+---
+-- @function [parent=#Mob] GetDrakkinHeritage
+-- @param self
+-- @return #number
+function M:GetDrakkinHeritage() end
+
+---
+-- @function [parent=#Mob] GetDrakkIntegerattoo
+-- @param self
+-- @return #number
+function M:GetDrakkIntegerattoo() end
+
+---
+-- @function [parent=#Mob] GetEntityVariable
+-- @param self
+-- @param #string name
+-- @return #string
+function M:GetEntityVariable(name) end
+
+---
+-- @function [parent=#Mob] GetEyeColor1
+-- @param self
+-- @return #number
+function M:GetEyeColor1() end
+
+---
+-- @function [parent=#Mob] GetEyeColor2
+-- @param self
+-- @return #number
+function M:GetEyeColor2() end
+
+---
+-- @function [parent=#Mob] GetFlurryChance
+-- @param self
+-- @return #number
+function M:GetFlurryChance() end
+
+---
+-- @function [parent=#Mob] GetFR
+-- @param self
+-- @return #number
+function M:GetFR() end
+
+---
+-- @function [parent=#Mob] GetGender
+-- @param self
+-- @return #number
+function M:GetGender() end
+
+---
+-- @function [parent=#Mob] GetHairColor
+-- @param self
+-- @return #number
+function M:GetHairColor() end
+
+---
+-- @function [parent=#Mob] GetHairStyle
+-- @param self
+-- @return #number
+function M:GetHairStyle() end
+
+---
+-- @function [parent=#Mob] GetHaste
+-- @param self
+-- @return #number
+function M:GetHaste() end
+
+---
+-- @function [parent=#Mob] GetHateAmount
+-- @param self
+-- @param #Mob target
+-- @return #number
+function M:GetHateAmount(target) end
+
+---
+-- @function [parent=#Mob] GetHateAmount
+-- @param self
+-- @param #Mob target
+-- @param #boolean is_damage
+-- @return #number
+function M:GetHateAmount(target,is_damage) end
+
+---
+-- @function [parent=#Mob] GetHateDamageTop
+-- @param self
+-- @param #Mob other
+-- @return #Mob
+function M:GetHateDamageTop(other) end
+
+---
+-- @function [parent=#Mob] GetHateList
+-- @param self
+-- @return HateList#HateList
+function M:GetHateList() end
+
+---
+-- @function [parent=#Mob] GetHateRandom
+-- @param self
+-- @return #Mob
+function M:GetHateRandom() end
+
+---
+-- @function [parent=#Mob] GetHateTop
+-- @param self
+-- @return #Mob
+function M:GetHateTop() end
+
+---
+-- @function [parent=#Mob] GetHeading
+-- @param self
+-- @return #number
+function M:GetHeading() end
+
+---
+-- @function [parent=#Mob] GetHelmTexture
+-- @param self
+-- @return #number
+function M:GetHelmTexture() end
+
+---
+-- @function [parent=#Mob] GetHP
+-- @param self
+-- @return #number
+function M:GetHP() end
+
+---
+-- @function [parent=#Mob] GetHPRatio
+-- @param self
+-- @return #number
+function M:GetHPRatio() end
+
+---
+-- @function [parent=#Mob] GetInteger
+-- @param self
+-- @return #number
+function M:GetInteger() end
+
+---
+-- @function [parent=#Mob] GetInvul
+-- @param self
+-- @return #boolean
+function M:GetInvul() end
+
+---
+-- @function [parent=#Mob] GetItemHPBonuses
+-- @param self
+-- @return #number
+function M:GetItemHPBonuses() end
+
+---
+-- @function [parent=#Mob] GetLevel
+-- @param self
+-- @return #number
+function M:GetLevel() end
+
+---
+-- @function [parent=#Mob] GetLevelCon
+-- @param self
+-- @param #number other
+-- @return #number
+function M:GetLevelCon(other) end
+
+---
+-- @function [parent=#Mob] GetLevelCon
+-- @param self
+-- @param #number my
+-- @param #number other
+-- @return #number
+function M:GetLevelCon(my,other) end
+
+---
+-- @function [parent=#Mob] GetLuclinFace
+-- @param self
+-- @return #number
+function M:GetLuclinFace() end
+
+---
+-- @function [parent=#Mob] GetMana
+-- @param self
+-- @return #number
+function M:GetMana() end
+
+---
+-- @function [parent=#Mob] GetManaRatio
+-- @param self
+-- @return #number
+function M:GetManaRatio() end
+
+---
+-- @function [parent=#Mob] GetMaxAGI
+-- @param self
+-- @return #number
+function M:GetMaxAGI() end
+
+---
+-- @function [parent=#Mob] GetMaxCHA
+-- @param self
+-- @return #number
+function M:GetMaxCHA() end
+
+---
+-- @function [parent=#Mob] GetMaxDEX
+-- @param self
+-- @return #number
+function M:GetMaxDEX() end
+
+---
+-- @function [parent=#Mob] GetMaxHP
+-- @param self
+-- @return #number
+function M:GetMaxHP() end
+
+---
+-- @function [parent=#Mob] GetMaxInteger
+-- @param self
+-- @return #number
+function M:GetMaxInteger() end
+
+---
+-- @function [parent=#Mob] GetMaxMana
+-- @param self
+-- @return #number
+function M:GetMaxMana() end
+
+---
+-- @function [parent=#Mob] GetMaxSTA
+-- @param self
+-- @return #number
+function M:GetMaxSTA() end
+
+---
+-- @function [parent=#Mob] GetMaxSTR
+-- @param self
+-- @return #number
+function M:GetMaxSTR() end
+
+---
+-- @function [parent=#Mob] GetMaxWIS
+-- @param self
+-- @return #number
+function M:GetMaxWIS() end
+
+---
+-- @function [parent=#Mob] Message
+-- @param self
+-- @param #number type
+-- @param #string message
+-- @return #nil
+function M:Message(type,message) end
+
+---
+-- @function [parent=#Mob] Message_StringID
+-- @param self
+-- @param #number type
+-- @param #number string_id
+-- @param #number distance
+-- @return #nil
+function M:Message_StringID(type,string_id,distance) end
+
+---
+-- @function [parent=#Mob] GetModSkillDmgTaken
+-- @param self
+-- @param #number skill
+-- @return #number
+function M:GetModSkillDmgTaken(skill) end
+
+---
+-- @function [parent=#Mob] GetModVulnerability
+-- @param self
+-- @param #number resist
+-- @return #number
+function M:GetModVulnerability(resist) end
+
+---
+-- @function [parent=#Mob] GetMonkHandToHandDamage
+-- @param self
+-- @return #number
+function M:GetMonkHandToHandDamage() end
+
+---
+-- @function [parent=#Mob] GetMonkHandToHandDelay
+-- @param self
+-- @return #number
+function M:GetMonkHandToHandDelay() end
+
+---
+-- @function [parent=#Mob] GetMR
+-- @param self
+-- @return #number
+function M:GetMR() end
+
+---
+-- @function [parent=#Mob] GetName
+-- @param self
+-- @return #string
+function M:GetName() end
+
+---
+-- @function [parent=#Mob] GetNPCTypeID
+-- @param self
+-- @return #number
+function M:GetNPCTypeID() end
+
+---
+-- @function [parent=#Mob] GetOwner
+-- @param self
+-- @return #Mob
+function M:GetOwner() end
+
+---
+-- @function [parent=#Mob] GetPet
+-- @param self
+-- @return #Mob
+function M:GetPet() end
+
+---
+-- @function [parent=#Mob] GetPetOrder
+-- @param self
+-- @return #number
+function M:GetPetOrder() end
+
+---
+-- @function [parent=#Mob] GetPR
+-- @param self
+-- @return #number
+function M:GetPR() end
+
+---
+-- @function [parent=#Mob] GetRace
+-- @param self
+-- @return #number
+function M:GetRace() end
+
+---
+-- @function [parent=#Mob] GetResist
+-- @param self
+-- @param #number type
+-- @return #number
+function M:GetResist(type) end
+
+---
+-- @function [parent=#Mob] GetReverseFactionCon
+-- @param self
+-- @param #Mob other
+-- @return #number
+function M:GetReverseFactionCon(other) end
+
+---
+-- @function [parent=#Mob] GetRunspeed
+-- @param self
+-- @return #number
+function M:GetRunspeed() end
+
+---
+-- @function [parent=#Mob] GetSize
+-- @param self
+-- @return #number
+function M:GetSize() end
+
+---
+-- @function [parent=#Mob] GetSkill
+-- @param self
+-- @param #number skill_id
+-- @return #number
+function M:GetSkill(skill_id) end
+
+---
+-- @function [parent=#Mob] GetSkillDmgTaken
+-- @param self
+-- @param #number skill
+-- @return #number
+function M:GetSkillDmgTaken(skill) end
+
+---
+-- @function [parent=#Mob] GetSpecializeSkillValue
+-- @param self
+-- @param #number spell_id
+-- @return #number
+function M:GetSpecializeSkillValue(spell_id) end
+
+---
+-- @function [parent=#Mob] GetSpellHPBonuses
+-- @param self
+-- @return #number
+function M:GetSpellHPBonuses() end
+
+---
+-- @function [parent=#Mob] GetSTA
+-- @param self
+-- @return #number
+function M:GetSTA() end
+
+---
+-- @function [parent=#Mob] GetSTR
+-- @param self
+-- @return #number
+function M:GetSTR() end
+
+---
+-- @function [parent=#Mob] GetTarget
+-- @param self
+-- @return #Mob
+function M:GetTarget() end
+
+---
+-- @function [parent=#Mob] GetTexture
+-- @param self
+-- @return #number
+function M:GetTexture() end
+
+---
+-- @function [parent=#Mob] GetWalkspeed
+-- @param self
+-- @return #number
+function M:GetWalkspeed() end
+
+---
+-- @function [parent=#Mob] GetWaypointH
+-- @param self
+-- @return #number
+function M:GetWaypointH() end
+
+---
+-- @function [parent=#Mob] GetWaypointID
+-- @param self
+-- @return #number
+function M:GetWaypointID() end
+
+---
+-- @function [parent=#Mob] GetWaypointPause
+-- @param self
+-- @return #number
+function M:GetWaypointPause() end
+
+---
+-- @function [parent=#Mob] GetWaypointX
+-- @param self
+-- @return #number
+function M:GetWaypointX() end
+
+---
+-- @function [parent=#Mob] GetWaypointY
+-- @param self
+-- @return #number
+function M:GetWaypointY() end
+
+---
+-- @function [parent=#Mob] GetWaypointZ
+-- @param self
+-- @return #number
+function M:GetWaypointZ() end
+
+---
+-- @function [parent=#Mob] GetWIS
+-- @param self
+-- @return #number
+function M:GetWIS() end
+
+---
+-- @function [parent=#Mob] GetX
+-- @param self
+-- @return #number
+function M:GetX() end
+
+---
+-- @function [parent=#Mob] GetY
+-- @param self
+-- @return #number
+function M:GetY() end
+
+---
+-- @function [parent=#Mob] GetZ
+-- @param self
+-- @return #number
+function M:GetZ() end
+
+---
+-- @function [parent=#Mob] GMMove
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:GMMove(x,y,z) end
+
+---
+-- @function [parent=#Mob] GMMove
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number heading
+-- @return #nil
+function M:GMMove(x,y,z,heading) end
+
+---
+-- @function [parent=#Mob] GMMove
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number heading
+-- @param #boolean send_update
+-- @return #nil
+function M:GMMove(x,y,z,heading,send_update) end
+
+---
+-- @function [parent=#Mob] GotoBind
+-- @param self
+-- @return #nil
+function M:GotoBind() end
+
+---
+-- @function [parent=#Mob] HasNPCSpecialAtk
+-- @param self
+-- @param #string parse
+-- @return #boolean
+function M:HasNPCSpecialAtk(parse) end
+
+---
+-- @function [parent=#Mob] HasProcs
+-- @param self
+-- @return #boolean
+function M:HasProcs() end
+
+---
+-- @function [parent=#Mob] Heal
+-- @param self
+-- @return #nil
+function M:Heal() end
+
+---
+-- @function [parent=#Mob] HealDamage
+-- @param self
+-- @param #number amount
+-- @return #nil
+function M:HealDamage(amount) end
+
+---
+-- @function [parent=#Mob] HealDamage
+-- @param self
+-- @param #number amount
+-- @param #Mob other
+-- @return #nil
+function M:HealDamage(amount,other) end
+
+---
+-- @function [parent=#Mob] IntegererruptSpell
+-- @param self
+-- @return #nil
+function M:IntegererruptSpell() end
+
+---
+-- @function [parent=#Mob] IntegererruptSpell
+-- @param self
+-- @param #number spell_id
+-- @return #nil
+function M:IntegererruptSpell(spell_id) end
+
+---
+-- @function [parent=#Mob] IsAIControlled
+-- @param self
+-- @return #boolean
+function M:IsAIControlled() end
+
+---
+-- @function [parent=#Mob] IsBeneficialAllowed
+-- @param self
+-- @param #Mob target
+-- @return #boolean
+function M:IsBeneficialAllowed(target) end
+
+---
+-- @function [parent=#Mob] IsEngaged
+-- @param self
+-- @return #boolean
+function M:IsEngaged() end
+
+---
+-- @function [parent=#Mob] IsEnraged
+-- @param self
+-- @return #boolean
+function M:IsEnraged() end
+
+---
+-- @function [parent=#Mob] IsInvisible
+-- @param self
+-- @return #boolean
+function M:IsInvisible() end
+
+---
+-- @function [parent=#Mob] IsInvisible
+-- @param self
+-- @param #Mob other
+-- @return #boolean
+function M:IsInvisible(other) end
+
+---
+-- @function [parent=#Mob] IsMeleeDisabled
+-- @param self
+-- @return #boolean
+function M:IsMeleeDisabled() end
+
+---
+-- @function [parent=#Mob] IsMoving
+-- @param self
+-- @return #boolean
+function M:IsMoving() end
+
+---
+-- @function [parent=#Mob] IsMezzed
+-- @param self
+-- @return #boolean
+function M:IsMezzed() end
+
+---
+-- @function [parent=#Mob] IsRoamer
+-- @param self
+-- @return #boolean
+function M:IsRoamer() end
+
+---
+-- @function [parent=#Mob] IsRooted
+-- @param self
+-- @return #boolean
+function M:IsRooted() end
+
+---
+-- @function [parent=#Mob] IsRunning
+-- @param self
+-- @return #boolean
+function M:IsRunning() end
+
+---
+-- @function [parent=#Mob] IsStunned
+-- @param self
+-- @return #boolean
+function M:IsStunned() end
+
+---
+-- @function [parent=#Mob] IsTargeted
+-- @param self
+-- @return #boolean
+function M:IsTargeted() end
+
+---
+-- @function [parent=#Mob] IsWarriorClass
+-- @param self
+-- @return #boolean
+function M:IsWarriorClass() end
+
+---
+-- @function [parent=#Mob] Kill
+-- @param self
+-- @return #nil
+function M:Kill() end
+
+---
+-- @function [parent=#Mob] Mesmerize
+-- @param self
+-- @return #nil
+function M:Mesmerize() end
+
+---
+-- @function [parent=#Mob] ModSkillDmgTaken
+-- @param self
+-- @param #number skill
+-- @param #number value
+-- @return #nil
+function M:ModSkillDmgTaken(skill,value) end
+
+---
+-- @function [parent=#Mob] ModVulnerability
+-- @param self
+-- @param #number resist
+-- @param #number value
+-- @return #nil
+function M:ModVulnerability(resist,value) end
+
+---
+-- @function [parent=#Mob] NPCSpecialAttacks
+-- @param self
+-- @param #string parse
+-- @param #number perm
+-- @return #nil
+function M:NPCSpecialAttacks(parse,perm) end
+
+---
+-- @function [parent=#Mob] NPCSpecialAttacks
+-- @param self
+-- @param #string parse
+-- @param #number perm
+-- @param #boolean reset
+-- @return #nil
+function M:NPCSpecialAttacks(parse,perm,reset) end
+
+---
+-- @function [parent=#Mob] NPCSpecialAttacks
+-- @param self
+-- @param #string parse
+-- @param #number perm
+-- @param #boolean reset
+-- @param #boolean remove
+-- @return #nil
+function M:NPCSpecialAttacks(parse,perm,reset,remove) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @return #nil
+function M:ProjectileAnimation(to,item_id) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @param #boolean is_arrow
+-- @return #nil
+function M:ProjectileAnimation(to,item_id,is_arrow) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @param #boolean is_arrow
+-- @param #number speed
+-- @return #nil
+function M:ProjectileAnimation(to,item_id,is_arrow,speed) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @param #boolean is_arrow
+-- @param #number speed
+-- @param #number angle
+-- @return #nil
+function M:ProjectileAnimation(to,item_id,is_arrow,speed,angle) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @param #boolean is_arrow
+-- @param #number speed
+-- @param #number angle
+-- @param #number tilt
+-- @return #nil
+function M:ProjectileAnimation(to,item_id,is_arrow,speed,angle,tilt) end
+
+---
+-- @function [parent=#Mob] ProjectileAnimation
+-- @param self
+-- @param #Mob to
+-- @param #number item_id
+-- @param #boolean is_arrow
+-- @param #number speed
+-- @param #number angle
+-- @param #number tilt
+-- @param #number arc
+-- @return #nil
+function M:ProjectileAnimation(to,item_id,is_arrow,speed,angle,tilt,arc) end
+
+---
+-- @function [parent=#Mob] QuestReward
+-- @param self
+-- @param Client#Client c
+-- @return #nil
+function M:QuestReward(c) end
+
+---
+-- @function [parent=#Mob] QuestReward
+-- @param self
+-- @param Client#Client c
+-- @param #number silver
+-- @return #nil
+function M:QuestReward(c,silver) end
+
+---
+-- @function [parent=#Mob] QuestReward
+-- @param self
+-- @param Client#Client c
+-- @param #number silver
+-- @param #number gold
+-- @return #nil
+function M:QuestReward(c,silver,gold) end
+
+---
+-- @function [parent=#Mob] QuestReward
+-- @param self
+-- @param Client#Client c
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @return #nil
+function M:QuestReward(c,silver,gold,platinum) end
+
+---
+-- @function [parent=#Mob] QuestSay
+-- @param self
+-- @param Client#Client client
+-- @param #string message
+-- @return #nil
+function M:QuestSay(client,message) end
+
+---
+-- @function [parent=#Mob] RemoveNimbusEffect
+-- @param self
+-- @param #number effect_id
+-- @return #nil
+function M:RemoveNimbusEffect(effect_id) end
+
+---
+-- @function [parent=#Mob] RangedAttack
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:RangedAttack(other) end
+
+---
+-- @function [parent=#Mob] ResistSpell
+-- @param self
+-- @param #number resist_type
+-- @param #number spell_id
+-- @param #Mob caster
+-- @return #number
+function M:ResistSpell(resist_type,spell_id,caster) end
+
+---
+-- @function [parent=#Mob] ResistSpell
+-- @param self
+-- @param #number resist_type
+-- @param #number spell_id
+-- @param #Mob caster
+-- @param #boolean use_resist_override
+-- @return #number
+function M:ResistSpell(resist_type,spell_id,caster,use_resist_override) end
+
+---
+-- @function [parent=#Mob] ResistSpell
+-- @param self
+-- @param #number resist_type
+-- @param #number spell_id
+-- @param #Mob caster
+-- @param #boolean use_resist_override
+-- @param #number resist_override
+-- @return #number
+function M:ResistSpell(resist_type,spell_id,caster,use_resist_override,resist_override) end
+
+---
+-- @function [parent=#Mob] ResistSpell
+-- @param self
+-- @param #number resist_type
+-- @param #number spell_id
+-- @param #Mob caster
+-- @param #boolean use_resist_override
+-- @param #number resist_override
+-- @param #boolean charisma_check
+-- @return #number
+function M:ResistSpell(resist_type,spell_id,caster,use_resist_override,resist_override,charisma_check) end
+
+---
+-- @function [parent=#Mob] Say
+-- @param self
+-- @param #string message
+-- @return #nil
+function M:Say(message) end
+
+---
+-- @function [parent=#Mob] SendAppearanceEffect
+-- @param self
+-- @param #number parm1
+-- @param #number parm2
+-- @param #number parm3
+-- @param #number parm4
+-- @param #number parm5
+-- @return #nil
+function M:SendAppearanceEffect(parm1,parm2,parm3,parm4,parm5) end
+
+---
+-- @function [parent=#Mob] SendAppearanceEffect
+-- @param self
+-- @param #number parm1
+-- @param #number parm2
+-- @param #number parm3
+-- @param #number parm4
+-- @param #number parm5
+-- @param Client#Client specific_target
+-- @return #nil
+function M:SendAppearanceEffect(parm1,parm2,parm3,parm4,parm5,specific_target) end
+
+---
+-- @function [parent=#Mob] SendIllusionPacket
+-- @param self
+-- @param IllusionOptions#IllusionOptions illusion
+-- @return #nil
+function M:SendIllusionPacket(illusion) end
+
+---
+-- @function [parent=#Mob] SendSpellEffect
+-- @param self
+-- @param #number effect_id
+-- @param #number duration
+-- @param #number finish_delay
+-- @param #boolean zone_wide
+-- @param #number unk020
+-- @return #nil
+function M:SendSpellEffect(effect_id,duration,finish_delay,zone_wide,unk020) end
+
+---
+-- @function [parent=#Mob] SendSpellEffect
+-- @param self
+-- @param #number effect_id
+-- @param #number duration
+-- @param #number finish_delay
+-- @param #boolean zone_wide
+-- @param #number unk020
+-- @param #boolean perm_effect
+-- @return #nil
+function M:SendSpellEffect(effect_id,duration,finish_delay,zone_wide,unk020,perm_effect) end
+
+---
+-- @function [parent=#Mob] SendSpellEffect
+-- @param self
+-- @param #number effect_id
+-- @param #number duration
+-- @param #number finish_delay
+-- @param #boolean zone_wide
+-- @param #number unk020
+-- @param #boolean perm_effect
+-- @param Client#Client c
+-- @return #nil
+function M:SendSpellEffect(effect_id,duration,finish_delay,zone_wide,unk020,perm_effect,c) end
+
+---
+-- @function [parent=#Mob] SendTo
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:SendTo(x,y,z) end
+
+---
+-- @function [parent=#Mob] SendToFixZ
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @return #nil
+function M:SendToFixZ(x,y,z) end
+
+---
+-- @function [parent=#Mob] SendWearChange
+-- @param self
+-- @param #number material_slot
+-- @return #nil
+function M:SendWearChange(material_slot) end
+
+---
+-- @function [parent=#Mob] SetAllowBeneficial
+-- @param self
+-- @param #boolean value
+-- @return #nil
+function M:SetAllowBeneficial(value) end
+
+---
+-- @function [parent=#Mob] SetAppearance
+-- @param self
+-- @param #number app
+-- @return #nil
+function M:SetAppearance(app) end
+
+---
+-- @function [parent=#Mob] SetAppearance
+-- @param self
+-- @param #number app
+-- @param #boolean ignore_self
+-- @return #nil
+function M:SetAppearance(app,ignore_self) end
+
+---
+-- @function [parent=#Mob] SetBodyType
+-- @param self
+-- @param #number new_body
+-- @param #boolean overwrite_orig
+-- @return #nil
+function M:SetBodyType(new_body,overwrite_orig) end
+
+---
+-- @function [parent=#Mob] SetCurrentWP
+-- @param self
+-- @param #number wp
+-- @return #nil
+function M:SetCurrentWP(wp) end
+
+---
+-- @function [parent=#Mob] SetDisableMelee
+-- @param self
+-- @param #boolean disable
+-- @return #nil
+function M:SetDisableMelee(disable) end
+
+---
+-- @function [parent=#Mob] SetEntityVariable
+-- @param self
+-- @param #string name
+-- @param #string value
+-- @return #nil
+function M:SetEntityVariable(name,value) end
+
+---
+-- @function [parent=#Mob] SetExtraHaste
+-- @param self
+-- @param #number haste
+-- @return #nil
+function M:SetExtraHaste(haste) end
+
+---
+-- @function [parent=#Mob] SetFlurryChance
+-- @param self
+-- @param #number value
+-- @return #nil
+function M:SetFlurryChance(value) end
+
+---
+-- @function [parent=#Mob] SetFlyMode
+-- @param self
+-- @param #number in_
+-- @return #nil
+function M:SetFlyMode(in_) end
+
+---
+-- @function [parent=#Mob] SetGender
+-- @param self
+-- @param #number in_
+-- @return #nil
+function M:SetGender(in_) end
+
+---
+-- @function [parent=#Mob] SetGlobal
+-- @param self
+-- @param #string varname
+-- @param #string newvalue
+-- @param #number options
+-- @param #string duration
+-- @return #nil
+function M:SetGlobal(varname,newvalue,options,duration) end
+
+---
+-- @function [parent=#Mob] SetGlobal
+-- @param self
+-- @param #string varname
+-- @param #string newvalue
+-- @param #number options
+-- @param #string duration
+-- @param #Mob other
+-- @return #nil
+function M:SetGlobal(varname,newvalue,options,duration,other) end
+
+---
+-- @function [parent=#Mob] SetHate
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:SetHate(other) end
+
+---
+-- @function [parent=#Mob] SetHate
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @return #nil
+function M:SetHate(other,hate) end
+
+---
+-- @function [parent=#Mob] SetHate
+-- @param self
+-- @param #Mob other
+-- @param #number hate
+-- @param #number damage
+-- @return #nil
+function M:SetHate(other,hate,damage) end
+
+---
+-- @function [parent=#Mob] HalveAggro
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:HalveAggro(other) end
+
+---
+-- @function [parent=#Mob] DoubleAggro
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:DoubleAggro(other) end
+
+---
+-- @function [parent=#Mob] SetHeading
+-- @param self
+-- @param #number in_
+-- @return #nil
+function M:SetHeading(in_) end
+
+---
+-- @function [parent=#Mob] SetHP
+-- @param self
+-- @param #number hp
+-- @return #nil
+function M:SetHP(hp) end
+
+---
+-- @function [parent=#Mob] SetInvisible
+-- @param self
+-- @param #number state
+-- @return #nil
+function M:SetInvisible(state) end
+
+---
+-- @function [parent=#Mob] SetInvul
+-- @param self
+-- @param #boolean value
+-- @return #nil
+function M:SetInvul(value) end
+
+---
+-- @function [parent=#Mob] SetLevel
+-- @param self
+-- @param #number level
+-- @return #nil
+function M:SetLevel(level) end
+
+---
+-- @function [parent=#Mob] SetLevel
+-- @param self
+-- @param #number level
+-- @param #boolean command
+-- @return #nil
+function M:SetLevel(level,command) end
+
+---
+-- @function [parent=#Mob] SetMana
+-- @param self
+-- @param #number mana
+-- @return #number
+function M:SetMana(mana) end
+
+---
+-- @function [parent=#Mob] SetOOCRegen
+-- @param self
+-- @param #number regen
+-- @return #nil
+function M:SetOOCRegen(regen) end
+
+---
+-- @function [parent=#Mob] SetPetOrder
+-- @param self
+-- @param #number order
+-- @return #nil
+function M:SetPetOrder(order) end
+
+---
+-- @function [parent=#Mob] SetRace
+-- @param self
+-- @param #number in_
+-- @return #nil
+function M:SetRace(in_) end
+
+---
+-- @function [parent=#Mob] SetRunning
+-- @param self
+-- @param #boolean running
+-- @return #nil
+function M:SetRunning(running) end
+
+---
+-- @function [parent=#Mob] SetSlotTint
+-- @param self
+-- @param #number material_slot
+-- @param #number red_tint
+-- @param #number green_tint
+-- @param #number blue_tint
+-- @return #nil
+function M:SetSlotTint(material_slot,red_tint,green_tint,blue_tint) end
+
+---
+-- @function [parent=#Mob] SetTarget
+-- @param self
+-- @param #Mob t
+-- @return #nil
+function M:SetTarget(t) end
+
+---
+-- @function [parent=#Mob] SetTargetable
+-- @param self
+-- @param #boolean on
+-- @return #nil
+function M:SetTargetable(on) end
+
+---
+-- @function [parent=#Mob] SetTexture
+-- @param self
+-- @param #number in_
+-- @return #nil
+function M:SetTexture(in_) end
+
+---
+-- @function [parent=#Mob] Shout
+-- @param self
+-- @param #string message
+-- @return #nil
+function M:Shout(message) end
+
+---
+-- @function [parent=#Mob] Signal
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:Signal(id) end
+
+---
+-- @function [parent=#Mob] SpellEffect
+-- @param self
+-- @param #Mob caster
+-- @param #number spell_id
+-- @param #number partial
+-- @return #nil
+function M:SpellEffect(caster,spell_id,partial) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @return #boolean
+function M:SpellFinished(spell_id,target) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @param #number slot
+-- @return #boolean
+function M:SpellFinished(spell_id,target,slot) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @param #number slot
+-- @param #number mana_used
+-- @return #boolean
+function M:SpellFinished(spell_id,target,slot,mana_used) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @param #number slot
+-- @param #number mana_used
+-- @param #number inventory_slot
+-- @return #boolean
+function M:SpellFinished(spell_id,target,slot,mana_used,inventory_slot) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @param #number slot
+-- @param #number mana_used
+-- @param #number inventory_slot
+-- @param #number resist_adjust
+-- @return #boolean
+function M:SpellFinished(spell_id,target,slot,mana_used,inventory_slot,resist_adjust) end
+
+---
+-- @function [parent=#Mob] SpellFinished
+-- @param self
+-- @param #number spell_id
+-- @param #Mob target
+-- @param #number slot
+-- @param #number mana_used
+-- @param #number inventory_slot
+-- @param #number resist_adjust
+-- @param #boolean proc
+-- @return #boolean
+function M:SpellFinished(spell_id,target,slot,mana_used,inventory_slot,resist_adjust,proc) end
+
+---
+-- @function [parent=#Mob] Spin
+-- @param self
+-- @return #nil
+function M:Spin() end
+
+---
+-- @function [parent=#Mob] Stun
+-- @param self
+-- @param #number duration
+-- @return #nil
+function M:Stun(duration) end
+
+---
+-- @function [parent=#Mob] TarGlobal
+-- @param self
+-- @param #string varname
+-- @param #string value
+-- @param #string duration
+-- @param #number npc_id
+-- @param #number char_id
+-- @param #number zone_id
+-- @return #nil
+function M:TarGlobal(varname,value,duration,npc_id,char_id,zone_id) end
+
+---
+-- @function [parent=#Mob] TempName
+-- @param self
+-- @return #nil
+function M:TempName() end
+
+---
+-- @function [parent=#Mob] TempName
+-- @param self
+-- @param #string newname
+-- @return #nil
+function M:TempName(newname) end
+
+---
+-- @function [parent=#Mob] ThrowingAttack
+-- @param self
+-- @param #Mob other
+-- @return #nil
+function M:ThrowingAttack(other) end
+
+---
+-- @function [parent=#Mob] UnStun
+-- @param self
+-- @return #nil
+function M:UnStun() end
+
+---
+-- @function [parent=#Mob] WearChange
+-- @param self
+-- @param #number material_slot
+-- @param #number texture
+-- @param #number color
+-- @return #nil
+function M:WearChange(material_slot,texture,color) end
+
+---
+-- @function [parent=#Mob] WipeHateList
+-- @param self
+-- @return #nil
+function M:WipeHateList() end
+
+---
+-- @function [parent=#Mob] GetSpecialAbility
+-- @param self
+-- @param #number ability
+-- @return #number
+function M:GetSpecialAbility(ability) end
+
+---
+-- @function [parent=#Mob] GetSpecialAbilityParam
+-- @param self
+-- @param #number ability
+-- @param #number param
+-- @return #number
+function M:GetSpecialAbilityParam(ability,param) end
+
+---
+-- @function [parent=#Mob] SetSpecialAbility
+-- @param self
+-- @param #number ability
+-- @param #number level
+-- @return #nil
+function M:SetSpecialAbility(ability,level) end
+
+---
+-- @function [parent=#Mob] SetSpecialAbilityParam
+-- @param self
+-- @param #number ability
+-- @param #number param
+-- @param #number value
+-- @return #nil
+function M:SetSpecialAbilityParam(ability,param,value) end
+
+---
+-- @function [parent=#Mob] ClearSpecialAbilities
+-- @param self
+-- @return #nil
+function M:ClearSpecialAbilities() end
+
+---
+-- @function [parent=#Mob] ProcessSpecialAbilities
+-- @param self
+-- @param #string str
+-- @return #nil
+function M:ProcessSpecialAbilities(str) end
+
+---
+-- @function [parent=#Mob] SetAppearance
+-- @param self
+-- @param #number app
+-- @return #nil
+function M:SetAppearance(app) end
+
+---
+-- @function [parent=#Mob] SetAppearance
+-- @param self
+-- @param #number app
+-- @param #boolean ignore_self
+-- @return #nil
+function M:SetAppearance(app,ignore_self) end
+
+---
+-- @function [parent=#Mob] SetDestructibleObject
+-- @param self
+-- @param #boolean set
+-- @return #nil
+function M:SetDestructibleObject(set) end
+
+---
+-- @function [parent=#Mob] IsImmuneToSpell
+-- @param self
+-- @param #number spell_id
+-- @param #Mob caster
+-- @return #boolean
+function M:IsImmuneToSpell(spell_id,caster) end
+
+---
+-- @function [parent=#Mob] BuffFadeBySpellID
+-- @param self
+-- @param #number spell_id
+-- @return #nil
+function M:BuffFadeBySpellID(spell_id) end
+
+---
+-- @function [parent=#Mob] BuffFadeByEffect
+-- @param self
+-- @param #number effect_id
+-- @return #nil
+function M:BuffFadeByEffect(effect_id) end
+
+---
+-- @function [parent=#Mob] BuffFadeByEffect
+-- @param self
+-- @param #number effect_id
+-- @param #number skipslot
+-- @return #nil
+function M:BuffFadeByEffect(effect_id,skipslot) end
+
+---
+-- @function [parent=#Mob] BuffFadeAll
+-- @param self
+-- @return #nil
+function M:BuffFadeAll() end
+
+---
+-- @function [parent=#Mob] BuffFadeBySlot
+-- @param self
+-- @param #number slot
+-- @return #nil
+function M:BuffFadeBySlot(slot) end
+
+---
+-- @function [parent=#Mob] BuffFadeBySlot
+-- @param self
+-- @param #number slot
+-- @param #boolean recalc_bonuses
+-- @return #nil
+function M:BuffFadeBySlot(slot,recalc_bonuses) end
+
+---
+-- @function [parent=#Mob] CanBuffStack
+-- @param self
+-- @param #number spell_id
+-- @param #number caster_level
+-- @return #number
+function M:CanBuffStack(spell_id,caster_level) end
+
+---
+-- @function [parent=#Mob] CanBuffStack
+-- @param self
+-- @param #number spell_id
+-- @param #number caster_level
+-- @param #boolean fail_if_overwrite
+-- @return #number
+function M:CanBuffStack(spell_id,caster_level,fail_if_overwrite) end
+
+return M;

@@ -1,0 +1,145 @@
+---
+-- @module Group
+
+local M = {}
+
+---
+-- @field [parent=#Group] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Group] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Group] DisbandGroup
+-- @param self
+-- @return #nil
+function M:DisbandGroup() end
+
+---
+-- @function [parent=#Group] IsGroupMember
+-- @param self
+-- @param Mob#Mob mob
+-- @return #boolean
+function M:IsGroupMember(mob) end
+
+---
+-- @function [parent=#Group] CastGroupSpell
+-- @param self
+-- @param Mob#Mob caster
+-- @param #number spell_id
+-- @return #nil
+function M:CastGroupSpell(caster,spell_id) end
+
+---
+-- @function [parent=#Group] SplitExp
+-- @param self
+-- @param #number exp
+-- @param Mob#Mob other
+-- @return #nil
+function M:SplitExp(exp,other) end
+
+---
+-- @function [parent=#Group] GroupMessage
+-- @param self
+-- @param Mob#Mob sender
+-- @param #number language
+-- @param #string message
+-- @return #nil
+function M:GroupMessage(sender,language,message) end
+
+---
+-- @function [parent=#Group] GetTotalGroupDamage
+-- @param self
+-- @param Mob#Mob other
+-- @return #number
+function M:GetTotalGroupDamage(other) end
+
+---
+-- @function [parent=#Group] SplitMoney
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @return #nil
+function M:SplitMoney(copper,silver,gold,platinum) end
+
+---
+-- @function [parent=#Group] SplitMoney
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @param Client#Client splitter
+-- @return #nil
+function M:SplitMoney(copper,silver,gold,platinum,splitter) end
+
+---
+-- @function [parent=#Group] SetLeader
+-- @param self
+-- @param Mob#Mob leader
+-- @return #nil
+function M:SetLeader(leader) end
+
+---
+-- @function [parent=#Group] GetLeader
+-- @param self
+-- @return Mob#Mob
+function M:GetLeader() end
+
+---
+-- @function [parent=#Group] GetLeaderName
+-- @param self
+-- @return #string
+function M:GetLeaderName() end
+
+---
+-- @function [parent=#Group] IsLeader
+-- @param self
+-- @param Mob#Mob leader
+-- @return #boolean
+function M:IsLeader(leader) end
+
+---
+-- @function [parent=#Group] GroupCount
+-- @param self
+-- @return #number
+function M:GroupCount() end
+
+---
+-- @function [parent=#Group] GetHighestLevel
+-- @param self
+-- @return #number
+function M:GetHighestLevel() end
+
+---
+-- @function [parent=#Group] TeleportGroup
+-- @param self
+-- @param Mob#Mob sender
+-- @param #number zone_id
+-- @param #number instance_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M:TeleportGroup(sender,zone_id,instance_id,x,y,z,h) end
+
+---
+-- @function [parent=#Group] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#Group] GetMember
+-- @param self
+-- @param #number index
+-- @return Mob#Mob
+function M:GetMember(index) end
+
+return M;

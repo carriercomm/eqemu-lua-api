@@ -1,0 +1,47 @@
+---
+-- @module Material
+
+local M = {}
+
+---
+-- @field [parent=#Material] #number Head
+M.Head = 1;
+
+---
+-- @field [parent=#Material] #number Chest
+M.Chest = 1;
+
+---
+-- @field [parent=#Material] #number Arms
+M.Arms = 1;
+
+---
+-- @field [parent=#Material] #number Bracer
+M.Bracer = 1;
+
+---
+-- @field [parent=#Material] #number Hands
+M.Hands = 1;
+
+---
+-- @field [parent=#Material] #number Legs
+M.Legs = 1;
+
+---
+-- @field [parent=#Material] #number Feet
+M.Feet = 1;
+
+---
+-- @field [parent=#Material] #number Primary
+M.Primary = 1;
+
+---
+-- @field [parent=#Material] #number Secondary
+M.Secondary = 1;
+
+---
+-- @field [parent=#Material] #number Max
+M.Max = 1;
+
+
+return M;

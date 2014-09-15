@@ -1,0 +1,177 @@
+---
+-- @module Spawn
+
+local M = {}
+
+---
+-- @field [parent=#Spawn] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Spawn] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Spawn] LoadGrid
+-- @param self
+-- @return #nil
+function M:LoadGrid() end
+
+---
+-- @function [parent=#Spawn] Enable
+-- @param self
+-- @return #nil
+function M:Enable() end
+
+---
+-- @function [parent=#Spawn] Disable
+-- @param self
+-- @return #nil
+function M:Disable() end
+
+---
+-- @function [parent=#Spawn] Enabled
+-- @param self
+-- @return #boolean
+function M:Enabled() end
+
+---
+-- @function [parent=#Spawn] Reset
+-- @param self
+-- @return #nil
+function M:Reset() end
+
+---
+-- @function [parent=#Spawn] Depop
+-- @param self
+-- @return #nil
+function M:Depop() end
+
+---
+-- @function [parent=#Spawn] Repop
+-- @param self
+-- @return #nil
+function M:Repop() end
+
+---
+-- @function [parent=#Spawn] Repop
+-- @param self
+-- @param #number delay
+-- @return #nil
+function M:Repop(delay) end
+
+---
+-- @function [parent=#Spawn] ForceDespawn
+-- @param self
+-- @return #nil
+function M:ForceDespawn() end
+
+---
+-- @function [parent=#Spawn] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#Spawn] GetX
+-- @param self
+-- @return #number
+function M:GetX() end
+
+---
+-- @function [parent=#Spawn] GetY
+-- @param self
+-- @return #number
+function M:GetY() end
+
+---
+-- @function [parent=#Spawn] GetZ
+-- @param self
+-- @return #number
+function M:GetZ() end
+
+---
+-- @function [parent=#Spawn] GetHeading
+-- @param self
+-- @return #number
+function M:GetHeading() end
+
+---
+-- @function [parent=#Spawn] SetRespawnTimer
+-- @param self
+-- @param #number newrespawntime
+-- @return #nil
+function M:SetRespawnTimer(newrespawntime) end
+
+---
+-- @function [parent=#Spawn] SetVariance
+-- @param self
+-- @param #number newvariance
+-- @return #nil
+function M:SetVariance(newvariance) end
+
+---
+-- @function [parent=#Spawn] GetVariance
+-- @param self
+-- @return #number
+function M:GetVariance() end
+
+---
+-- @function [parent=#Spawn] RespawnTimer
+-- @param self
+-- @return #number
+function M:RespawnTimer() end
+
+---
+-- @function [parent=#Spawn] SpawnGroupID
+-- @param self
+-- @return #number
+function M:SpawnGroupID() end
+
+---
+-- @function [parent=#Spawn] CurrentNPCID
+-- @param self
+-- @return #number
+function M:CurrentNPCID() end
+
+---
+-- @function [parent=#Spawn] SetCurrentNPCID
+-- @param self
+-- @param #number nid
+-- @return #nil
+function M:SetCurrentNPCID(nid) end
+
+---
+-- @function [parent=#Spawn] GetSpawnCondition
+-- @param self
+-- @return #number
+function M:GetSpawnCondition() end
+
+---
+-- @function [parent=#Spawn] NPCPointerValid
+-- @param self
+-- @return #boolean
+function M:NPCPointerValid() end
+
+---
+-- @function [parent=#Spawn] SetNPCPointer
+-- @param self
+-- @param NPC#NPC n
+-- @return #nil
+function M:SetNPCPointer(n) end
+
+---
+-- @function [parent=#Spawn] SetTimer
+-- @param self
+-- @param #number duration
+-- @return #nil
+function M:SetTimer(duration) end
+
+---
+-- @function [parent=#Spawn] GetKillCount
+-- @param self
+-- @return #number
+function M:GetKillCount() end
+
+return M;

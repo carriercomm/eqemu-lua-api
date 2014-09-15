@@ -1,0 +1,772 @@
+---
+-- @module NPC
+-- @extends Mob#Mob
+
+local M = {}
+
+---
+-- @field [parent=#NPC] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#NPC] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#NPC] Signal
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:Signal(id) end
+
+---
+-- @function [parent=#NPC] CheckNPCFactionAlly
+-- @param self
+-- @param #number faction
+-- @return #number
+function M:CheckNPCFactionAlly(faction) end
+
+---
+-- @function [parent=#NPC] AddItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @return #nil
+function M:AddItem(item_id,charges) end
+
+---
+-- @function [parent=#NPC] AddItem
+-- @param self
+-- @param #number item_id
+-- @param #number charges
+-- @param #boolean equip
+-- @return #nil
+function M:AddItem(item_id,charges,equip) end
+
+---
+-- @function [parent=#NPC] AddLootTable
+-- @param self
+-- @return #nil
+function M:AddLootTable() end
+
+---
+-- @function [parent=#NPC] AddLootTable
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:AddLootTable(id) end
+
+---
+-- @function [parent=#NPC] RemoveItem
+-- @param self
+-- @param #number item_id
+-- @return #nil
+function M:RemoveItem(item_id) end
+
+---
+-- @function [parent=#NPC] RemoveItem
+-- @param self
+-- @param #number item_id
+-- @param #number quantity
+-- @return #nil
+function M:RemoveItem(item_id,quantity) end
+
+---
+-- @function [parent=#NPC] RemoveItem
+-- @param self
+-- @param #number item_id
+-- @param #number quantity
+-- @param #number slot
+-- @return #nil
+function M:RemoveItem(item_id,quantity,slot) end
+
+---
+-- @function [parent=#NPC] ClearItemList
+-- @param self
+-- @return #nil
+function M:ClearItemList() end
+
+---
+-- @function [parent=#NPC] AddCash
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @return #nil
+function M:AddCash(copper,silver,gold,platinum) end
+
+---
+-- @function [parent=#NPC] RemoveCash
+-- @param self
+-- @return #nil
+function M:RemoveCash() end
+
+---
+-- @function [parent=#NPC] CountLoot
+-- @param self
+-- @return #number
+function M:CountLoot() end
+
+---
+-- @function [parent=#NPC] GetLoottableID
+-- @param self
+-- @return #number
+function M:GetLoottableID() end
+
+---
+-- @function [parent=#NPC] GetCopper
+-- @param self
+-- @return #number
+function M:GetCopper() end
+
+---
+-- @function [parent=#NPC] GetSilver
+-- @param self
+-- @return #number
+function M:GetSilver() end
+
+---
+-- @function [parent=#NPC] GetGold
+-- @param self
+-- @return #number
+function M:GetGold() end
+
+---
+-- @function [parent=#NPC] GetPlatinum
+-- @param self
+-- @return #number
+function M:GetPlatinum() end
+
+---
+-- @function [parent=#NPC] SetCopper
+-- @param self
+-- @param #number amt
+-- @return #nil
+function M:SetCopper(amt) end
+
+---
+-- @function [parent=#NPC] SetSilver
+-- @param self
+-- @param #number amt
+-- @return #nil
+function M:SetSilver(amt) end
+
+---
+-- @function [parent=#NPC] SetGold
+-- @param self
+-- @param #number amt
+-- @return #nil
+function M:SetGold(amt) end
+
+---
+-- @function [parent=#NPC] SetPlatinum
+-- @param self
+-- @param #number amt
+-- @return #nil
+function M:SetPlatinum(amt) end
+
+---
+-- @function [parent=#NPC] SetGrid
+-- @param self
+-- @param #number grid
+-- @return #nil
+function M:SetGrid(grid) end
+
+---
+-- @function [parent=#NPC] SetSaveWaypoint
+-- @param self
+-- @param #number wp
+-- @return #nil
+function M:SetSaveWaypoint(wp) end
+
+---
+-- @function [parent=#NPC] SetSp2
+-- @param self
+-- @param #number sg2
+-- @return #nil
+function M:SetSp2(sg2) end
+
+---
+-- @function [parent=#NPC] GetWaypointMax
+-- @param self
+-- @return #number
+function M:GetWaypointMax() end
+
+---
+-- @function [parent=#NPC] GetGrid
+-- @param self
+-- @return #number
+function M:GetGrid() end
+
+---
+-- @function [parent=#NPC] GetSp2
+-- @param self
+-- @return #number
+function M:GetSp2() end
+
+---
+-- @function [parent=#NPC] GetNPCFactionID
+-- @param self
+-- @return #number
+function M:GetNPCFactionID() end
+
+---
+-- @function [parent=#NPC] GetPrimaryFaction
+-- @param self
+-- @return #number
+function M:GetPrimaryFaction() end
+
+---
+-- @function [parent=#NPC] GetNPCHate
+-- @param self
+-- @param Mob#Mob ent
+-- @return #number
+function M:GetNPCHate(ent) end
+
+---
+-- @function [parent=#NPC] IsOnHatelist
+-- @param self
+-- @param Mob#Mob ent
+-- @return #boolean
+function M:IsOnHatelist(ent) end
+
+---
+-- @function [parent=#NPC] SetNPCFactionID
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:SetNPCFactionID(id) end
+
+---
+-- @function [parent=#NPC] GetMaxDMG
+-- @param self
+-- @return #number
+function M:GetMaxDMG() end
+
+---
+-- @function [parent=#NPC] GetMinDMG
+-- @param self
+-- @return #number
+function M:GetMinDMG() end
+
+---
+-- @function [parent=#NPC] IsAnimal
+-- @param self
+-- @return #boolean
+function M:IsAnimal() end
+
+---
+-- @function [parent=#NPC] GetPetSpellID
+-- @param self
+-- @return #number
+function M:GetPetSpellID() end
+
+---
+-- @function [parent=#NPC] SetPetSpellID
+-- @param self
+-- @param #number id
+-- @return #nil
+function M:SetPetSpellID(id) end
+
+---
+-- @function [parent=#NPC] GetMaxDamage
+-- @param self
+-- @param #number level
+-- @return #number
+function M:GetMaxDamage(level) end
+
+---
+-- @function [parent=#NPC] SetTaunting
+-- @param self
+-- @param #boolean t
+-- @return #nil
+function M:SetTaunting(t) end
+
+---
+-- @function [parent=#NPC] PickPocket
+-- @param self
+-- @param Client#Client thief
+-- @return #nil
+function M:PickPocket(thief) end
+
+---
+-- @function [parent=#NPC] StartSwarmTimer
+-- @param self
+-- @param #number duration
+-- @return #nil
+function M:StartSwarmTimer(duration) end
+
+---
+-- @function [parent=#NPC] DoClassAttacks
+-- @param self
+-- @param Mob#Mob target
+-- @return #nil
+function M:DoClassAttacks(target) end
+
+---
+-- @function [parent=#NPC] GetMaxWp
+-- @param self
+-- @return #number
+function M:GetMaxWp() end
+
+---
+-- @function [parent=#NPC] DisplayWaypointInfo
+-- @param self
+-- @param Client#Client to
+-- @return #nil
+function M:DisplayWaypointInfo(to) end
+
+---
+-- @function [parent=#NPC] CalculateNewWaypoint
+-- @param self
+-- @return #nil
+function M:CalculateNewWaypoint() end
+
+---
+-- @function [parent=#NPC] AssignWaypoints
+-- @param self
+-- @param #number grid
+-- @return #nil
+function M:AssignWaypoints(grid) end
+
+---
+-- @function [parent=#NPC] SetWaypointPause
+-- @param self
+-- @return #nil
+function M:SetWaypointPause() end
+
+---
+-- @function [parent=#NPC] UpdateWaypoint
+-- @param self
+-- @param #number wp
+-- @return #nil
+function M:UpdateWaypoint(wp) end
+
+---
+-- @function [parent=#NPC] StopWandering
+-- @param self
+-- @return #nil
+function M:StopWandering() end
+
+---
+-- @function [parent=#NPC] ResumeWandering
+-- @param self
+-- @return #nil
+function M:ResumeWandering() end
+
+---
+-- @function [parent=#NPC] PauseWandering
+-- @param self
+-- @param #number pause_time
+-- @return #nil
+function M:PauseWandering(pause_time) end
+
+---
+-- @function [parent=#NPC] MoveTo
+-- @param self
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #boolean save
+-- @return #nil
+function M:MoveTo(x,y,z,h,save) end
+
+---
+-- @function [parent=#NPC] NextGuardPosition
+-- @param self
+-- @return #nil
+function M:NextGuardPosition() end
+
+---
+-- @function [parent=#NPC] SaveGuardSpot
+-- @param self
+-- @return #nil
+function M:SaveGuardSpot() end
+
+---
+-- @function [parent=#NPC] SaveGuardSpot
+-- @param self
+-- @param #boolean clear
+-- @return #nil
+function M:SaveGuardSpot(clear) end
+
+---
+-- @function [parent=#NPC] IsGuarding
+-- @param self
+-- @return #boolean
+function M:IsGuarding() end
+
+---
+-- @function [parent=#NPC] AI_SetRoambox
+-- @param self
+-- @param #number dist
+-- @param #number max_x
+-- @param #number min_x
+-- @param #number max_y
+-- @param #number min_y
+-- @return #nil
+function M:AI_SetRoambox(dist,max_x,min_x,max_y,min_y) end
+
+---
+-- @function [parent=#NPC] AI_SetRoambox
+-- @param self
+-- @param #number dist
+-- @param #number max_x
+-- @param #number min_x
+-- @param #number max_y
+-- @param #number min_y
+-- @param #number delay
+-- @return #nil
+function M:AI_SetRoambox(dist,max_x,min_x,max_y,min_y,delay) end
+
+---
+-- @function [parent=#NPC] GetNPCSpellsID
+-- @param self
+-- @return #number
+function M:GetNPCSpellsID() end
+
+---
+-- @function [parent=#NPC] GetSpawnPointID
+-- @param self
+-- @return #number
+function M:GetSpawnPointID() end
+
+---
+-- @function [parent=#NPC] GetSpawnPointX
+-- @param self
+-- @return #number
+function M:GetSpawnPointX() end
+
+---
+-- @function [parent=#NPC] GetSpawnPointY
+-- @param self
+-- @return #number
+function M:GetSpawnPointY() end
+
+---
+-- @function [parent=#NPC] GetSpawnPointZ
+-- @param self
+-- @return #number
+function M:GetSpawnPointZ() end
+
+---
+-- @function [parent=#NPC] GetSpawnPointH
+-- @param self
+-- @return #number
+function M:GetSpawnPointH() end
+
+---
+-- @function [parent=#NPC] GetGuardPointX
+-- @param self
+-- @return #number
+function M:GetGuardPointX() end
+
+---
+-- @function [parent=#NPC] GetGuardPointY
+-- @param self
+-- @return #number
+function M:GetGuardPointY() end
+
+---
+-- @function [parent=#NPC] GetGuardPointZ
+-- @param self
+-- @return #number
+function M:GetGuardPointZ() end
+
+---
+-- @function [parent=#NPC] SetPrimSkill
+-- @param self
+-- @param #number skill_id
+-- @return #nil
+function M:SetPrimSkill(skill_id) end
+
+---
+-- @function [parent=#NPC] SetSecSkill
+-- @param self
+-- @param #number skill_id
+-- @return #nil
+function M:SetSecSkill(skill_id) end
+
+---
+-- @function [parent=#NPC] GetPrimSkill
+-- @param self
+-- @return #number
+function M:GetPrimSkill() end
+
+---
+-- @function [parent=#NPC] GetSecSkill
+-- @param self
+-- @return #number
+function M:GetSecSkill() end
+
+---
+-- @function [parent=#NPC] GetSwarmOwner
+-- @param self
+-- @return #number
+function M:GetSwarmOwner() end
+
+---
+-- @function [parent=#NPC] GetSwarmTarget
+-- @param self
+-- @return #number
+function M:GetSwarmTarget() end
+
+---
+-- @function [parent=#NPC] SetSwarmTarget
+-- @param self
+-- @param #number target
+-- @return #nil
+function M:SetSwarmTarget(target) end
+
+---
+-- @function [parent=#NPC] ModifyNPCStat
+-- @param self
+-- @param #string stat
+-- @param #string value
+-- @return #nil
+function M:ModifyNPCStat(stat,value) end
+
+---
+-- @function [parent=#NPC] AddAISpell
+-- @param self
+-- @param #number priority
+-- @param #number spell_id
+-- @param #number type
+-- @param #number mana_cost
+-- @param #number recast_delay
+-- @param #number resist_adjust
+-- @return #nil
+function M:AddAISpell(priority,spell_id,type,mana_cost,recast_delay,resist_adjust) end
+
+---
+-- @function [parent=#NPC] RemoveAISpell
+-- @param self
+-- @param #number spell_id
+-- @return #nil
+function M:RemoveAISpell(spell_id) end
+
+---
+-- @function [parent=#NPC] SetSpellFocusDMG
+-- @param self
+-- @param #number focus
+-- @return #nil
+function M:SetSpellFocusDMG(focus) end
+
+---
+-- @function [parent=#NPC] SetSpellFocusHeal
+-- @param self
+-- @param #number focus
+-- @return #nil
+function M:SetSpellFocusHeal(focus) end
+
+---
+-- @function [parent=#NPC] GetSlowMitigation
+-- @param self
+-- @return #number
+function M:GetSlowMitigation() end
+
+---
+-- @function [parent=#NPC] GetAttackSpeed
+-- @param self
+-- @return #number
+function M:GetAttackSpeed() end
+
+---
+-- @function [parent=#NPC] GetAccuracyRating
+-- @param self
+-- @return #number
+function M:GetAccuracyRating() end
+
+---
+-- @function [parent=#NPC] GetSpawnKillCount
+-- @param self
+-- @return #number
+function M:GetSpawnKillCount() end
+
+---
+-- @function [parent=#NPC] GetScore
+-- @param self
+-- @return #number
+function M:GetScore() end
+
+---
+-- @function [parent=#NPC] MerchantOpenShop
+-- @param self
+-- @return #nil
+function M:MerchantOpenShop() end
+
+---
+-- @function [parent=#NPC] MerchantCloseShop
+-- @param self
+-- @return #nil
+function M:MerchantCloseShop() end
+
+---
+-- @function [parent=#NPC] GetMerchantProbability
+-- @param self
+-- @return #number
+function M:GetMerchantProbability() end
+
+---
+-- @function [parent=#NPC] SetMerchantProbability
+-- @param self
+-- @param #number new_item_spawn_probability
+-- @return #nil
+function M:SetMerchantProbability(new_item_spawn_probability) end
+
+---
+-- @type event_aggro_say
+-- @field NPC#NPC self
+-- @field Client#Client other
+-- @field #string message
+-- @field #number language
+
+---
+-- @type event_cast
+-- @field NPC#NPC self
+-- @field Spell#Spell spell
+
+---
+-- @type event_cast_begin
+-- @field NPC#NPC self
+-- @field Spell#Spell spell
+
+---
+-- @type event_cast_on
+-- @field NPC#NPC self
+-- @field Spell#Spell spell
+
+---
+-- @type event_combat
+-- @field NPC#NPC self
+-- @field #boolean joined
+
+---
+-- @type event_death
+-- @field NPC#NPC self
+-- @field Mob#Mob other
+-- @field #number damage
+-- @field Spell#Spell spell
+-- @field #number skill_id
+
+---
+-- @type event_death_complete
+-- @field NPC#NPC self
+-- @field Mob#Mob other
+-- @field #number damage
+-- @field Spell#Spell spell
+-- @field #number skill_id
+
+---
+-- @type event_enter
+-- @field NPC#NPC self
+-- @field Client#Client other
+
+---
+-- @type event_enter_area
+-- @field NPC#NPC self
+-- @field #number area_id
+-- @field #number area_type
+
+---
+-- @type event_exit
+-- @field NPC#NPC self
+-- @field Client#Client other
+
+---
+-- @type event_feign_death
+-- @field NPC#NPC self
+-- @field Client#Client other
+
+---
+-- @type event_hate_list
+-- @field NPC#NPC self
+-- @field #boolean joined
+
+---
+-- @type event_hp
+-- @field NPC#NPC self
+-- @field #number hp_event
+-- @field #number inc_hp_event
+
+---
+-- @type event_leave_area
+-- @field NPC#NPC self
+-- @field #number area_id
+-- @field #number area_type
+
+---
+-- @type event_proximity_say
+-- @field NPC#NPC self
+-- @field Client#Client other
+-- @field #string message
+-- @field #number language
+
+---
+-- @type event_say
+-- @field NPC#NPC self
+-- @field Client#Client other
+-- @field #string message
+-- @field #number language
+
+---
+-- @type event_signal
+-- @field NPC#NPC self
+-- @field #number signal
+
+---
+-- @type event_slay
+-- @field NPC#NPC self
+-- @field Mob#Mob other
+
+---
+-- @type event_spawn
+-- @field NPC#NPC self
+
+---
+-- @type event_target_change
+-- @field NPC#NPC self
+-- @field Mob#Mob other
+
+---
+-- @type event_task_accepted
+-- @field NPC#NPC self
+-- @field Client#Client other
+-- @field #number task_id
+
+---
+-- @type event_timer
+-- @field NPC#NPC self
+-- @field #string timer
+
+---
+-- @type event_trade
+-- @field NPC#NPC self
+-- @field Client#Client other
+-- @field #event_trade_Trade trade
+
+---
+-- @type event_trade_Trade
+-- @field ItemInst#ItemInst item1
+-- @field ItemInst#ItemInst item2
+-- @field ItemInst#ItemInst item3
+-- @field ItemInst#ItemInst item4
+-- @field #number copper
+-- @field #number silver
+-- @field #number gold
+-- @field #number platinum
+
+---
+-- @type event_waypoint_arrive
+-- @field NPC#NPC self
+-- @field #number wp
+
+---
+-- @type event_waypoint_depart
+-- @field NPC#NPC self
+-- @field #number wp
+
+return M;

@@ -1,0 +1,182 @@
+---
+-- @module Raid
+
+local M = {}
+
+---
+-- @field [parent=#Raid] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Raid] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Raid] IsRaidMember
+-- @param self
+-- @param #string name
+-- @return #boolean
+function M:IsRaidMember(name) end
+
+---
+-- @function [parent=#Raid] CastGroupSpell
+-- @param self
+-- @param Mob#Mob caster
+-- @param #number spell_id
+-- @param #number group_id
+-- @return #nil
+function M:CastGroupSpell(caster,spell_id,group_id) end
+
+---
+-- @function [parent=#Raid] GroupCount
+-- @param self
+-- @param #number group_id
+-- @return #number
+function M:GroupCount(group_id) end
+
+---
+-- @function [parent=#Raid] RaidCount
+-- @param self
+-- @return #number
+function M:RaidCount() end
+
+---
+-- @function [parent=#Raid] GetGroup
+-- @param self
+-- @param #string c
+-- @return #number
+function M:GetGroup(c) end
+
+---
+-- @function [parent=#Raid] GetGroup
+-- @param self
+-- @param Client#Client c
+-- @return #number
+function M:GetGroup(c) end
+
+---
+-- @function [parent=#Raid] SplitExp
+-- @param self
+-- @param #number exp
+-- @param Mob#Mob other
+-- @return #nil
+function M:SplitExp(exp,other) end
+
+---
+-- @function [parent=#Raid] GetTotalRaidDamage
+-- @param self
+-- @param Mob#Mob other
+-- @return #number
+function M:GetTotalRaidDamage(other) end
+
+---
+-- @function [parent=#Raid] SplitMoney
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @return #nil
+function M:SplitMoney(copper,silver,gold,platinum) end
+
+---
+-- @function [parent=#Raid] SplitMoney
+-- @param self
+-- @param #number copper
+-- @param #number silver
+-- @param #number gold
+-- @param #number platinum
+-- @param Client#Client splitter
+-- @return #nil
+function M:SplitMoney(copper,silver,gold,platinum,splitter) end
+
+---
+-- @function [parent=#Raid] BalanceHP
+-- @param self
+-- @param #number penalty
+-- @param #number group_id
+-- @return #nil
+function M:BalanceHP(penalty,group_id) end
+
+---
+-- @function [parent=#Raid] IsLeader
+-- @param self
+-- @param #string c
+-- @return #boolean
+function M:IsLeader(c) end
+
+---
+-- @function [parent=#Raid] IsLeader
+-- @param self
+-- @param Client#Client c
+-- @return #boolean
+function M:IsLeader(c) end
+
+---
+-- @function [parent=#Raid] IsGroupLeader
+-- @param self
+-- @param #string name
+-- @return #boolean
+function M:IsGroupLeader(name) end
+
+---
+-- @function [parent=#Raid] GetHighestLevel
+-- @param self
+-- @return #number
+function M:GetHighestLevel() end
+
+---
+-- @function [parent=#Raid] GetLowestLevel
+-- @param self
+-- @return #number
+function M:GetLowestLevel() end
+
+---
+-- @function [parent=#Raid] GetClientByIndex
+-- @param self
+-- @param #number index
+-- @return Client#Client
+function M:GetClientByIndex(index) end
+
+---
+-- @function [parent=#Raid] TeleportGroup
+-- @param self
+-- @param Mob#Mob sender
+-- @param #number zone_id
+-- @param #number instance_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @param #number group_id
+-- @return #nil
+function M:TeleportGroup(sender,zone_id,instance_id,x,y,z,h,group_id) end
+
+---
+-- @function [parent=#Raid] TeleportRaid
+-- @param self
+-- @param Mob#Mob sender
+-- @param #number zone_id
+-- @param #number instance_id
+-- @param #number x
+-- @param #number y
+-- @param #number z
+-- @param #number h
+-- @return #nil
+function M:TeleportRaid(sender,zone_id,instance_id,x,y,z,h) end
+
+---
+-- @function [parent=#Raid] GetID
+-- @param self
+-- @return #number
+function M:GetID() end
+
+---
+-- @function [parent=#Raid] GetMember
+-- @param self
+-- @param #number index
+-- @return Client#Client
+function M:GetMember(index) end
+
+return M;

@@ -1,0 +1,238 @@
+---
+-- @module Inventory
+
+local M = {}
+
+---
+-- @field [parent=#Inventory] #boolean null
+M.null = true;
+
+---
+-- @field [parent=#Inventory] #boolean valid
+M.valid = true;
+
+
+---
+-- @function [parent=#Inventory] GetItem
+-- @param self
+-- @param #number slot_id
+-- @return ItemInst#ItemInst
+function M:GetItem(slot_id) end
+
+---
+-- @function [parent=#Inventory] GetItem
+-- @param self
+-- @param #number slot_id
+-- @param #number bag_slot
+-- @return ItemInst#ItemInst
+function M:GetItem(slot_id,bag_slot) end
+
+---
+-- @function [parent=#Inventory] PutItem
+-- @param self
+-- @param #number slot_id
+-- @param ItemInst#ItemInst item
+-- @return #number
+function M:PutItem(slot_id,item) end
+
+---
+-- @function [parent=#Inventory] PushCursor
+-- @param self
+-- @param ItemInst#ItemInst item
+-- @return #number
+function M:PushCursor(item) end
+
+---
+-- @function [parent=#Inventory] SwapItem
+-- @param self
+-- @param #number slot_a
+-- @param #number slot_b
+-- @return #boolean
+function M:SwapItem(slot_a,slot_b) end
+
+---
+-- @function [parent=#Inventory] DeleteItem
+-- @param self
+-- @param #number slot_id
+-- @return #boolean
+function M:DeleteItem(slot_id) end
+
+---
+-- @function [parent=#Inventory] DeleteItem
+-- @param self
+-- @param #number slot_id
+-- @param #number quantity
+-- @return #boolean
+function M:DeleteItem(slot_id,quantity) end
+
+---
+-- @function [parent=#Inventory] CheckNoDrop
+-- @param self
+-- @param #number slot_id
+-- @return #boolean
+function M:CheckNoDrop(slot_id) end
+
+---
+-- @function [parent=#Inventory] PopItem
+-- @param self
+-- @param #number slot_id
+-- @return ItemInst#ItemInst
+function M:PopItem(slot_id) end
+
+---
+-- @function [parent=#Inventory] HasItem
+-- @param self
+-- @param #number item_id
+-- @return #number
+function M:HasItem(item_id) end
+
+---
+-- @function [parent=#Inventory] HasItem
+-- @param self
+-- @param #number item_id
+-- @param #number quantity
+-- @return #number
+function M:HasItem(item_id,quantity) end
+
+---
+-- @function [parent=#Inventory] HasItem
+-- @param self
+-- @param #number item_id
+-- @param #number quantity
+-- @param #number where
+-- @return #number
+function M:HasItem(item_id,quantity,where) end
+
+---
+-- @function [parent=#Inventory] HasSpaceForItem
+-- @param self
+-- @param Item#Item item
+-- @param #number quantity
+-- @return #boolean
+function M:HasSpaceForItem(item,quantity) end
+
+---
+-- @function [parent=#Inventory] HasItemByUse
+-- @param self
+-- @param #number use
+-- @return #number
+function M:HasItemByUse(use) end
+
+---
+-- @function [parent=#Inventory] HasItemByUse
+-- @param self
+-- @param #number use
+-- @param uInteger8#uInteger8 quantity
+-- @return #number
+function M:HasItemByUse(use,quantity) end
+
+---
+-- @function [parent=#Inventory] HasItemByUse
+-- @param self
+-- @param #number use
+-- @param uInteger8#uInteger8 quantity
+-- @param uInteger8#uInteger8 where
+-- @return #number
+function M:HasItemByUse(use,quantity,where) end
+
+---
+-- @function [parent=#Inventory] HasItemByLoreGroup
+-- @param self
+-- @param #number loregroup
+-- @return #number
+function M:HasItemByLoreGroup(loregroup) end
+
+---
+-- @function [parent=#Inventory] HasItemByLoreGroup
+-- @param self
+-- @param #number loregroup
+-- @param #number where
+-- @return #number
+function M:HasItemByLoreGroup(loregroup,where) end
+
+---
+-- @function [parent=#Inventory] FindFreeSlot
+-- @param self
+-- @param #boolean for_bag
+-- @param #boolean try_cursor
+-- @return #number
+function M:FindFreeSlot(for_bag,try_cursor) end
+
+---
+-- @function [parent=#Inventory] FindFreeSlot
+-- @param self
+-- @param #boolean for_bag
+-- @param #boolean try_cursor
+-- @param #number min_size
+-- @return #number
+function M:FindFreeSlot(for_bag,try_cursor,min_size) end
+
+---
+-- @function [parent=#Inventory] FindFreeSlot
+-- @param self
+-- @param #boolean for_bag
+-- @param #boolean try_cursor
+-- @param #number min_size
+-- @param #boolean is_arrow
+-- @return #number
+function M:FindFreeSlot(for_bag,try_cursor,min_size,is_arrow) end
+
+---
+-- @function [parent=#Inventory] CalcSlotId
+-- @param self
+-- @param #number slot_id
+-- @return #number
+function M:CalcSlotId(slot_id) end
+
+---
+-- @function [parent=#Inventory] CalcSlotId
+-- @param self
+-- @param #number slot_id
+-- @param #number bag_slot
+-- @return #number
+function M:CalcSlotId(slot_id,bag_slot) end
+
+---
+-- @function [parent=#Inventory] CalcBagIdx
+-- @param self
+-- @param #number slot_id
+-- @return #number
+function M:CalcBagIdx(slot_id) end
+
+---
+-- @function [parent=#Inventory] CalcSlotFromMaterial
+-- @param self
+-- @param #number material
+-- @return #number
+function M:CalcSlotFromMaterial(material) end
+
+---
+-- @function [parent=#Inventory] CalcMaterialFromSlot
+-- @param self
+-- @param #number equipslot
+-- @return #number
+function M:CalcMaterialFromSlot(equipslot) end
+
+---
+-- @function [parent=#Inventory] CanItemFitInContainer
+-- @param self
+-- @param Item#Item item
+-- @param Item#Item container
+-- @return #boolean
+function M:CanItemFitInContainer(item,container) end
+
+---
+-- @function [parent=#Inventory] SupportsContainers
+-- @param self
+-- @param #number slot_id
+-- @return #boolean
+function M:SupportsContainers(slot_id) end
+
+---
+-- @function [parent=#Inventory] GetSlotByItemInst
+-- @param self
+-- @param ItemInst#ItemInst inst
+-- @return #number
+function M:GetSlotByItemInst(inst) end
+
+return M;

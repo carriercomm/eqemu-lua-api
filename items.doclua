@@ -1,0 +1,18 @@
+---
+-- @module items
+
+---
+-- @function [parent=#items] check_turn_in
+-- @param NPC#event_trade_Trade trade Item hand-in table (from event_trade)
+-- @param #table trade_check Items to check for
+-- @return #boolean returns true if trade successful
+
+---
+-- @function [parent=#items] return_items
+-- @param NPC#NPC npc The npc being traded with
+-- @param Client#Client client The client being traded with
+-- @param NPC#event_trade_Trade trade Item hand-in table (from event_trade)
+-- @param #boolean text Default: true - NPC says "I have no need for this.."
+-- @return #nil
+
+return nil;

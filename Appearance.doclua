@@ -1,0 +1,27 @@
+---
+-- @module Appearance
+
+local M = {}
+
+---
+-- @field [parent=#Appearance] #number Standing
+M.Standing = 1;
+
+---
+-- @field [parent=#Appearance] #number Sitting
+M.Sitting = 1;
+
+---
+-- @field [parent=#Appearance] #number Crouching
+M.Crouching = 1;
+
+---
+-- @field [parent=#Appearance] #number Dead
+M.Dead = 1;
+
+---
+-- @field [parent=#Appearance] #number Looting
+M.Looting = 1;
+
+
+return M;
